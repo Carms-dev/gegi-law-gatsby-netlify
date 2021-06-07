@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "gegi-law-gatsby-netlify",
+    title: "GEGI Law",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [gatsby-transformer-remark
+        plugins: [
           // gatsby-remark-relative-images must go before gatsby-remark-images
           `gatsby-remark-relative-images`,
           {
