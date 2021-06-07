@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  repo: Carms-dev/gegi-law-gatsby-netlify
+  branch: master
+  commit_messages:
+    create: '[ADD][CMS] {{collection}} “{{slug}}”'
+    update: '[UPD][CMS] {{collection}} “{{slug}}”'
+    delete: '[REM][CMS] {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+local_backend: true
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - label: Organizations
+    name: Organizations
+    folder: content/organization
+    create: true
+    fields:
+      - {label: "Organization Name", name: orgName, widget: string}
+
+  - label: Cases
+    name: cases
+    folder: content/cases
+    create: true
+    fields:
+      - {label: "Case name", name: caseName, widget: string}
+
+  - label: Pages
+    name: pages
+    files:
+      - file: content/pages/home.md
+        label: "Home Page"
+        name: home
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+
+      - file: content/pages/start.md
+        label: "Get Started Page"
+        name: start
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+
+      - file: content/pages/organization_finder.md
+        label: "Organization Finder Page"
+        name: orgFinder
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+
+      - file: content/pages/case_finder.md
+        label: "Case Finder Page"
+        name: caseFinder
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+
+  - label: Settings
+    name: settings
+    files:
+      - file: content/settings/site.md
+        label: "Site settings"
+        name: siteSettings
+        fields:
+          - {label: "Site Name", name: siteName, widget: string}
+          - {label: "Site Description", name: siteDiscription, widget: text}
+          - {label: Logo, name: logo, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - {label: Favicon, name: favicon, widget: image}
