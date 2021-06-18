@@ -34,11 +34,6 @@ const GlobalStyles = createGlobalStyle`
   button:focus, button:hover {
     outline: none;
   }
-
-  // Section
-  section {
-    margin: 3rem 0 5rem 0;
-  }
   .wrapper {
     margin: 2rem 0;
   }
@@ -59,6 +54,7 @@ const GlobalStyles = createGlobalStyle`
   p {
     font-size: 1rem;
     white-space: pre-wrap;
+    line-height: 1.6;
   }
   .btn {
     text-align: center;
@@ -75,9 +71,6 @@ const GlobalStyles = createGlobalStyle`
     background: var(--secondary);
   }
   @media (min-width: 640px) {
-    section {
-      margin: 5rem 0;
-    }
     .wrapper {
       margin: 4rem 0;
     }
@@ -87,9 +80,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @media (min-width: 1024px) {
-    section {
-      margin: 7rem 0;
-    }
     html {
       font-size: 18px;
     }

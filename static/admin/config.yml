@@ -31,7 +31,7 @@ collections:
       - {label: Phone, name: phone, widget: string}
       - {label: Logo, name: logo, widget: image}
       - label: Organization or Firm
-        name: OrgOrFirm
+        name: orgOrFirm
         widget: select
         options: [Community Organization, Law Firm]
         default: Community Organization
@@ -74,12 +74,14 @@ collections:
 
   - label: Pages
     name: pages
+    editor:
+      preview: false
     files:
       - file: content/pages/home.md
-        label: "Home Page"
-        name: home
+        label: Home Page
+        name: homePage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
           - label: Hero
             name: hero
             widget: object
@@ -90,32 +92,43 @@ collections:
 
       - file: content/pages/start.md
         label: "Get Started Page"
-        name: start
+        name: startPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
 
-      - file: content/pages/organization_finder.md
-        label: "Organization Finder Page"
-        name: orgFinder
+      - file: content/pages/resources-page.md
+        label: Resources Page
+        name: resourcesPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - label: Filters
+            name: filters
+            widget: hidden
+            default: ["Services", "Location", "Cost"]
 
-      - file: content/pages/case_finder.md
-        label: "Case Finder Page"
-        name: caseFinder
+      - file: content/pages/cases.md
+        label: Cases Page
+        name: casesPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
 
   - label: Settings
     name: settings
     editor:
-    preview: false
+      preview: false
     files:
       - file: content/settings/site.md
         label: "Site settings"
         name: siteSettings
         fields:
-          - {label: Site Name, name: siteName, widget: string}
+          - {label: Site Title, name: siteTitle, widget: string}
           - {label: Site Description, name: siteDescription, widget: text}
           - {label: Site Logo, name: siteLogo, widget: image}
 

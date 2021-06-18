@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import GlobalStyles from "../styles/GlobalStyles"
 import SiteBorderStyles from "../styles/SiteBorderStyles"
 import Header from "./Header"
-import Footer from "./Footer"
+// import Footer from "./Footer"
 import Typography from "../styles/Typography"
 
 const Layout = ({ children }) => {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <SiteBorderStyles>
         <main>{children}</main>
       </SiteBorderStyles>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
