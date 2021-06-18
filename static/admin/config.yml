@@ -108,14 +108,16 @@ collections:
 
   - label: Settings
     name: settings
+    editor:
+    preview: false
     files:
       - file: content/settings/site.md
         label: "Site settings"
         name: siteSettings
         fields:
-          - {label: "Site Name", name: siteName, widget: string}
-          - {label: "Site Description", name: siteDiscription, widget: text}
-          - {label: Logo, name: logo, widget: image}
+          - {label: Site Name, name: siteName, widget: string}
+          - {label: Site Description, name: siteDescription, widget: text}
+          - {label: Site Logo, name: siteLogo, widget: image}
 
   - label: Fees (Resources)
     name: fees

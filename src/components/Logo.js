@@ -1,15 +1,37 @@
 import * as React from "react"
-// import { graphql, useStaticQuery } from "gatsby"
-// import { GatsbyImage } from "gatsby-plugin-image"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Logo() {
+  const { siteSettings } = useStaticQuery(graphql`
+    query {
+      siteSettings: file(relativeDirectory: {eq: "settings"}) {
+        childrenMarkdownRemark {
+          frontmatter {
+            siteTitle
+            siteLogo {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
+  const { siteTitle, siteLogo } = siteSettings.childrenMarkdownRemark[0].frontmatter
   return (
-    <p>LOGO</p>
-    // <GatsbyImage
-    //   image={siteLogo.localFile.childImageSharp.gatsbyImageData}
-    //   alt={siteLogo.altText}
-    //   imgStyle={{width: `auto`}}
-    // />
+    <Link to='/'>
+      <GatsbyImage
+        image={siteLogo.childImageSharp.gatsbyImageData}
+        alt={`${siteTitle} logo`}
+        imgStyle={{width: `auto`}}
+      />
+    </Link>
   )
 }

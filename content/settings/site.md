@@ -1,5 +1,5 @@
 ---
-siteName: GEGI Law
-siteDiscription: TBD
-logo: /assets/gegi_law.png
+siteTitle: GEGI Law
+siteDescription: TBD
+siteLogo: /assets/gegi_law.png
 ---
