@@ -115,8 +115,7 @@ collections:
         fields:
           - {label: "Site Name", name: siteName, widget: string}
           - {label: "Site Description", name: siteDiscription, widget: text}
-          - {label: Logo, name: logo, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-          - {label: Favicon, name: favicon, widget: image}
+          - {label: Logo, name: logo, widget: image}
 
   - label: Fees (Resources)
     name: fees
