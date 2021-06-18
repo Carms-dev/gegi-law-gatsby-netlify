@@ -15,19 +15,62 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - label: Organizations
-    name: Organizations
-    folder: content/organization
+  - label: Resources
+    name: resources
+    folder: content/resources
     create: true
+    identifier_field: name
+    editor:
+      preview: false
     fields:
-      - {label: "Organization Name", name: orgName, widget: string}
+      - {label: Name, name: name, widget: string}
+      - {label: Eligibility, name: eligibility, widget: string}
+      - {label: Service Description, name: serviceDescription, widget: text}
+      - {label: Website, name: website, widget: string}
+      - {label: Email, name: email, widget: string}
+      - {label: Phone, name: phone, widget: string}
+      - {label: Logo, name: logo, widget: image}
+      - label: Organization or Firm
+        name: OrgOrFirm
+        widget: select
+        options: [Community Organization, Law Firm]
+        default: Community Organization
+      - label: Locations
+        name: locations
+        widget: relation
+        multiple: true
+        collection: regions
+        search_fields: [region]
+        value_field: "{{slug}}"
+        display_fields: [region]
+      - label: Cost
+        name: cost
+        widget: relation
+        collection: fees
+        search_fields: [fee]
+        value_field: "{{slug}}"
+        display_fields: [fee]
 
   - label: Cases
     name: cases
     folder: content/cases
     create: true
+    identifier_field: name
     fields:
-      - {label: "Case name", name: caseName, widget: string}
+      - {label: name, name: name, widget: string, required: true}
+      - {label: Citation, name: citation, widget: string, required: true}
+      - {label: Description, name: description, widget: text, required: true}
+      - {label: Takeaway, name: takeaway, widget: text, required: false}
+      - {label: "Has won?", name: hasWon, widget: boolean, default: false}
+      - {label: Link, name: url, widget: string, required: true}
+      - label: Themes
+        name: themes
+        widget: relation
+        multiple: true
+        collection: caseThemes
+        search_fields: [theme]
+        value_field: "{{slug}}"
+        display_fields: [theme]
 
   - label: Pages
     name: pages
@@ -74,3 +117,27 @@ collections:
           - {label: "Site Description", name: siteDiscription, widget: text}
           - {label: Logo, name: logo, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Favicon, name: favicon, widget: image}
+
+  - label: Fees (Resources)
+    name: fees
+    folder: content/fees
+    create: true
+    identifier_field: fee
+    fields:
+      - {label: Fee Category, name: fee, widget: string, required: true}
+
+  - label: Regions (Resources)
+    name: regions
+    folder: content/regions
+    create: true
+    identifier_field: region
+    fields:
+      - {label: Region, name: region, widget: string, required: true}        
+
+  - label: Themes (Cases)
+    name: caseThemes
+    folder: content/cases-themes
+    create: true
+    identifier_field: theme
+    fields:
+      - {label: Theme, name: theme, widget: string, required: true}          
