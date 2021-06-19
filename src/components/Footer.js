@@ -12,5 +12,4 @@ export default function Footer() {
   )
 }
 
-
 const FooterStyles = styled.footer``

@@ -3,17 +3,18 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero'
-import SimpleSelect from '../components/SimpleSelect'
+import ResourceCards from '../components/ResourceCards'
+import Filters from '../components/Filters'
 
 export default function ResourcesPage({ data: { page, resources } }) {
   const { title, hero } = page.childMarkdownRemark.frontmatter
-  console.log(page, resources)
 
   return (
     <Layout>
       <Seo title={title} />
-      <Hero heading={hero.heading} description={hero.description} image={hero.image} />
-      <SimpleSelect />
+      <Hero heading={hero.heading} description={`${resources.nodes.length} ${hero.description}`} image={hero.image} />
+      <Filters />
+      <ResourceCards resources={resources} />
     </Layout>
   )
 }
@@ -47,12 +48,15 @@ export const data = graphql`
       nodes {
         childMarkdownRemark {
           frontmatter {
-            name
+            resourceName
             eligibility
             serviceDescription
             website
             email
             phone
+            resourceType
+            locations
+            cost
             logo {
               childImageSharp {
                 gatsbyImageData(
@@ -62,9 +66,6 @@ export const data = graphql`
                 )
               }
             }
-            orgOrFirm
-            locations
-            cost
           }
         }
       }

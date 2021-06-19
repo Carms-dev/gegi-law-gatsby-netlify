@@ -7,7 +7,8 @@ const GlobalStyles = createGlobalStyle`
     --aqua-dark: #32808D; 
     --peach: #F7A58D;
     --yellow: #FCCC49;
-    --gray-light: #F6F4F5;
+    --grey-light: #ccc;
+    --grey: #747474;
     --black: #2E2E2E;
     --darker: #474335;
     --white: #fff;

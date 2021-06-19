@@ -23,7 +23,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: Name, name: name, widget: string}
+      - {label: Resource Name, name: resourceName, widget: string}
       - {label: Eligibility, name: eligibility, widget: string}
       - {label: Service Description, name: serviceDescription, widget: text}
       - {label: Website, name: website, widget: string}
@@ -31,7 +31,7 @@ collections:
       - {label: Phone, name: phone, widget: string}
       - {label: Logo, name: logo, widget: image}
       - label: Organization or Firm
-        name: orgOrFirm
+        name: resourceType
         widget: select
         options: [Community Organization, Law Firm]
         default: Community Organization
@@ -39,6 +39,7 @@ collections:
         name: locations
         widget: relation
         multiple: true
+        min: 1
         collection: regions
         search_fields: [region]
         value_field: "{{slug}}"
@@ -57,7 +58,7 @@ collections:
     create: true
     identifier_field: name
     fields:
-      - {label: name, name: name, widget: string, required: true}
+      - {label: Case Name, name: caseName, widget: string, required: true}
       - {label: Citation, name: citation, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
       - {label: Takeaway, name: takeaway, widget: text, required: false}
@@ -67,6 +68,7 @@ collections:
         name: themes
         widget: relation
         multiple: true
+        min: 1
         collection: caseThemes
         search_fields: [theme]
         value_field: "{{slug}}"

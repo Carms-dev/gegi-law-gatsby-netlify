@@ -10,5 +10,4 @@ filters:
   - Services
   - Location
   - Cost
-test: test
 ---

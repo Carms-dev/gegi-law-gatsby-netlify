@@ -22,6 +22,7 @@ const HeroStyles = styled.section`
   /* background: var(--aqua-light); */
   display: grid;
   text-align: center;
+  justify-content: center;
   h1 {
     margin-bottom: 1rem;
   }
