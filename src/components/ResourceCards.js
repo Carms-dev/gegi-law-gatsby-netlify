@@ -12,7 +12,8 @@ export default function ResourceCards({ resources }) {
   )
 }
 
-const ResourceCardsStyles = styled.div`
+const ResourceCardsStyles = styled.section`
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
   grid-gap: 1rem;

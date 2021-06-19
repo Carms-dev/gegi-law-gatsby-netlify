@@ -15,7 +15,7 @@ export default function Filters() {
 const FiltersStyles = styled.div`
   display: grid;
   grid-gap: 1rem;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0;
   max-width: 540px;
   margin: 0 auto;
 

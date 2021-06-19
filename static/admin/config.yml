@@ -35,22 +35,29 @@ collections:
         widget: select
         options: [Community Organization, Law Firm]
         default: Community Organization
+      - label: Service
+        name: service
+        widget: relation
+        collection: serviceCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
       - label: Locations
         name: locations
         widget: relation
         multiple: true
         min: 1
-        collection: regions
-        search_fields: [region]
-        value_field: region # "{{slug}}"
-        display_fields: [region]
+        collection: locationCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
       - label: Cost
         name: cost
         widget: relation
-        collection: fees
-        search_fields: [fee]
-        value_field: fee # "{{slug}}"
-        display_fields: [fee]
+        collection: costCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
 
   - label: Cases
     name: cases
@@ -115,7 +122,7 @@ collections:
           - label: Filters
             name: filters
             widget: hidden
-            default: ["Services", "Location", "Cost"]
+            default: ["Service", "Location", "Cost"]
 
       - file: content/pages/cases.md
         label: Cases Page
@@ -136,25 +143,36 @@ collections:
           - {label: Site Description, name: siteDescription, widget: text}
           - {label: Site Logo, name: siteLogo, widget: image}
 
-  - label: Fees (Resources)
-    name: fees
-    folder: content/fees
+  - label: Service Category
+    name: serviceCategories
+    folder: content/service-category
     create: true
-    identifier_field: fee
+    identifier_field: category
     fields:
-      - {label: Fee Category, name: fee, widget: string, required: true}
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Service }
+      - {label: Service Category, name: category, widget: string, required: true}
 
-  - label: Regions (Resources)
-    name: regions
-    folder: content/regions
+  - label: Cost Category
+    name: costCategories
+    folder: content/cost-category
     create: true
-    identifier_field: region
+    identifier_field: category
     fields:
-      - {label: Region, name: region, widget: string, required: true}        
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Cost }
+      - {label: Fee Category, name: category, widget: string, required: true}
 
-  - label: Themes (Cases)
+  - label: Location Category
+    name: locationCategories
+    folder: content/location-category
+    create: true
+    identifier_field: category
+    fields:
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Location }
+      - {label: Location Category, name: category, widget: string, required: true}        
+
+  - label: Case Themes
     name: caseThemes
-    folder: content/cases-themes
+    folder: content/case-themes
     create: true
     identifier_field: theme
     fields:

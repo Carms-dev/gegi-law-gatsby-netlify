@@ -33,8 +33,8 @@ export default function ResourceCard({ resource }) {
       </div>
       <div style={{color: `var(--grey)`}}>{cost} · {resourceType}</div>
       <ul>
-        {/* <li>Hightlights: <span></span></li> */}
-        {/* <li>Services: <span></span></li> */}
+        <li>Hightlights: <span>Placeholder</span></li>
+        <li>Services: <span>Placeholder</span></li>
         {eligibility && <li>Eligibility: <span>{eligibility}</span></li>}
         <li>Location: <span>{locations.join(', ')}</span></li>
         {phone && <li>Phone: <span>{phone}</span></li>}
@@ -64,7 +64,7 @@ const ResourceCardStyles = styled.div`
   }
   /* TODO: generalized */
   .btns-inline {
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
     > a {
       display: inline-block;
       padding: 0.5rem 0;
@@ -77,9 +77,9 @@ const ResourceCardStyles = styled.div`
   }
   ul {
     list-style: none;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     border-top: 1px solid var(--grey-light);
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   li {
     font-weight: 500;
