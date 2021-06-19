@@ -10,6 +10,6 @@ phone: 416-340-7790 or 1-888-705-8889
 logo: /assets/halco.jpg
 resourceType: Community Organization
 locations:
-  - ontario-wide
-cost: free
+  - Ontario-wide
+cost: Free
 ---

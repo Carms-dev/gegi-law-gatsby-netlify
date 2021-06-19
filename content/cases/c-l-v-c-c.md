@@ -13,6 +13,5 @@ takeaway: One of the applicant's in this case had not undergone gender affirming
 hasWon: false
 url: https://www.canlii.org/en/on/onsc/doc/1992/1992canlii7651/1992canlii7651.html?autocompleteStr=c(l)%20v%20C&autocompletePos=1
 themes:
-  - marriage
-  - name-change
+  - Marriage
 ---

@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #747474;
     --black: #2E2E2E;
     --darker: #474335;
+    --lighter: #eee;
     --white: #fff;
     --off-white: #FFFBF3;
   }
@@ -52,12 +53,12 @@ const GlobalStyles = createGlobalStyle`
   h3 {
     font-size: 1.5rem;
   }
-  p {
+  li, p {
     font-size: 1rem;
     white-space: pre-wrap;
     line-height: 1.6;
   }
-  .btn {
+  /* .btn {
     text-align: center;
     background: var(--aqua);
     color: #fff;
@@ -70,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
   }
   .btn-secondary {
     background: var(--secondary);
-  }
+  } */
   @media (min-width: 640px) {
     .wrapper {
       margin: 4rem 0;

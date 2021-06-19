@@ -19,7 +19,7 @@ collections:
     name: resources
     folder: content/resources
     create: true
-    identifier_field: name
+    identifier_field: resourceName
     editor:
       preview: false
     fields:
@@ -42,21 +42,23 @@ collections:
         min: 1
         collection: regions
         search_fields: [region]
-        value_field: "{{slug}}"
+        value_field: region # "{{slug}}"
         display_fields: [region]
       - label: Cost
         name: cost
         widget: relation
         collection: fees
         search_fields: [fee]
-        value_field: "{{slug}}"
+        value_field: fee # "{{slug}}"
         display_fields: [fee]
 
   - label: Cases
     name: cases
+    editor:
+      preview: false
     folder: content/cases
     create: true
-    identifier_field: name
+    identifier_field: caseName
     fields:
       - {label: Case Name, name: caseName, widget: string, required: true}
       - {label: Citation, name: citation, widget: string, required: true}
@@ -71,7 +73,7 @@ collections:
         min: 1
         collection: caseThemes
         search_fields: [theme]
-        value_field: "{{slug}}"
+        value_field: theme # "{{slug}}"
         display_fields: [theme]
 
   - label: Pages
