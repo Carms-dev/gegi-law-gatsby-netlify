@@ -1,5 +1,5 @@
 ---
-name: HIV & AIDS Legal Clinic Ontario
+resourceName: HIV & AIDS Legal Clinic Ontario
 eligibility: Depending on your financials and legal issue
 serviceDescription: HALCO provides free legal services for people living with
   HIV/AIDS in Ontario. HALCO’s legal services include summary legal advice,
@@ -8,8 +8,9 @@ website: https://www.halco.org/our-services/legal-services
 email: talklaw@halco.org
 phone: 416-340-7790 or 1-888-705-8889
 logo: /assets/halco.jpg
-OrgOrFirm: Community Organization
-locations:
-  - ontario-wide
-cost: free
+resourceType: Community Organization
+service: Legal Representation
+cost: Free
+location:
+  - Ontario-wide
 ---

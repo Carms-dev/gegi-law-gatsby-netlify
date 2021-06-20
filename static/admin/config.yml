@@ -19,11 +19,11 @@ collections:
     name: resources
     folder: content/resources
     create: true
-    identifier_field: name
+    identifier_field: resourceName
     editor:
       preview: false
     fields:
-      - {label: Name, name: name, widget: string}
+      - {label: Resource Name, name: resourceName, widget: string}
       - {label: Eligibility, name: eligibility, widget: string}
       - {label: Service Description, name: serviceDescription, widget: text}
       - {label: Website, name: website, widget: string}
@@ -31,33 +31,43 @@ collections:
       - {label: Phone, name: phone, widget: string}
       - {label: Logo, name: logo, widget: image}
       - label: Organization or Firm
-        name: OrgOrFirm
+        name: resourceType
         widget: select
         options: [Community Organization, Law Firm]
         default: Community Organization
-      - label: Locations
-        name: locations
+      - label: Service
+        name: service
+        widget: relation
+        collection: serviceCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
+      - label: Location
+        name: location
         widget: relation
         multiple: true
-        collection: regions
-        search_fields: [region]
-        value_field: "{{slug}}"
-        display_fields: [region]
+        min: 1
+        collection: locationCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
       - label: Cost
         name: cost
         widget: relation
-        collection: fees
-        search_fields: [fee]
-        value_field: "{{slug}}"
-        display_fields: [fee]
+        collection: costCategories
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
 
   - label: Cases
     name: cases
+    editor:
+      preview: false
     folder: content/cases
     create: true
-    identifier_field: name
+    identifier_field: caseName
     fields:
-      - {label: name, name: name, widget: string, required: true}
+      - {label: Case Name, name: caseName, widget: string, required: true}
       - {label: Citation, name: citation, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
       - {label: Takeaway, name: takeaway, widget: text, required: false}
@@ -67,19 +77,22 @@ collections:
         name: themes
         widget: relation
         multiple: true
+        min: 1
         collection: caseThemes
         search_fields: [theme]
-        value_field: "{{slug}}"
+        value_field: theme # "{{slug}}"
         display_fields: [theme]
 
   - label: Pages
     name: pages
+    editor:
+      preview: false
     files:
       - file: content/pages/home.md
-        label: "Home Page"
-        name: home
+        label: Home Page
+        name: homePage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
           - label: Hero
             name: hero
             widget: object
@@ -90,53 +103,76 @@ collections:
 
       - file: content/pages/start.md
         label: "Get Started Page"
-        name: start
+        name: startPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
 
-      - file: content/pages/organization_finder.md
-        label: "Organization Finder Page"
-        name: orgFinder
+      - file: content/pages/resources-page.md
+        label: Resources Page
+        name: resourcesPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - label: Filters
+            name: filters
+            widget: hidden
+            default: ["service", "location", "cost"]
 
-      - file: content/pages/case_finder.md
-        label: "Case Finder Page"
-        name: caseFinder
+      - file: content/pages/cases.md
+        label: Cases Page
+        name: casesPage
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: Title, name: title, widget: string}
 
   - label: Settings
     name: settings
+    editor:
+      preview: false
     files:
       - file: content/settings/site.md
         label: "Site settings"
         name: siteSettings
         fields:
-          - {label: "Site Name", name: siteName, widget: string}
-          - {label: "Site Description", name: siteDiscription, widget: text}
-          - {label: Logo, name: logo, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-          - {label: Favicon, name: favicon, widget: image}
+          - {label: Site Title, name: siteTitle, widget: string}
+          - {label: Site Description, name: siteDescription, widget: text}
+          - {label: Site Logo, name: siteLogo, widget: image}
 
-  - label: Fees (Resources)
-    name: fees
-    folder: content/fees
+  - label: Service Category
+    name: serviceCategories
+    folder: content/Service
     create: true
-    identifier_field: fee
+    identifier_field: category
     fields:
-      - {label: Fee Category, name: fee, widget: string, required: true}
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Service }
+      - {label: Service Category, name: category, widget: string, required: true}
 
-  - label: Regions (Resources)
-    name: regions
-    folder: content/regions
+  - label: Cost Category
+    name: costCategories
+    folder: content/Cost
     create: true
-    identifier_field: region
+    identifier_field: category
     fields:
-      - {label: Region, name: region, widget: string, required: true}        
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Cost }
+      - {label: Fee Category, name: category, widget: string, required: true}
 
-  - label: Themes (Cases)
+  - label: Location Category
+    name: locationCategories
+    folder: content/Location
+    create: true
+    identifier_field: category
+    fields:
+      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Location }
+      - {label: Location Category, name: category, widget: string, required: true}        
+
+  - label: Case Themes
     name: caseThemes
-    folder: content/cases-themes
+    folder: content/case-themes
     create: true
     identifier_field: theme
     fields:

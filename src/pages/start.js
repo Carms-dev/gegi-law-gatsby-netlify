@@ -2,11 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-export default function IndexPage() {
+export default function GetStartedPage() {
   return (
     <Layout>
-      <Seo title="Home" />
-      <h1>Home</h1>
+      <Seo title="Get Started" />
+      <h1>Start</h1>
     </Layout>
   )
 }
+

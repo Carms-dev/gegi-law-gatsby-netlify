@@ -1,3 +1,0 @@
----
-fee: Service-dependent
----
