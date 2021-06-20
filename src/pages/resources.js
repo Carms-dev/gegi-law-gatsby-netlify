@@ -20,6 +20,7 @@ export default function ResourcesPage({ data: { page, collections } }) {
 
   const [selection, setSelection] = useState(originalSelection)
 
+  // create filter collections to pass as props
   const filterCollections = filters.map(filter => {
     const select = collections.group
     .find(collection => collection.fieldValue === filter)
@@ -29,8 +30,6 @@ export default function ResourcesPage({ data: { page, collections } }) {
       label: item.category,
       value: stringToSlug(item.category)
     }))
-
-    // console.log({selectLabel: filter, menuItems: menuItems})
 
     return {selectLabel: filter, menuItems: menuItems}
   })

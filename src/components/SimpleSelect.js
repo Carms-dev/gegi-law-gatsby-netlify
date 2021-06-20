@@ -5,7 +5,6 @@ import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import { stringToSlug, capitalize } from '../utils/helpers'
-import ResourcesPage from '../pages/resources'
 
 const useStyles = makeStyles(() => ({
   formControl: {
@@ -28,7 +27,34 @@ export default function SimpleSelect({ allResources, setResources, selection, se
       [event.target.name]: event.target.value
     }
     setSelection(updatedSelection)
-    // TODO: set resources
+
+    // update resources
+    // filter out resources that meet all 3 criteria
+    const updatedResources = allResources.filter(res => {
+      const matches = []
+
+      Object.keys(updatedSelection).forEach(key => {
+        if (updatedSelection[key] === ``) {
+          matches.push(true)
+        } else if (typeof(res[key] )=== `string`) {
+          // check key: service, cost
+          const match = stringToSlug(res[key]) === updatedSelection[key]
+          matches.push(match)
+        } else {
+          // check key: location
+          if (updatedSelection[key] === 'ontario-wide') {
+            matches.push(true)
+          } else {
+            // get sligifiedLocationArray for that res
+            const sligifiedLocation = res[key].map(loc => stringToSlug(loc))
+            const match = sligifiedLocation.includes(updatedSelection[key])
+            matches.push(match)
+          }
+        }
+      })
+      return matches.every(match => match === true)
+    })
+    setResources(updatedResources)
   }
 
   return (
