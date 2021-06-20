@@ -42,8 +42,8 @@ collections:
         search_fields: [category]
         value_field: category # "{{slug}}"
         display_fields: [category]
-      - label: Locations
-        name: locations
+      - label: Location
+        name: location
         widget: relation
         multiple: true
         min: 1
@@ -122,7 +122,7 @@ collections:
           - label: Filters
             name: filters
             widget: hidden
-            default: ["Service", "Location", "Cost"]
+            default: ["service", "location", "cost"]
 
       - file: content/pages/cases.md
         label: Cases Page
@@ -145,7 +145,7 @@ collections:
 
   - label: Service Category
     name: serviceCategories
-    folder: content/service-category
+    folder: content/Service
     create: true
     identifier_field: category
     fields:
@@ -154,7 +154,7 @@ collections:
 
   - label: Cost Category
     name: costCategories
-    folder: content/cost-category
+    folder: content/Cost
     create: true
     identifier_field: category
     fields:
@@ -163,7 +163,7 @@ collections:
 
   - label: Location Category
     name: locationCategories
-    folder: content/location-category
+    folder: content/Location
     create: true
     identifier_field: category
     fields:

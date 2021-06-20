@@ -11,6 +11,6 @@ logo: /assets/halco.jpg
 resourceType: Community Organization
 service: Legal Representation
 cost: Free
-locations:
+location:
   - Ontario-wide
 ---

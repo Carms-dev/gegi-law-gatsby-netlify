@@ -8,11 +8,12 @@ export default function ResourceCard({ resource }) {
     cost,
     eligibility,
     email,
-    locations,
+    location,
     logo,
     resourceType,
     phone,
     resourceName,
+    service,
     serviceDescription,
     website
   } = resource
@@ -34,9 +35,9 @@ export default function ResourceCard({ resource }) {
       <div style={{color: `var(--grey)`}}>{cost} · {resourceType}</div>
       <ul>
         <li>Hightlights: <span>Placeholder</span></li>
-        <li>Services: <span>Placeholder</span></li>
+        <li>Service: <span>{service}</span></li>
         {eligibility && <li>Eligibility: <span>{eligibility}</span></li>}
-        <li>Location: <span>{locations.join(', ')}</span></li>
+        <li>Location: <span>{location.join(', ')}</span></li>
         {phone && <li>Phone: <span>{phone}</span></li>}
       </ul>
       <SimplePopover label="See service description →" content={serviceDescription} />
@@ -60,7 +61,7 @@ const ResourceCardStyles = styled.div`
   /* may have to implement string truncate for line > 2 */
   h3 {
     font-weight: 500;
-    min-height: 62px;
+    min-height: 72px;
   }
   /* TODO: generalized */
   .btns-inline {

@@ -7,7 +7,7 @@ hero:
     imageFile: /assets/gegi_for-students-loved-ones-icon.png
     alt: Interlocking hears
 filters:
-  - Services
-  - Location
-  - Cost
+  - service
+  - location
+  - cost
 ---

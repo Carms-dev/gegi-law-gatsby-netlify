@@ -3,11 +3,9 @@ import styled from "styled-components"
 import ResourceCard from './ResourceCard'
 
 export default function ResourceCards({ resources }) {
-
   return (
     <ResourceCardsStyles>
-      {resources.nodes.map(node => (<ResourceCard resource={node.childMarkdownRemark.frontmatter} />))}
-      {resources.nodes.map(node => (<ResourceCard resource={node.childMarkdownRemark.frontmatter} />))}
+      {resources.map(res => (<ResourceCard key={res.resourceName} resource={res} />))}
     </ResourceCardsStyles>
   )
 }
