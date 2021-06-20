@@ -18,43 +18,45 @@ const useStyles = makeStyles(() => ({
 
 export default function SimpleSelect({ allResources, setResources, selection, setSelection, selectLabel, menuItems }) {
   const classes = useStyles();
-  // const [selected, setSelected] = React.useState("");
+
+  // Filter out resources that meet all 3 criteria
+  const updatedResources = (updatedSelection) => (
+    allResources.filter(res => {
+      const matches =  Object.keys(updatedSelection).map(key => {
+        if (updatedSelection[key] === ``) return true
+
+        if (typeof(res[key] )=== `string`) {
+          // handle selection for keys: service, cost
+          return stringToSlug(res[key]) === updatedSelection[key]
+        } else {
+          // handle selection for key: location
+          if (updatedSelection[key] === 'ontario-wide') {
+            return true
+          } else {
+            // get sligifiedLocationArray for that res
+            const sligifiedLocation = res[key].map(loc => stringToSlug(loc))
+
+            return (
+              sligifiedLocation.includes(updatedSelection[key]) ||
+              sligifiedLocation.includes('ontario-wide')
+            )
+          }
+        }
+      })
+      return matches.every(match => match === true)
+    })
+  )
 
   const handleChange = (event) => {
-    // create a copy of the selection
+    // Update selection
     const updatedSelection  = {
       ...selection,
       [event.target.name]: event.target.value
     }
     setSelection(updatedSelection)
 
-    // update resources
-    // filter out resources that meet all 3 criteria
-    const updatedResources = allResources.filter(res => {
-      const matches = []
-
-      Object.keys(updatedSelection).forEach(key => {
-        if (updatedSelection[key] === ``) {
-          matches.push(true)
-        } else if (typeof(res[key] )=== `string`) {
-          // check key: service, cost
-          const match = stringToSlug(res[key]) === updatedSelection[key]
-          matches.push(match)
-        } else {
-          // check key: location
-          if (updatedSelection[key] === 'ontario-wide') {
-            matches.push(true)
-          } else {
-            // get sligifiedLocationArray for that res
-            const sligifiedLocation = res[key].map(loc => stringToSlug(loc))
-            const match = sligifiedLocation.includes(updatedSelection[key])
-            matches.push(match)
-          }
-        }
-      })
-      return matches.every(match => match === true)
-    })
-    setResources(updatedResources)
+    // Update resources based on the updated selection
+    setResources(updatedResources(updatedSelection))
   }
 
   return (

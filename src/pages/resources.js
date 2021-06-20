@@ -44,7 +44,7 @@ export default function ResourcesPage({ data: { page, collections } }) {
   return (
     <Layout>
       <Seo title={title} />
-      <Hero heading={hero.heading} description={`${resources.length} ${hero.description}`} image={hero.image} />
+      <Hero heading={hero.heading} description={`${allResources.length} ${hero.description}`} image={hero.image} />
       <Filters
         allResources={allResources}
         collections={filterCollections}
