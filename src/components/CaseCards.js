@@ -5,7 +5,7 @@ import CaseCard from './CaseCard'
 export default function CaseCards({ cases }) {
   return (
     <CaseCardsStyles>
-      {cases.map(cas => (<CaseCard key={cas.caseName} cas={cas} />))}
+      {cases.map(cas => (<CaseCard cas={cas} />))}
     </CaseCardsStyles>
   )
 }

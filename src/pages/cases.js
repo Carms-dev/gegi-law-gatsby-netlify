@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Hero from '../components/Hero'
@@ -12,7 +13,7 @@ import Themes from '../components/Themes'
 export default function CasesPage({ data: { page, collections } }) {
   const { title, hero } = page.childMarkdownRemark.frontmatter
 
-  // build resources
+  // build themes
   const themes = collections.group
     .find(collection => collection.fieldValue === "themes")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
@@ -24,16 +25,21 @@ export default function CasesPage({ data: { page, collections } }) {
 
   const [cases, setCases] = useState(allCases)
 
-  console.log(cases)
   return (
     <Layout>
       <Seo title={title} />
       <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
-      <CaseCards cases={cases} />
-      <Themes themes={themes} setCases={setCases} />
+      <CaseContentStyles>
+        <Themes allCases={allCases} setCases={setCases} themes={themes}  />
+        <CaseCards cases={cases} />
+      </CaseContentStyles>
     </Layout>
   )
 }
+
+const CaseContentStyles = styled.section`
+  display: grid;
+`
 
 export const data = graphql`
   query {
