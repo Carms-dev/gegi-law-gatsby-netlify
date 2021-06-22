@@ -79,9 +79,9 @@ collections:
         multiple: true
         min: 1
         collection: caseThemes
-        search_fields: [theme]
-        value_field: theme # "{{slug}}"
-        display_fields: [theme]
+        search_fields: [category]
+        value_field: category # "{{slug}}"
+        display_fields: [category]
 
   - label: Pages
     name: pages
@@ -107,7 +107,7 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
 
-      - file: content/pages/resources-page.md
+      - file: content/pages/resources.md
         label: Resources Page
         name: resourcesPage
         fields:
@@ -129,6 +129,15 @@ collections:
         name: casesPage
         fields:
           - {label: Title, name: title, widget: string}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - {label: Won Icon, name: wonIcon, widget: image}
+          - {label: Lost Icon, name: lostIcon, widget: image}
 
   - label: Settings
     name: settings
@@ -149,7 +158,6 @@ collections:
     create: true
     identifier_field: category
     fields:
-      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Service }
       - {label: Service Category, name: category, widget: string, required: true}
 
   - label: Cost Category
@@ -158,7 +166,6 @@ collections:
     create: true
     identifier_field: category
     fields:
-      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Cost }
       - {label: Fee Category, name: category, widget: string, required: true}
 
   - label: Location Category
@@ -167,13 +174,12 @@ collections:
     create: true
     identifier_field: category
     fields:
-      - {label: Hidden Key, name: hiddenKey, widget: hidden, default: Location }
       - {label: Location Category, name: category, widget: string, required: true}        
 
   - label: Case Themes
     name: caseThemes
-    folder: content/case-themes
+    folder: content/themes
     create: true
-    identifier_field: theme
+    identifier_field: category
     fields:
-      - {label: Theme, name: theme, widget: string, required: true}          
+      - {label: Theme Category, name: category, widget: string, required: true}          

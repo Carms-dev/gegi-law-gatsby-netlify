@@ -59,7 +59,7 @@ export default function ResourcesPage({ data: { page, collections } }) {
 
 export const data = graphql`
   query {
-    page: file(relativeDirectory: {eq: "pages"}, name: {eq: "resources-page"}) {
+    page: file(relativeDirectory: {eq: "pages"}, name: {eq: "resources"}) {
       childMarkdownRemark {
         frontmatter {
           title

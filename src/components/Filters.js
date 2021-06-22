@@ -31,5 +31,4 @@ const FiltersStyles = styled.div`
     max-width: 840px;
     grid-template-columns: repeat(3, 1fr);
   }
-
 `
