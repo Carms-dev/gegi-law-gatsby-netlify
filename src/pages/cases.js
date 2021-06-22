@@ -11,7 +11,7 @@ import Themes from '../components/Themes'
 
 // markup
 export default function CasesPage({ data: { page, collections } }) {
-  const { title, hero } = page.childMarkdownRemark.frontmatter
+  const { title, hero, wonIcon, lostIcon  } = page.childMarkdownRemark.frontmatter
 
   // build themes
   const themes = collections.group
@@ -31,7 +31,7 @@ export default function CasesPage({ data: { page, collections } }) {
       <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
       <CaseContentStyles>
         <Themes allCases={allCases} setCases={setCases} themes={themes}  />
-        <CaseCards cases={cases} />
+        <CaseCards cases={cases} wonIcon={wonIcon} lostIcon={lostIcon} />
       </CaseContentStyles>
     </Layout>
   )
@@ -39,6 +39,22 @@ export default function CasesPage({ data: { page, collections } }) {
 
 const CaseContentStyles = styled.section`
   display: grid;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+
+    div:first-child {
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+    }
+    div:last-child {
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+    }
+
+  }
+
 `
 
 export const data = graphql`
@@ -54,9 +70,31 @@ export const data = graphql`
               alt
               imageFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(
+                    width: 400
+                    placeholder: BLURRED
+                    layout: CONSTRAINED
+                  )
                 }
               }
+            }
+          }
+          wonIcon {
+            childImageSharp {
+              gatsbyImageData(
+                width: 50
+                placeholder: BLURRED
+                layout: CONSTRAINED
+              )
+            }
+          }
+          lostIcon {
+            childImageSharp {
+              gatsbyImageData(
+                width: 50
+                placeholder: BLURRED
+                layout: CONSTRAINED
+              )
             }
           }
         }

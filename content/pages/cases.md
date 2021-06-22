@@ -6,4 +6,6 @@ hero:
   image:
     imageFile: /assets/gegi_law-400x386.png
     alt: Gegi Law
+wonIcon: /assets/case.png
+lostIcon: /assets/case-white.png
 ---
