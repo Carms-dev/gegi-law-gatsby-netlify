@@ -52,10 +52,11 @@ export default function Themes({themes, allCases, setCases}) {
     <div className={classes.root}>
       {casesGroupByThemes.map(({ theme, cases }) => (
         <Chip
+          key={theme + `Chip`}
           name={theme}
           variant="outlined"
           size="medium"
-          color={activeTheme === theme ? 'primary' : ''}
+          color={activeTheme === theme ? 'primary' : 'default'}
           avatar={<Avatar>{cases.length}</Avatar>}
           label={theme}
           onClick={handleClick}

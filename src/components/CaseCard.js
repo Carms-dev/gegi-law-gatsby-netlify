@@ -33,7 +33,7 @@ export default function CaseCard({ cas, icon }) {
             <span>{caseName}</span>
             <Tooltip title="Open in Canlii" placement="right">
               <IconButton href={url} target='_blank' rel="noreferrer">
-                <OpenInNewIcon fontSize='medium' />
+                <OpenInNewIcon fontSize='default' />
               </IconButton>
             </Tooltip>
           </h3>
@@ -42,7 +42,7 @@ export default function CaseCard({ cas, icon }) {
       {/* takeaways are optional */}
       {takeaway && <SimplePopover label="💡 GEGI's takeaway →" content={takeaway} />}
       <div className="card-tags">
-        {themes.map(theme => (<Chip variant="outlined" size="medium" label={theme} />))}
+        {themes.map(theme => (<Chip key={caseName + theme} variant="outlined" size="medium" label={theme} />))}
       </div>
     </CaseCardStyles>
   )
