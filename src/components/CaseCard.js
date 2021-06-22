@@ -49,6 +49,8 @@ export default function CaseCard({ cas, icon }) {
 }
 
 const CaseCardStyles = styled.div`
+  margin-bottom: 4rem;
+
   .card-pre {
     display: inline-flex;
     align-items: center;

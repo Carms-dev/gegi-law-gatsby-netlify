@@ -10,16 +10,13 @@ export default function ResourceCards({ resources }) {
   )
 }
 
-const ResourceCardsStyles = styled.section`
-  padding: 2rem 0;
+const ResourceCardsStyles = styled.div`
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
   grid-gap: 1rem;
 
   @media (min-width: 1024px) {
-    /* grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) ); */
     grid-template-columns: repeat(3, 1fr);
-
+    grid-gap: 2rem;
   }
-
 `

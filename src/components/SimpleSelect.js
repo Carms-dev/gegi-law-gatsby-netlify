@@ -11,7 +11,8 @@ const useStyles = makeStyles(() => ({
     minWidth: 200,
     width: `100%`,
     "& .MuiInputBase-root": {
-      borderRadius: `12px`
+      borderRadius: `12px`,
+      background: `var(--off-white)`,
     }
   }
 }));

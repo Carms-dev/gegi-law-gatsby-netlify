@@ -10,6 +10,4 @@ export default function CaseCards({ cases, wonIcon, lostIcon }) {
   )
 }
 
-const CaseCardsStyles = styled.section`
-
-`
+const CaseCardsStyles = styled.div``
