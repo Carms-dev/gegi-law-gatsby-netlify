@@ -23,13 +23,14 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: Resource Name, name: resourceName, widget: string}
-      - {label: Eligibility, name: eligibility, widget: string}
+      - {label: Resource Name, name: resourceName, widget: string, required: true}
+      - {label: Highlights, name: highlights, widget: string, required: false}
+      - {label: Eligibility, name: eligibility, widget: string, required: true}
       - {label: Service Description, name: serviceDescription, widget: text}
-      - {label: Website, name: website, widget: string}
-      - {label: Email, name: email, widget: string}
-      - {label: Phone, name: phone, widget: string}
-      - {label: Logo, name: logo, widget: image}
+      - {label: Website, name: website, widget: string, required: true}
+      - {label: Email, name: email, widget: string, required: false}
+      - {label: Phone, name: phone, widget: string, required: false}
+      - {label: Logo, name: logo, widget: image, required: true}
       - label: Organization or Firm
         name: resourceType
         widget: select
@@ -39,24 +40,27 @@ collections:
         name: service
         widget: relation
         collection: serviceCategories
+        required: true
         search_fields: [category]
-        value_field: category # "{{slug}}"
+        value_field: category
         display_fields: [category]
       - label: Location
         name: location
         widget: relation
         multiple: true
+        required: true
         min: 1
         collection: locationCategories
         search_fields: [category]
-        value_field: category # "{{slug}}"
+        value_field: category
         display_fields: [category]
       - label: Cost
         name: cost
         widget: relation
+        required: true
         collection: costCategories
         search_fields: [category]
-        value_field: category # "{{slug}}"
+        value_field: category
         display_fields: [category]
 
   - label: Cases
@@ -80,7 +84,7 @@ collections:
         min: 1
         collection: caseThemes
         search_fields: [category]
-        value_field: category # "{{slug}}"
+        value_field: category
         display_fields: [category]
 
   - label: Pages
@@ -152,34 +156,34 @@ collections:
           - {label: Site Description, name: siteDescription, widget: text}
           - {label: Site Logo, name: siteLogo, widget: image}
 
-  - label: Service Category
+  - label: Service (Resource Category)
     name: serviceCategories
-    folder: content/Service
+    folder: content/service
     create: true
     identifier_field: category
     fields:
       - {label: Service Category, name: category, widget: string, required: true}
 
-  - label: Cost Category
+  - label: Cost (Resource Category)
     name: costCategories
-    folder: content/Cost
+    folder: content/cost
     create: true
     identifier_field: category
     fields:
       - {label: Fee Category, name: category, widget: string, required: true}
 
-  - label: Location Category
+  - label: Location (Resource Category)
     name: locationCategories
-    folder: content/Location
+    folder: content/location
     create: true
     identifier_field: category
     fields:
-      - {label: Location Category, name: category, widget: string, required: true}        
+      - {label: Location Category, name: category, widget: string, required: true}
 
-  - label: Case Themes
+  - label: Theme (Case Category)
     name: caseThemes
-    folder: content/themes
+    folder: content/theme
     create: true
     identifier_field: category
     fields:
-      - {label: Theme Category, name: category, widget: string, required: true}          
+      - {label: Theme Category, name: category, widget: string, required: true}

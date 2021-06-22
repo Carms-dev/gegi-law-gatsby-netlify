@@ -5,14 +5,15 @@ import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import { stringToSlug, capitalize } from '../utils/helpers'
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles(() => ({
   formControl: {
     minWidth: 200,
     width: `100%`,
     "& .MuiInputBase-root": {
-      borderRadius: `12px`,
       background: `var(--off-white)`,
+      borderRadius: 12,
     }
   }
 }));
@@ -70,6 +71,7 @@ export default function SimpleSelect({ allResources, setResources, selection, se
         onChange={handleChange}
         label={selectLabel}
         name={selectLabel}
+        IconComponent={KeyboardArrowDownIcon}
       >
         {menuItems.map(item => (
           <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>

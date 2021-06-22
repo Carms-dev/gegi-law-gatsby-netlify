@@ -100,6 +100,7 @@ export const data = graphql`
             frontmatter {
               category
               resourceName
+              highlights
               eligibility
               service
               serviceDescription

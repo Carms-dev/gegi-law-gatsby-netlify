@@ -10,6 +10,7 @@ export default function ResourceCard({ resource }) {
     email,
     location,
     logo,
+    highlights,
     resourceType,
     phone,
     resourceName,
@@ -34,7 +35,7 @@ export default function ResourceCard({ resource }) {
       </div>
       <div style={{color: `var(--grey)`}}>{cost} · {resourceType}</div>
       <ul>
-        <li>Hightlights: <span>Placeholder</span></li>
+        {highlights && <li>Highlights: <span>{highlights}</span></li>}
         <li>Service: <span>{service}</span></li>
         {eligibility && <li>Eligibility: <span>{eligibility}</span></li>}
         <li>Location: <span>{location.join(', ')}</span></li>
