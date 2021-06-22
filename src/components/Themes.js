@@ -4,21 +4,26 @@ import Avatar from '@material-ui/core/Avatar'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
-  root: {
-    fontFamily: `inherit`,
-    fontSize: `inherit`,
-  },
   chip: {
+    borderRadius: 12,
     margin: 4,
     flexDirection: `row-reverse`,
+    "&.MuiChip-outlinedPrimary": {
+      color: `var(--aqua-dark)`,
+      border: `1px solid var(--aqua-dark)`,
+    },
     "& .MuiAvatar-root": {
       marginLeft: 0,
       marginRight: 4,
+      borderRadius: 8,
+    },
+    "& .MuiChip-avatarColorPrimary": {
+      backgroundColor: `var(--aqua-dark)`,
     }
   }
 }));
 
-export default function Themes({themes, allCases, setCases}) {
+export default function Themes({ themes, allCases, setCases }) {
   const classes = useStyles();
 
   const casesGroupByThemes = themes
@@ -49,7 +54,7 @@ export default function Themes({themes, allCases, setCases}) {
   }
 
   return (
-    <div className={classes.root}>
+    <div>
       {casesGroupByThemes.map(({ theme, cases }) => (
         <Chip
           key={theme + `Chip`}

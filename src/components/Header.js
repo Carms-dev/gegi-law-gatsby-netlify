@@ -13,7 +13,8 @@ const useStyles = makeStyles({
   navbarDisplayFlex: {
     display: `flex`,
     justifyContent: `space-between`,
-    alignItems: `center`
+    alignItems: `center`,
+    padding: `1rem 0`,
   },
   navDisplayFlex: {
     display: `flex`,

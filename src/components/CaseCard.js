@@ -30,7 +30,7 @@ export default function CaseCard({ cas, icon }) {
           <p style={{color: `var(--grey)`}}>{citation} · {hasWon ? 'Won' : 'Lost'}</p>
         </div>
           <h3>
-            <span>{caseName}</span>
+            <span style={{marginRight: `0.5rem`}}>{caseName}</span>
             <Tooltip title="Open in Canlii" placement="right">
               <IconButton href={url} target='_blank' rel="noreferrer">
                 <OpenInNewIcon fontSize='default' />
@@ -42,7 +42,7 @@ export default function CaseCard({ cas, icon }) {
       {/* takeaways are optional */}
       {takeaway && <SimplePopover label="💡 GEGI's takeaway →" content={takeaway} />}
       <div className="card-tags">
-        {themes.map(theme => (<Chip key={caseName + theme} variant="outlined" size="medium" label={theme} />))}
+        {themes.map(theme => (<Chip key={caseName + theme} variant="outlined" size="medium" label={theme} style={{borderRadius: 12}}/>))}
       </div>
     </CaseCardStyles>
   )
@@ -57,9 +57,6 @@ const CaseCardStyles = styled.div`
     p {
       margin-left: 0.5rem;
     }
-  }
-  h3 span {
-    margin-right: 0.5rem;
   }
   .card-text {
     margin: 1rem 0;
