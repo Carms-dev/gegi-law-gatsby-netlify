@@ -74,6 +74,8 @@ const ResourceCardStyles = styled.div`
       border: 1px solid var(--grey-light);
       min-width: 96px;
       text-align: center;
+      border-radius: 8px;
+      font-weight: 300;
     }
   }
   ul {
