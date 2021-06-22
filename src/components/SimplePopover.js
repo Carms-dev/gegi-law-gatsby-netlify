@@ -9,11 +9,12 @@ const useStyles = makeStyles(() => ({
       marginRight: 20,
       padding: 20,
       maxWidth: 500,
+      borderRadius: 12,
     },
   }
 }));
 
-export default function SimplePopover({label, content}) {
+export default function SimplePopover({ label, content }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
