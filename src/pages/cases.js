@@ -15,7 +15,7 @@ export default function CasesPage({ data: { page, collections } }) {
 
   // build themes (filter)
   const themes = collections.group
-    .find(collection => collection.fieldValue === "themes")
+    .find(collection => collection.fieldValue === "theme")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
 
   // build cases
@@ -104,7 +104,7 @@ export const data = graphql`
         }
       }
     }
-    collections: allFile(filter: {relativeDirectory: {in: ["cases", "themes"]}}) {
+    collections: allFile(filter: {relativeDirectory: {in: ["cases", "theme"]}}) {
       group(field: relativeDirectory) {
         fieldValue
         nodes {

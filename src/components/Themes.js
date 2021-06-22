@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
   chip: {
-    borderRadius: 12,
+    borderRadius: 8,
     margin: 4,
     flexDirection: `row-reverse`,
     "&.MuiChip-outlinedPrimary": {
