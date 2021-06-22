@@ -1,25 +1,27 @@
 import * as React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
+import SiteBorderStyles from "../styles/SiteBorderStyles"
 
 export default function Hero({ heading, description, image }) {
   return (
-    <HeroStyles>
-      <GatsbyImage
-        image={image.imageFile.childImageSharp.gatsbyImageData}
-        alt={image.alt}
-        imgStyle={{width: `auto`}}
-      />
-      <div>
-        <h1>{heading}</h1>
-        <p>{description}</p>
-      </div>
-    </HeroStyles>
+    <SiteBorderStyles>
+      <HeroStyles>
+        <GatsbyImage
+          image={image.imageFile.childImageSharp.gatsbyImageData}
+          alt={image.alt}
+          imgStyle={{width: `auto`}}
+        />
+        <div>
+          <h1>{heading}</h1>
+          <p>{description}</p>
+        </div>
+      </HeroStyles>
+    </SiteBorderStyles>
   )
 }
 
-const HeroStyles = styled.section`
-  /* background: var(--aqua-light); */
+const HeroStyles = styled.div`
   display: grid;
   text-align: center;
   justify-content: center;

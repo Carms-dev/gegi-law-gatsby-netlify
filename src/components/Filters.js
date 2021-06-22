@@ -23,12 +23,14 @@ export default function Filters({ allResources, setResources, selection, setSele
 const FiltersStyles = styled.div`
   display: grid;
   grid-gap: 1rem;
-  padding: 2rem 0;
+  padding-top: 2rem;
   max-width: 540px;
   margin: 0 auto;
 
   @media (min-width: 1024px) {
     max-width: 840px;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 0;
   }
+
 `

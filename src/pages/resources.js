@@ -1,4 +1,3 @@
-// import React from 'react'
 import React, { useState } from 'react'
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -7,6 +6,7 @@ import Hero from '../components/Hero'
 import ResourceCards from '../components/ResourceCards'
 import Filters from '../components/Filters'
 import { cleanObject, stringToSlug } from '../utils/helpers'
+import SiteBorderStyles from '../styles/SiteBorderStyles'
 
 export default function ResourcesPage({ data: { page, collections } }) {
   const { title, hero, filters } = page.childMarkdownRemark.frontmatter
@@ -44,15 +44,24 @@ export default function ResourcesPage({ data: { page, collections } }) {
   return (
     <Layout>
       <Seo title={title} />
-      <Hero heading={hero.heading} description={`${allResources.length} ${hero.description}`} image={hero.image} />
-      <Filters
-        allResources={allResources}
-        collections={filterCollections}
-        selection={selection}
-        setSelection={setSelection}
-        setResources={setResources}
-      />
-      <ResourceCards resources={resources} />
+      <section className="pb-section bg-aqua">
+        <Hero heading={hero.heading} description={`${allResources.length} ${hero.description}`} image={hero.image} />
+        <SiteBorderStyles>
+          <Filters
+            allResources={allResources}
+            collections={filterCollections}
+            selection={selection}
+            setSelection={setSelection}
+            setResources={setResources}
+          />
+        </SiteBorderStyles>
+      </section>
+      <section className="py-section">
+        <SiteBorderStyles>
+          <ResourceCards resources={resources} />
+        </SiteBorderStyles>
+
+      </section>
     </Layout>
   )
 }
@@ -115,5 +124,4 @@ export const data = graphql`
       }
     }
   }
-
 `

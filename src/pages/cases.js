@@ -7,13 +7,13 @@ import Hero from '../components/Hero'
 import { cleanObject } from '../utils/helpers'
 import CaseCards from '../components/CaseCards'
 import Themes from '../components/Themes'
+import SiteBorderStyles from "../styles/SiteBorderStyles"
 
 
-// markup
 export default function CasesPage({ data: { page, collections } }) {
   const { title, hero, wonIcon, lostIcon  } = page.childMarkdownRemark.frontmatter
 
-  // build themes
+  // build themes (filter)
   const themes = collections.group
     .find(collection => collection.fieldValue === "themes")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
@@ -28,21 +28,27 @@ export default function CasesPage({ data: { page, collections } }) {
   return (
     <Layout>
       <Seo title={title} />
-      <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
-      <CaseContentStyles>
-        <Themes allCases={allCases} setCases={setCases} themes={themes}  />
-        <CaseCards cases={cases} wonIcon={wonIcon} lostIcon={lostIcon} />
-      </CaseContentStyles>
+      <section className="pb-section bg-aqua">
+        <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
+      </section>
+      <section className="py-section">
+        <SiteBorderStyles>
+          <CaseContentStyles>
+            <Themes allCases={allCases} setCases={setCases} themes={themes}  />
+            <CaseCards cases={cases} wonIcon={wonIcon} lostIcon={lostIcon} />
+          </CaseContentStyles>
+        </SiteBorderStyles>
+      </section>
     </Layout>
   )
 }
 
-const CaseContentStyles = styled.section`
+const CaseContentStyles = styled.div`
   display: grid;
+  grid-gap: 2rem;
 
   @media (min-width: 640px) {
     grid-template-columns: 3fr 1fr;
-    grid-gap: 20px;
 
     div:first-child {
       grid-column: 2 / -1;
@@ -52,9 +58,7 @@ const CaseContentStyles = styled.section`
       grid-column: 1 / 2;
       grid-row: 1 / -1;
     }
-
   }
-
 `
 
 export const data = graphql`

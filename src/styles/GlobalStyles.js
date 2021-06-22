@@ -72,10 +72,19 @@ const GlobalStyles = createGlobalStyle`
   .btn-secondary {
     background: var(--secondary);
   } */
+
+  // Section
+  .pb-section {
+    padding-bottom: 3rem;
+  }
+  .py-section {
+    padding: 3rem 0;
+  }
+  .bg-aqua {
+    background: var(--aqua-light);
+  }
+
   @media (min-width: 640px) {
-    .wrapper {
-      margin: 4rem 0;
-    }
     html {
       font-size: 16px;
     }
