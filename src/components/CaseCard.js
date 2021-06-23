@@ -8,7 +8,7 @@ import Chip from '@material-ui/core/Chip';
 import Tooltip from '@material-ui/core/Tooltip';
 
 export default function CaseCard({ cas, icon }) {
-  const { 
+  const {
     caseName,
     citation,
     description,
@@ -25,18 +25,18 @@ export default function CaseCard({ cas, icon }) {
           <GatsbyImage
             image={icon.childImageSharp.gatsbyImageData}
             alt={hasWon ? 'Case Won Icon' : 'Case Lost Icon'}
-            imgStyle={{width: `auto`}}
+            imgStyle={{ width: `auto` }}
           />
-          <p style={{color: `var(--grey)`}}>{citation} · {hasWon ? 'Won' : 'Lost'}</p>
+          <p style={{ color: `var(--grey)` }}>{citation} · {hasWon ? 'Won' : 'Lost'}</p>
         </div>
-          <h3>
-            <span style={{marginRight: `0.5rem`}}>{caseName}</span>
-            <Tooltip title="Open in Canlii" placement="right">
-              <IconButton href={url} target='_blank' rel="noreferrer">
-                <OpenInNewIcon fontSize='default' />
-              </IconButton>
-            </Tooltip>
-          </h3>
+        <h3>
+          <span style={{ marginRight: `0.5rem` }}>{caseName}</span>
+          <Tooltip title="Open in Canlii" placement="right">
+            <IconButton href={url} target='_blank' rel="noreferrer">
+              <OpenInNewIcon fontSize='medium' />
+            </IconButton>
+          </Tooltip>
+        </h3>
       </div>
       <p className="card-text">{description}</p>
       {/* takeaways are optional */}
@@ -48,7 +48,7 @@ export default function CaseCard({ cas, icon }) {
             variant="outlined"
             size="medium"
             label={theme}
-            style={{borderRadius: 8, marginRight: `0.5rem`}}
+            style={{ borderRadius: 8, marginRight: `0.5rem` }}
           />
         ))}
       </div>
