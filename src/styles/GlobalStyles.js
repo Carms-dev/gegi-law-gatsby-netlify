@@ -84,6 +84,62 @@ const GlobalStyles = createGlobalStyle`
   .bg-aqua {
     background: var(--aqua-light);
   }
+  /* curve hero section bottom */
+  #curve {
+    background-color: var(--grey-light);
+    height: 8vmax;
+    width: 100vw;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 50%;
+  }
+
+  #curve:after {
+    content:"";
+    display: block;
+    background-color: var(--aqua-light);
+    height: 6vmax;
+    width: 100vw;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  /* wave hero section bottom */
+  #wave-container {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  #wave {
+    display: block;
+    position: relative;
+    height: 40px;
+    background: var(--aqua-light);
+  }
+
+  #wave:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 300px;
+    background-color: var(--off-white);
+    right: -25%;
+    top: 20px
+  }
+
+  #wave:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 300px;
+    background-color: var(--aqua-light);
+    left: -25%;
+    top: -240px;
+  }
 
   @media (min-width: 640px) {
     html {

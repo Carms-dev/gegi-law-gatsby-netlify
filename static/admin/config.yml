@@ -71,6 +71,7 @@ collections:
     create: true
     identifier_field: caseName
     fields:
+      - {label: "Is Cornerstone?", name: isCornerstone, widget: boolean, default: false}
       - {label: Case Name, name: caseName, widget: string, required: true}
       - {label: Citation, name: citation, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
@@ -103,7 +104,34 @@ collections:
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: object, fields: [{label: "Image File", name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Call to action, name: linkText, widget: string}
+          - {label: Introduce Resource Page, name: resourcePageLabel, widget: string}
+          - {label: Introduce Case Page, name: casePageLabel, widget: string}
+          - {label: Introduce Supporter, name: supporterLabel, widget: string}
+          - label: Cornerstone Cases Section
+            name: caseSection
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: Call to action, name: linkText, widget: string}
+          - label: About Section
+            name: aboutSection
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - label: Description
+                name: description
+                widget: markdown
+                buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
+          - label: Statistics Section
+            name: statisticsSection
+            widget: object
+            fields:
+              - {label: Case Label, name: caseLabel, widget: string}
+              - {label: Resource Label, name: resourceLabel, widget: string}
+              - {label: Province Label, name: provinceLabel, widget: string}
+              - {label: "# Provinces", name: provinceNum, widget: number, value_type: int}
 
       - file: content/pages/start.md
         label: "Get Started Page"
@@ -158,6 +186,8 @@ collections:
 
   - label: Service (Resource Category)
     name: serviceCategories
+    editor:
+      preview: false
     folder: content/service
     create: true
     identifier_field: category
@@ -166,6 +196,8 @@ collections:
 
   - label: Cost (Resource Category)
     name: costCategories
+    editor:
+      preview: false
     folder: content/cost
     create: true
     identifier_field: category
@@ -174,6 +206,8 @@ collections:
 
   - label: Location (Resource Category)
     name: locationCategories
+    editor:
+      preview: false
     folder: content/location
     create: true
     identifier_field: category
@@ -187,3 +221,13 @@ collections:
     identifier_field: category
     fields:
       - {label: Theme Category, name: category, widget: string, required: true}
+
+  - label: Supporter Logo
+    name: supporter
+    folder: content/supporter
+    create: true
+    identifier_field: category
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: logo, name: logo, widget: image}
+      - {label: Link, name: url, widget: string}

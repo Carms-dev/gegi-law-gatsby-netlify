@@ -56,6 +56,9 @@ export default function ResourcesPage({ data: { page, collections } }) {
           />
         </SiteBorderStyles>
       </section>
+      <div id="wave-container">
+        <div id="wave" />
+      </div>
       <section className="py-section">
         <SiteBorderStyles>
           <ResourceCards resources={resources} />
