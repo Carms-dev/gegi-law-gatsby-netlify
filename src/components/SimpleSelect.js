@@ -14,11 +14,11 @@ const useStyles = makeStyles(() => ({
     "& .MuiInputBase-root": {
       background: `var(--off-white)`,
       borderRadius: 12,
-    }
+    },
   }
 }));
 
-export default function SimpleSelect({ allResources, setResources, selection, setSelection, selectLabel, menuItems }) {
+function ResourcesSelect({ allResources, setResources, selection, setSelection, selectLabel, menuItems }) {
   const classes = useStyles();
 
   // Filter out resources that meet all 3 criteria
@@ -80,3 +80,32 @@ export default function SimpleSelect({ allResources, setResources, selection, se
     </FormControl>
   );
 }
+
+function QuestionsSelect({ selectLabel, options, index }) {
+  const classes = useStyles(selectLabel);
+
+  const handleChange = (event) => {
+    console.log(event.target.value)
+  }
+
+  return (
+    <FormControl variant="outlined" className={classes.formControl}>
+      <InputLabel id={`select-outlined-label-${index}`}>{selectLabel}</InputLabel>
+      <Select
+        labelId={`select-outlined-label-${index}`}
+        id={`select-outlined-${index}`}
+        value={``}
+        onChange={handleChange}
+        label={selectLabel}
+        name={selectLabel}
+        IconComponent={KeyboardArrowDownIcon}
+      >
+        {options.map(item => (
+          <MenuItem key={item.option} value={item.option}>{item.option}</MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  );
+}
+
+export { ResourcesSelect, QuestionsSelect }

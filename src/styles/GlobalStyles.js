@@ -44,9 +44,10 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 16px;
     background: var(--off-white);
+    scroll-behavior: smooth;
   }
   h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   h2 {
     font-size: 1.75rem;
