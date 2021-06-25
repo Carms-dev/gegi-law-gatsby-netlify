@@ -47,7 +47,10 @@ const QuestionSectionStyles = styled.section`
   padding-top: 20vmax;
   transition: padding-top 0.8s ease;
   > * {
-    margin-bottom: 2rem;
+    margin: 1rem 0;
+  }
+  > p {
+    margin-top: 0;
   }
   h3 {
     font-weight: 500;
