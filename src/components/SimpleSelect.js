@@ -1,24 +1,27 @@
 import React from 'react'
+import { stringToSlug, capitalize } from '../utils/helpers'
+
 import { makeStyles } from "@material-ui/core/styles"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
-import { stringToSlug, capitalize } from '../utils/helpers'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 
 const useStyles = makeStyles(() => ({
   formControl: {
     minWidth: 200,
+    maxWidth: 450,
     width: `100%`,
     "& .MuiInputBase-root": {
       background: `var(--off-white)`,
       borderRadius: 12,
-    }
+    },
   }
 }));
 
-export default function SimpleSelect({ allResources, setResources, selection, setSelection, selectLabel, menuItems }) {
+function ResourcesSelect({ allResources, setResources, selection, setSelection, selectLabel, menuItems }) {
   const classes = useStyles();
 
   // Filter out resources that meet all 3 criteria
@@ -80,3 +83,46 @@ export default function SimpleSelect({ allResources, setResources, selection, se
     </FormControl>
   );
 }
+
+// for start page
+
+function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse }) {
+  const classes = useStyles(selected);
+
+  const handleChange = (event) => {
+    // update style
+    // add class to move the question up
+    const step = event.currentTarget.dataset.step
+    const section = document.getElementById(step)
+    section.classList.add('reduce-pt')
+
+    // Update value for Select
+    setSelected(event.target.value)
+    // Find the option that matches the value selected
+    const selectedOption = options.find(({option}) => option === event.target.value)
+    // set the response based onthe selected option
+    setResponse(selectedOption.response)
+  }
+
+  return (
+    <FormControl variant="outlined" className={classes.formControl}>
+      <InputLabel id={`select-outlined-label-${index}`}>{selectLabel}</InputLabel>
+      <Select
+        labelId={`select-outlined-label-${index}`}
+        id={`select-outlined-${index}`}
+        value={selected}
+        onChange={handleChange}
+        label={selectLabel}
+        IconComponent={KeyboardArrowDownIcon}
+      >
+        {options.map(item => (
+          <MenuItem key={item.option} data-step={`step-${index + 1}`} value={item.option}>
+              {item.option}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  );
+}
+
+export { ResourcesSelect, QuestionsSelect }

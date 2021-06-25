@@ -1,12 +1,12 @@
 import React from 'react'
-import SimpleSelect from '../components/SimpleSelect'
+import { ResourcesSelect } from '../components/SimpleSelect'
 import styled from 'styled-components'
 
 export default function Filters({ allResources, setResources, selection, setSelection, collections }) {
   return (
     <FiltersStyles>
       {collections.map(collection => (
-        <SimpleSelect
+        <ResourcesSelect
           allResources={allResources}
           setResources={setResources}
           selection={selection}

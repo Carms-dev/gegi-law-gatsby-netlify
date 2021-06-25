@@ -31,6 +31,9 @@ export default function CasesPage({ data: { page, collections } }) {
       <section className="pb-section bg-aqua">
         <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
       </section>
+      <div id="wave-container">
+        <div id="wave" />
+      </div>
       <section className="py-section">
         <SiteBorderStyles>
           <CaseContentStyles>

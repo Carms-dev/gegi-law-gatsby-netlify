@@ -124,6 +124,7 @@ collections:
                 name: description
                 widget: markdown
                 buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - label: Statistics Section
             name: statisticsSection
             widget: object
@@ -138,6 +139,40 @@ collections:
         name: startPage
         fields:
           - {label: Title, name: title, widget: string}
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - label: Disclaimer
+            name: disclaimer
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - label: Description
+                name: description
+                widget: markdown
+                buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
+          - label: Questions
+            name: questions
+            widget: list
+            summary: '{{fields.question}} - {{fields.selectLabel}}'
+            fields:
+              - {label: Question, name: question, widget: string}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Select Label, name: selectLabel, widget: string}
+              - label: Options
+                name: options
+                widget: list
+                fields:
+                - {label: Option, name: option, widget: string}
+                - label: Response
+                  name: response
+                  widget: markdown
+                  buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
+          - {label: Response Icon, name: responseIcon, widget: image}
 
       - file: content/pages/resources.md
         label: Resources Page

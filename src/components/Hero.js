@@ -10,7 +10,7 @@ export default function Hero({ heading, description, image }) {
         <GatsbyImage
           image={image.imageFile.childImageSharp.gatsbyImageData}
           alt={image.alt}
-          imgStyle={{width: `auto`, padding: `1.5rem`}}
+          imgStyle={{width: `auto`, padding: `3rem`}}
         />
         <div>
           <h1>{heading}</h1>
