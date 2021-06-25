@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { stringToSlug, capitalize } from '../utils/helpers'
+
 import { makeStyles } from "@material-ui/core/styles"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
-import { stringToSlug, capitalize } from '../utils/helpers'
+// import Paper from "@material-ui/core/Paper";
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 
 const useStyles = makeStyles(() => ({
   formControl: {
@@ -81,11 +84,21 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
   );
 }
 
+// for start page
+
 function QuestionsSelect({ selectLabel, options, index }) {
   const classes = useStyles(selectLabel);
 
+  const [selected, setSelected] = useState("")
+  const [response, setResponse] = useState("")
+
   const handleChange = (event) => {
-    console.log(event.target.value)
+    // Update value for Select
+    setSelected(event.target.value)
+    // Find the option that matches the value selected
+    const selectedOption = options.find(({option}) => option === event.target.value)
+    // set the response based onthe selected option
+    setResponse(selectedOption.response)
   }
 
   return (
@@ -94,7 +107,7 @@ function QuestionsSelect({ selectLabel, options, index }) {
       <Select
         labelId={`select-outlined-label-${index}`}
         id={`select-outlined-${index}`}
-        value={``}
+        value={selected}
         onChange={handleChange}
         label={selectLabel}
         name={selectLabel}
@@ -104,6 +117,8 @@ function QuestionsSelect({ selectLabel, options, index }) {
           <MenuItem key={item.option} value={item.option}>{item.option}</MenuItem>
         ))}
       </Select>
+      {response !== "" && <p>{response}</p>
+}
     </FormControl>
   );
 }
