@@ -5,14 +5,13 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Hero from '../components/Hero'
-// import QuestionSection from '../components/QuestionSection'
+import QuestionSection from '../components/QuestionSection'
 import { IconButton } from "@material-ui/core"
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
-import { QuestionsSelect } from '../components/SimpleSelect'
 
 
 export default function GetStartedPage({ data: { page } }) {
-  const { title, hero, questions } = page.childMarkdownRemark.frontmatter
+  const { title, hero, questions, responseIcon } = page.childMarkdownRemark.frontmatter
 
   return (
     <Layout>
@@ -30,23 +29,13 @@ export default function GetStartedPage({ data: { page } }) {
             {/* <SectionIndicator></SectionIndicator> */}
           </section>
           {questions.map((section, index) => (
-            <section id={`step-${index + 1}`} className="section section-100">
-              <h3>{section.question}</h3>
-              {section.description && <p>{section.description}</p>}
-              <QuestionsSelect
-                selectLabel={section.selectLabel}
-                options={section.options}
-              />
-              {(index !== questions.length - 1) &&
-                <IconButton
-                  aria-label="move downward"
-                  href={`#step-${index + 2}`}
-                  className="scroll-to"
-                >
-                  <ArrowDownwardIcon size='medium'/>
-                </IconButton>
-              }
-            </section>
+            <QuestionSection
+              className="section"
+              key={section.question}
+              section={section}
+              count={questions.length}
+              responseIcon={responseIcon}
+              index={index} />
           ))}
         </StartPageStyles>
     </Layout>
@@ -63,24 +52,19 @@ const StartPageStyles = styled.div`
   .section-intro {
     min-height: calc(100vh - 91px);
   }
-  .section-100 {
-    min-height: 100vh;
-    padding: 20px;
-    max-width: 800px;
-    text-align: center;
-    margin: auto;
-    > * {
-      margin-top: 1rem;
-    }
-    h3 {
-      font-weight: 500;
-    }
+  .reduce-pt {
+    padding-top: 5vmax;
   }
   .scroll-to {
     position: absolute;
     left: 50%;
-    bottom: 3vh;
+    bottom: 3vmax;
     transform: translateX(-50%);
+  }
+  @media (min-width: 640px) {
+    .section-intro {
+      padding-top: 15vh;
+    }
   }
 `
 
@@ -104,6 +88,19 @@ export const data = graphql`
                   )
                 }
               }
+            }
+          }
+          disclaimer {
+            heading
+            description
+          }
+          responseIcon {
+            childImageSharp {
+              gatsbyImageData(
+                width: 50
+                placeholder: BLURRED
+                layout: CONSTRAINED
+              )
             }
           }
           questions {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { stringToSlug, capitalize } from '../utils/helpers'
 
 import { makeStyles } from "@material-ui/core/styles"
@@ -6,13 +6,13 @@ import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
-// import Paper from "@material-ui/core/Paper";
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 
 const useStyles = makeStyles(() => ({
   formControl: {
     minWidth: 200,
+    maxWidth: 450,
     width: `100%`,
     "& .MuiInputBase-root": {
       background: `var(--off-white)`,
@@ -86,13 +86,16 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
 
 // for start page
 
-function QuestionsSelect({ selectLabel, options, index }) {
-  const classes = useStyles(selectLabel);
-
-  const [selected, setSelected] = useState("")
-  const [response, setResponse] = useState("")
+function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse }) {
+  const classes = useStyles(selected);
 
   const handleChange = (event) => {
+    // update style
+    // add class to move the question up
+    const step = event.currentTarget.dataset.step
+    const section = document.getElementById(step)
+    section.classList.add('reduce-pt')
+
     // Update value for Select
     setSelected(event.target.value)
     // Find the option that matches the value selected
@@ -110,15 +113,14 @@ function QuestionsSelect({ selectLabel, options, index }) {
         value={selected}
         onChange={handleChange}
         label={selectLabel}
-        name={selectLabel}
         IconComponent={KeyboardArrowDownIcon}
       >
         {options.map(item => (
-          <MenuItem key={item.option} value={item.option}>{item.option}</MenuItem>
+          <MenuItem key={item.option} data-step={`step-${index + 1}`} value={item.option}>
+              {item.option}
+          </MenuItem>
         ))}
       </Select>
-      {response !== "" && <p>{response}</p>
-}
     </FormControl>
   );
 }
