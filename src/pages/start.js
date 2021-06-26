@@ -63,6 +63,9 @@ const StartPageStyles = styled.div`
     bottom: 3vmax;
     transform: translateX(-50%);
   }
+  p {
+    margin-bottom: 0.5rem;
+  }
   @media (min-width: 640px) {
     .section-intro {
       padding-top: 15vh;
