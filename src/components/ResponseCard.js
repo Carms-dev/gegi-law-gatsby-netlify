@@ -1,4 +1,5 @@
 import React from "react"
+import ReactMarkdown from 'react-markdown'
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -9,7 +10,9 @@ export default function ResponseCard({icon, response }) {
         image={icon.childImageSharp.gatsbyImageData}
         alt="Response Icon"
         imgStyle={{ width: `auto` }} />
-      <p>{response}</p>
+      <div className="card-text">
+        <ReactMarkdown>{response}</ReactMarkdown>
+      </div>
     </ResponseCardStyles>
   )
 }
@@ -21,7 +24,7 @@ const ResponseCardStyles = styled.div`
   grid-gap: 1rem;
   text-align: left;
 
-  p {
+  .card-text {
     max-height: 30vh;
     overflow-y: scroll;
   }
@@ -32,7 +35,7 @@ const ResponseCardStyles = styled.div`
     place-items: flex-start;
     place-content: center;
 
-    p {
+    .card-text {
       max-height: unset;
       overflow-y: unset;
     }

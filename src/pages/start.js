@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import { Disclaimer } from '../components/Alert'
 import Hero from '../components/Hero'
 import QuestionSection from '../components/QuestionSection'
 import { IconButton } from "@material-ui/core"
@@ -11,12 +12,13 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
 
 export default function GetStartedPage({ data: { page } }) {
-  const { title, hero, questions, responseIcon } = page.childMarkdownRemark.frontmatter
+  const { title, hero, questions, responseIcon, disclaimer } = page.childMarkdownRemark.frontmatter
 
   return (
     <Layout>
       <Seo title={title} />
         <StartPageStyles>
+          <Disclaimer disclaimer={disclaimer} />
           <section className="section section-intro">
             <Hero heading={hero.heading} description={hero.description} image={hero.image} />
             <IconButton
@@ -60,6 +62,9 @@ const StartPageStyles = styled.div`
     left: 50%;
     bottom: 3vmax;
     transform: translateX(-50%);
+  }
+  p {
+    margin-bottom: 0.5rem;
   }
   @media (min-width: 640px) {
     .section-intro {
