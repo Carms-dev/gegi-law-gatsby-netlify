@@ -84,16 +84,17 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
   );
 }
 
-// for start page
+// Start Page Questions
 
-function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse }) {
+function QuestionsSelect({ selectLabel, selected, options, index, anchors, setSelected, setResponse }) {
   const classes = useStyles(selected);
 
   const handleChange = (event) => {
-    // update style
-    // add class to move the question up
-    const step = event.currentTarget.dataset.step
-    const section = document.getElementById(step)
+    // Find the corresponding section
+    const item = event.currentTarget
+    const i = parseInt(item.dataset.index)
+    const section = document.getElementById(anchors[i])
+    // update style: add class to move the question up
     section.classList.add('reduce-pt')
 
     // Update value for Select
@@ -116,8 +117,8 @@ function QuestionsSelect({ selectLabel, selected, options, index, setSelected, s
         IconComponent={KeyboardArrowDownIcon}
       >
         {options.map(item => (
-          <MenuItem key={item.option} data-step={`step-${index + 1}`} value={item.option}>
-              {item.option}
+          <MenuItem key={item.option} data-index={index} value={item.option}>
+            {item.option}
           </MenuItem>
         ))}
       </Select>

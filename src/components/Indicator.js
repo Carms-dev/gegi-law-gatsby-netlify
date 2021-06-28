@@ -1,37 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
-import IconButton from '@material-ui/core/IconButton';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
-export default function Indicator({step, setStep, count}) {
-  const ids = [...Array(count).keys()].map(id => `#step-${id + 1}`)
-  ids.unshift('#')
+export default function Indicator({step, setStep, anchors}) {
+  const handleClick = (event) => {
+    event.preventDefault()
+    const btn = event.currentTarget
+
+    // Update step
+    const updatedStep = parseInt(btn.dataset.index)
+    setStep(updatedStep)
+
+    // Scroll to the anchor
+    document.getElementById(anchors[updatedStep]).scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <IndicatorStyles>
-      {ids.map(id => (
-        <IconButton
-          aria-label="switch sections"
-          href={id}
+      {anchors.map((anchor, index) => (
+        <a
+          key={anchor}
+          href={`#${anchor}`}
+          data-index={index}
+          onClick={handleClick}
+          style={{ color: `${step === index ? 'var(--yellow)' : 'var(--darker)'}`}}
         >
-          <FiberManualRecordIcon size='small' />
-        </IconButton>
+          {step === index ? '●' : '○'}
+        </a>
       ))}
-
     </IndicatorStyles>
   )
 }
 
 const IndicatorStyles = styled.div`
-  display: none;
   z-index: 1;
+  display: none;
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: 5vw;
   transform: translateY(-50%);
   flex-direction: column;
+  font-size: 1.5rem;
 
-  @media (min-width: 640px) {
+  @media (min-width: 1280px) {
     display: flex;
   }
 `

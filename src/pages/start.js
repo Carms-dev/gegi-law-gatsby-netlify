@@ -8,38 +8,45 @@ import Indicator from '../components/Indicator'
 import { Disclaimer } from '../components/Alert'
 import Hero from '../components/Hero'
 import QuestionSection from '../components/QuestionSection'
-import { IconButton } from "@material-ui/core"
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
-
+import ScrollBtn from '../components/ScrollBtn'
 
 export default function GetStartedPage({ data: { page } }) {
   const { title, hero, questions, responseIcon, disclaimer } = page.childMarkdownRemark.frontmatter
 
-  const [step, setStep] = useState('#')
+  // compile anchors
+  const anchors = [...Array(questions.length).keys()].map(id => `step-${id + 1}`)
+  anchors.unshift('intro')
+
+  const [step, setStep] = useState(0)
+
   return (
     <Layout>
       <Seo title={title} />
       <StartPageStyles>
-        <Indicator step={step} setStep={setStep} count={questions.length}/>
         <Disclaimer disclaimer={disclaimer} />
-        <section className="section section-intro">
-          <Hero heading={hero.heading} description={hero.description} image={hero.image} />
-          <IconButton
-            aria-label="move downward"
-            href='#step-1'
-            className="scroll-to"
-          >
-            <ArrowDownwardIcon size='medium'/>
-          </IconButton>
+        <Indicator step={step} setStep={setStep} anchors={anchors} />
+        <section className="section section-intro" id="intro">
+          <Hero
+            heading={hero.heading}
+            description={hero.description}
+            image={hero.image} />
+          <ScrollBtn
+            index={1}
+            anchors={anchors}
+            setStep={setStep} />
         </section>
         {questions.map((section, index) => (
           <QuestionSection
-            className="section"
             key={section.question}
             section={section}
-            count={questions.length}
+            index={index + 1}
+            className="section"
             responseIcon={responseIcon}
-            index={index} />
+            anchors={anchors}
+            setStep={setStep}
+            isLast={index === questions.length - 1}
+          />
+
         ))}
       </StartPageStyles>
     </Layout>
@@ -47,30 +54,31 @@ export default function GetStartedPage({ data: { page } }) {
 }
 
 const StartPageStyles = styled.div`
+  position: relative;
+
   .section {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
   }
-  .section-intro {
-    min-height: calc(100vh - 91px);
+  .section#intro {
+    min-height: 100vh;
+    margin-top: -91px;
+    padding-top: 91px;
+    /* display: flex; */
+    /* margin: auto; */
+    /* min-height: calc(100vh - 91px); */
   }
   .reduce-pt {
     padding-top: 5vmax;
-  }
-  .scroll-to {
-    position: absolute;
-    left: 50%;
-    bottom: 3vmax;
-    transform: translateX(-50%);
   }
   p {
     margin-bottom: 0.5rem;
   }
   @media (min-width: 640px) {
-    .section-intro {
-      padding-top: 15vh;
+    .section#intro {
+      padding-top: 30vh;
     }
   }
 `
