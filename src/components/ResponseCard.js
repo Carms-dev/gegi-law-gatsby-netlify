@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-export default function ResponseCard({icon, response }) {
+export default function ResponseCard({ icon, response }) {
   return (
     <ResponseCardStyles>
       <GatsbyImage
@@ -40,5 +40,4 @@ const ResponseCardStyles = styled.div`
       overflow-y: unset;
     }
   }
-
 `

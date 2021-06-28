@@ -2,17 +2,16 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import ResponseCard from "./ResponseCard"
 import { QuestionsSelect } from '../components/SimpleSelect'
-import { IconButton } from "@material-ui/core"
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
+import ScrollBtn from '../components/ScrollBtn'
 
-export default function QuestionSection({ section, index, className, responseIcon, count }) {
+export default function QuestionSection({ section, index, className, responseIcon, anchors, setStep, isLast }) {
   const { question, description, selectLabel, options } = section
 
   const [selected, setSelected] = useState(``)
   const [response, setResponse] = useState(``)
 
   return (
-    <QuestionSectionStyles id={`step-${index + 1}`} className={className} >
+    <QuestionSectionStyles id={anchors[index]} className={className} >
       <h3>{question}</h3>
       {description && <p>{description}</p>}
       <QuestionsSelect
@@ -22,17 +21,16 @@ export default function QuestionSection({ section, index, className, responseIco
         setResponse={setResponse}
         options={options}
         index={index}
+        anchors={anchors}
       />
       {response !== "" && <ResponseCard icon={responseIcon} response={response} />}
+
       {/* No arrow down for the last question */}
-      {(index !== count - 1) &&
-        <IconButton
-          aria-label="move downward"
-          href={`#step-${index + 2}`}
-          className="scroll-to"
-        >
-          <ArrowDownwardIcon size='medium'/>
-        </IconButton>
+      {!isLast &&
+        <ScrollBtn
+          index={index + 1}
+          anchors={anchors}
+          setStep={setStep} />
       }
     </QuestionSectionStyles>
   )

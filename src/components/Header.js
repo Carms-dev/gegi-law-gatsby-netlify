@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core"
 
 const useStyles = makeStyles({
   navbarDisplayFlex: {
+    zIndex: 100,
     display: `flex`,
     justifyContent: `space-between`,
     alignItems: `center`,
