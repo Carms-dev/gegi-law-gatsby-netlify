@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import Indicator from '../components/Indicator'
 import { Disclaimer } from '../components/Alert'
 import Hero from '../components/Hero'
 import QuestionSection from '../components/QuestionSection'
@@ -14,32 +15,33 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 export default function GetStartedPage({ data: { page } }) {
   const { title, hero, questions, responseIcon, disclaimer } = page.childMarkdownRemark.frontmatter
 
+  const [step, setStep] = useState('#')
   return (
     <Layout>
       <Seo title={title} />
-        <StartPageStyles>
-          <Disclaimer disclaimer={disclaimer} />
-          <section className="section section-intro">
-            <Hero heading={hero.heading} description={hero.description} image={hero.image} />
-            <IconButton
-              aria-label="move downward"
-              href='#step-1'
-              className="scroll-to"
-            >
-              <ArrowDownwardIcon size='medium'/>
-            </IconButton>
-            {/* <SectionIndicator></SectionIndicator> */}
-          </section>
-          {questions.map((section, index) => (
-            <QuestionSection
-              className="section"
-              key={section.question}
-              section={section}
-              count={questions.length}
-              responseIcon={responseIcon}
-              index={index} />
-          ))}
-        </StartPageStyles>
+      <StartPageStyles>
+        <Indicator step={step} setStep={setStep} count={questions.length}/>
+        <Disclaimer disclaimer={disclaimer} />
+        <section className="section section-intro">
+          <Hero heading={hero.heading} description={hero.description} image={hero.image} />
+          <IconButton
+            aria-label="move downward"
+            href='#step-1'
+            className="scroll-to"
+          >
+            <ArrowDownwardIcon size='medium'/>
+          </IconButton>
+        </section>
+        {questions.map((section, index) => (
+          <QuestionSection
+            className="section"
+            key={section.question}
+            section={section}
+            count={questions.length}
+            responseIcon={responseIcon}
+            index={index} />
+        ))}
+      </StartPageStyles>
     </Layout>
   )
 }
