@@ -33,7 +33,7 @@ export default function CaseCard({ cas, icon }) {
           <span style={{ marginRight: `0.5rem` }}>{caseName}</span>
           <Tooltip title="Open in Canlii" placement="right">
             <IconButton href={url} target='_blank' rel="noreferrer">
-              <OpenInNewIcon fontSize='medium' />
+              <OpenInNewIcon fontSize='default' />
             </IconButton>
           </Tooltip>
         </h3>
