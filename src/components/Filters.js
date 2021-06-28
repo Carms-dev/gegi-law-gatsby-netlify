@@ -24,7 +24,7 @@ const FiltersStyles = styled.div`
   display: grid;
   grid-gap: 1rem;
   padding-top: 2rem;
-  max-width: 540px;
+  max-width: 450px;
   margin: 0 auto;
 
   @media (min-width: 1024px) {

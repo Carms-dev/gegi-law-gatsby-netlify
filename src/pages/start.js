@@ -66,9 +66,6 @@ const StartPageStyles = styled.div`
     min-height: 100vh;
     margin-top: -91px;
     padding-top: 91px;
-    /* display: flex; */
-    /* margin: auto; */
-    /* min-height: calc(100vh - 91px); */
   }
   .reduce-pt {
     padding-top: 5vmax;
