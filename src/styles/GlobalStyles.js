@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --aqua: #51C2BA;
     --aqua-light: #C4E8E2;
-    --aqua-dark: #32808D; 
+    --aqua-dark: #32808D;
     --peach: #F7A58D;
     --yellow: #FCCC49;
     --grey-light: #ccc;
@@ -61,15 +61,22 @@ const GlobalStyles = createGlobalStyle`
     white-space: pre-wrap;
     line-height: 1.6;
   }
-  /* .btn {
+  .btn {
     text-align: center;
-    background: var(--aqua);
+    background: var(--aqua-dark);
     color: #fff;
-    padding: 10px 30px;
+    padding: 15px 30px;
     border-radius: 4px;
     width: 100%;
+    font-size: 1.25rem;
+    transition: opacity 0.7s ease;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
-  .btn-primary {
+  /* .btn-primary {
     background: var(--primary-alt);
   }
   .btn-secondary {
