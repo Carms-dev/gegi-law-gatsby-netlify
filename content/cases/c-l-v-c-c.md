@@ -1,4 +1,5 @@
 ---
+isCornerstone: false
 caseName: C(L) v C(C)
 citation: 1992 CanLII 7651 (ON SC)
 description: Respondent is a woman who passed as a man. Married another woman
