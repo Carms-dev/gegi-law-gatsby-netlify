@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --aqua: #51C2BA;
     --aqua-light: #C4E8E2;
+    --aqua-xlight: #EDF8F6;
     --aqua-dark: #32808D;
     --peach: #F7A58D;
     --peach-light: #FCDFD6;
@@ -62,6 +63,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     white-space: pre-wrap;
     line-height: 1.6;
+  }
+  .card {
+    border-radius: 12px;
+    border: 1px solid var(--lighter);
   }
   .btn {
     text-align: center;

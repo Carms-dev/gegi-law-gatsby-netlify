@@ -6,8 +6,7 @@ import Seo from '../components/Seo'
 import SiteBorderStyles from '../styles/SiteBorderStyles'
 import styled from 'styled-components'
 
-
-export default function IndexPage({ data: { page, supporters, cases }}) {
+export default function IndexPage({ data: { page, supporters, cases } }) {
   const {
     title,
     hero,
@@ -49,14 +48,12 @@ export default function IndexPage({ data: { page, supporters, cases }}) {
               <p>{secondaryCTAs.caseCTA}</p>
             </Link>
           </section>
-        </SiteBorderStyles>
-        {/* supporter logo garden */}
 
-        <SiteBorderStyles>
+          {/* supporter logo garden */}
           <section id="supporter" className="py-section">
             <p>{supporterLabel}</p>
             <div id="logo-garden">
-              {supporters.nodes.map(node =>{
+              {supporters.nodes.map(node => {
                 const supporter = node.childMarkdownRemark.frontmatter
                 return (
                   <a href={supporter.url}>
@@ -68,19 +65,33 @@ export default function IndexPage({ data: { page, supporters, cases }}) {
               })}
             </div>
           </section>
+
+          {/* Cornerstone cases */}
+          <section id="cornerstone">
+            <div className="card bg-aqua">
+              <h2>{caseSection.heading}</h2>
+              <p>{caseSection.description}</p>
+              <Link className="btn" to="/cases">{caseSection.linkText}</Link>
+            </div>
+            {cases.nodes.map(node => {
+              const cas = node.frontmatter
+              return (
+                <div className="card">
+                  <h3>{cas.caseName}</h3>
+                  <p>{cas.takeaway}</p>
+                </div>
+              )
+            })}
+          </section>
+          {/* About section */}
+          <section id="about">
+
+          </section>
+          {/* Statistics section */}
+          <section id="statistics">
+
+          </section>
         </SiteBorderStyles>
-        {/* Cornerstone cases */}
-        <section>
-
-        </section>
-        {/* About section */}
-        <section id="about">
-
-        </section>
-        {/* Statistics section */}
-        <section id="statistics">
-
-        </section>
       </HomePageStyles>
     </Layout>
   )
@@ -93,7 +104,7 @@ const HomePageStyles = styled.div`
     }
     p {
       font-size: 1.25rem;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -105,7 +116,6 @@ const HomePageStyles = styled.div`
   }
   .card-cta {
     padding: 1rem;
-    border-radius: 12px;
     display: grid;
     grid-template-columns: 70px 1fr;
     align-items: center;
@@ -140,6 +150,34 @@ const HomePageStyles = styled.div`
     }
   }
 
+  /* cornerstone */
+  #cornerstone {
+    display: grid;
+    grid-gap: 1rem;
+
+    h2, h3 {
+      margin-bottom: 1rem;
+    }
+
+    > div {
+      padding: 1rem;
+      background: var(--aqua-xlight);
+    }
+
+    div:first-child {
+      padding: 3rem;
+      background: var(--aqua-light);
+      display: grid;
+      place-content: center;
+      text-align: center;
+
+      p {
+        margin-bottom: 3rem;
+      }
+
+    }
+  }
+
   @media (min-width: 640px) {
     #hero {
       text-align: center;
@@ -149,6 +187,7 @@ const HomePageStyles = styled.div`
       grid-template-columns: repeat(2, 1fr);
     }
     #logo-garden {
+      overflow-x: hidden;
       justify-content: center;
     }
   }
@@ -168,11 +207,17 @@ const HomePageStyles = styled.div`
         font-size: 1.25rem;
       }
     }
-    #logo-garden {
-      d
+    #cornerstone {
+      grid-template-columns: repeat(2, 1fr);
+
+      > div {
+        padding: 2rem;
+      }
+      div:first-child {
+        grid-row: 1 / 3;
+      }
     }
   }
-
 `
 
 export const data = graphql`
