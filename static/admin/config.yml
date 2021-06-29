@@ -110,9 +110,9 @@ collections:
             widget: object
             fields:
             - {label: Resource Page (CTA), name: resourceCTA, widget: string}
-            - {label: Resource Page Icon, name: resourcePageIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+            - {label: Resource Page Icon, name: resourceIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
             - {label: Case Page (CTA), name: caseCTA, widget: string}
-            - {label: Case Page Icon, name: casePageIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+            - {label: Case Page Icon, name: caseIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Introduce Supporter, name: supporterLabel, widget: string}
           - label: Cornerstone Cases Section
             name: caseSection

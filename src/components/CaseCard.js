@@ -1,7 +1,7 @@
-import * as React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "styled-components"
-import SimplePopover from "./SimplePopover"
+import * as React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
+import SimplePopover from './SimplePopover'
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { IconButton } from "@material-ui/core"
 import Chip from '@material-ui/core/Chip';

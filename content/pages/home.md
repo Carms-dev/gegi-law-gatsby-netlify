@@ -15,12 +15,12 @@ caseSection:
   description: You Should Know About
   linkText: See All
 secondaryCTAs:
-  resourcePageIcon:
+  resourceIcon:
     imageFile: /assets/gegi_info.png
     alt: GEGI info Icon
   resourceCTA: Where can I get legal advice from recognized organizations and firms?
   caseCTA: How can I search relevant caselaw?
-  casePageIcon:
+  caseIcon:
     imageFile: /assets/case.png
     alt: GEGI Case Icon
 aboutSection:
