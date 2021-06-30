@@ -16,8 +16,8 @@ const useStyles = makeStyles(() => ({
     top: '50vh',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    maxWidth: 840,
 
-    maxWidth: 500,
     "& .MuiPaper-root": {
       borderRadius: `var(--br)`,
       padding: `1rem`,

@@ -224,16 +224,25 @@ collections:
           - {label: Site Title, name: siteTitle, widget: string}
           - {label: Site Description, name: siteDescription, widget: text}
           - {label: Site Logo, name: siteLogo, widget: image}
-          - label: Privacy Page
+          - {label: Site Image, name: siteImage, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - label: Privacy Policy Page
             name: privacyPage
             widget: object
             fields:
               - {label: Heading, name: heading, widget: string}
-              - label: Privacy Policy
-                name: privacyPolicy
+              - label: Policy
+                name: description
                 widget: markdown
                 buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
-              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - label: 404 Page
+            name: fourOhFourPage
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - label: Description
+                name: description
+                widget: markdown
+                buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
 
 
   - label: Service (Resource Category)

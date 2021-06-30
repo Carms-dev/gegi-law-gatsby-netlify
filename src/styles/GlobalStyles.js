@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     --aqua-light: #C4E8E2;
     --aqua-xlight: #EDF8F6;
     --aqua-dark: #32808D;
+    --aqua-xdark: #2B6C76;
     --peach: #F7A58D;
     --peach-light: #FCDFD6;
     --yellow: #FCCC49;
@@ -38,6 +39,12 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: var(--aqua-dark);
+    /* transition: color 0.7s ease; */
+
+    &:hover {
+      color: var(--aqua-xdark);
+    }
   }
   button:focus, button:hover {
     outline: none;
@@ -83,6 +90,7 @@ const GlobalStyles = createGlobalStyle`
     opacity: 1;
 
     &:hover {
+      color: var(--white);
       opacity: 0.9;
     }
   }
