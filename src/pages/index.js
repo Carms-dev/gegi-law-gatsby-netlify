@@ -144,6 +144,7 @@ const HomePageStyles = styled.div`
   }
   /* hero */
   #hero {
+    text-align: center;
     h1 {
       margin-bottom: 1rem;
     }
@@ -256,9 +257,6 @@ const HomePageStyles = styled.div`
   }
 
   @media (min-width: 640px) {
-    #hero {
-      text-align: center;
-    }
     #cta {
       grid-gap: 3rem;
       grid-template-columns: repeat(2, 1fr);

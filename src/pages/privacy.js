@@ -6,45 +6,49 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import SiteBorderStyles from '../styles/SiteBorderStyles'
 
 export default function PrivacyPolicyPage({ data }) {
-  const { heading, image, privacyPolicy } = data.page.childMarkdownRemark.frontmatter.privacyPage
-  console.log(heading, image, privacyPolicy)
+  const { siteImage, privacyPage: { heading, description } } = data.page.childMarkdownRemark.frontmatter
+
   return (
     <Layout>
       <Seo title={heading} />
-      <SiteBorderStyles>
-        <PolicyPageStyles className="py-section">
-          <GatsbyImage
-            image={image.imageFile.childImageSharp.gatsbyImageData}
-            alt={image.alt}
-            imgStyle={{ width: `auto`, padding: `1rem` }}
-          />
-          <div>
-            <h1>{heading}</h1>
-            <ReactMarkdown>{privacyPolicy}</ReactMarkdown>
-          </div>
-        </PolicyPageStyles>
-      </SiteBorderStyles>
+      <PolicyPageStyles className="py-section">
+        <GatsbyImage
+          image={siteImage.imageFile.childImageSharp.gatsbyImageData}
+          alt={siteImage.alt}
+          imgStyle={{ width: `auto`, padding: `1rem` }}
+        />
+        <div>
+          <h1>{heading}</h1>
+          <ReactMarkdown>{description}</ReactMarkdown>
+        </div>
+      </PolicyPageStyles>
     </Layout>
   )
 }
 
 const PolicyPageStyles = styled.div`
+  padding: 2rem 20px;
+  max-width: 640px;
+  margin: auto;
+  text-align: center;
+
   display: grid;
-  place-items: center;
+  grid-gap: 1rem;
+  min-height: calc(100vh - 200px);
+  place-content: space-evenly;
+  justify-items: center;
+
   h1 {
     margin-bottom: 1rem;
   }
   p {
     margin-bottom: 0.5rem;
   }
+
   @media (min-width: 640px) {
-    grid-template-columns: 2fr 3fr;
-    grid-auto-rows: 1fr;
-    align-items: flex-start;
-    grid-gap: 2rem;
+    padding: 3rem 20px;
   }
 `
 
@@ -53,21 +57,21 @@ export const data = graphql`
     page: file(relativeDirectory: {eq: "settings"}) {
       childMarkdownRemark {
         frontmatter {
-          privacyPage {
-            heading
-            privacyPolicy
-            image {
-              alt
-              imageFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 400
-                    placeholder: BLURRED
-                    layout: CONSTRAINED
-                  )
-                }
+          siteImage {
+            imageFile {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 400
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
               }
             }
+            alt
+          }
+          privacyPage {
+            heading
+            description
           }
         }
       }

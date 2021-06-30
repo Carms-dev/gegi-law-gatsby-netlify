@@ -61,6 +61,11 @@ export default function ResourcesPage({ data: { page, collections } }) {
       </div>
       <section className="py-section">
         <SiteBorderStyles>
+          {resources.length === 0 &&
+          <section className="pb-section" style={{textAlign: `center`}}>
+            <h2 style={{marginBottom: `1rem`}}>0 results found</h2>
+            <p>Try refining your search!</p>
+          </section>}
           <ResourceCards resources={resources} />
         </SiteBorderStyles>
 
