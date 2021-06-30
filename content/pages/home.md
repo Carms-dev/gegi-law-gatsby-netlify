@@ -3,7 +3,7 @@ statisticsSection:
   caseLabel: Gender-related Human Rights Cases
   resourceLabel: Vetted Organizations offering affortable Legal Specialty
   provinceLabel: Province of Canada
-  provinceNum: 1
+  provinceCount: 1
 title: Gender Expression and Gender Identity Human Rights Law for Ontario Students
 hero:
   heading: Gender Expression and Gender Identity Human Rights Law for Ontario Students

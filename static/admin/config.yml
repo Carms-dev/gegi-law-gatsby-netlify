@@ -138,7 +138,7 @@ collections:
               - {label: Case Label, name: caseLabel, widget: string}
               - {label: Resource Label, name: resourceLabel, widget: string}
               - {label: Province Label, name: provinceLabel, widget: string}
-              - {label: "# Provinces", name: provinceNum, widget: number, value_type: int}
+              - {label: "# Provinces", name: provinceCount, widget: number, value_type: int}
 
       - file: content/pages/start.md
         label: "Get Started Page"
@@ -264,8 +264,8 @@ collections:
       - {label: Theme Category, name: category, widget: string, required: true}
 
   - label: Supporter Logo
-    name: supporter
-    folder: content/supporter
+    name: supporters
+    folder: content/supporters
     create: true
     identifier_field: category
     fields:

@@ -1,12 +1,15 @@
 import React from 'react'
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
+
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import SiteBorderStyles from '../styles/SiteBorderStyles'
 import styled from 'styled-components'
 
-export default function IndexPage({ data: { page, supporters, cases } }) {
+export default function IndexPage({ data: { page, collections, cornerstones } }) {
+  // Destructure page content
   const {
     title,
     hero,
@@ -16,6 +19,21 @@ export default function IndexPage({ data: { page, supporters, cases } }) {
     aboutSection,
     statisticsSection
   } = page.childMarkdownRemark.frontmatter
+
+  // Compile supporters collection
+  const supporters = collections.group
+  .find(collection => collection.fieldValue === "supporters")
+  .nodes.map(node => (node.childMarkdownRemark.frontmatter))
+
+  // Get case count
+  const caseCount = collections.group
+  .find(collection => collection.fieldValue === "cases")
+  .nodes.length
+
+  // Get resource count
+  const resourceCount = collections.group
+  .find(collection => collection.fieldValue === "resources")
+  .nodes.length
 
   return (
     <Layout>
@@ -30,6 +48,7 @@ export default function IndexPage({ data: { page, supporters, cases } }) {
           </SiteBorderStyles>
         </section>
         <div id="curve" />
+
         {/* secondary call to action */}
         <SiteBorderStyles>
           <section id="cta">
@@ -53,43 +72,61 @@ export default function IndexPage({ data: { page, supporters, cases } }) {
           <section id="supporter" className="py-section">
             <p>{supporterLabel}</p>
             <div id="logo-garden">
-              {supporters.nodes.map(node => {
-                const supporter = node.childMarkdownRemark.frontmatter
-                return (
-                  <a href={supporter.url}>
-                    <GatsbyImage
-                      image={supporter.logo.childImageSharp.gatsbyImageData}
-                      alt={`${supporter.title} Logo`} />
-                  </a>
-                )
-              })}
+              {supporters.map(supporter => (
+                <a key={supporter.title} href={supporter.url}>
+                  <GatsbyImage
+                    image={supporter.logo.childImageSharp.gatsbyImageData}
+                    alt={`${supporter.title} Logo`} />
+                </a>
+              ))}
             </div>
           </section>
 
           {/* Cornerstone cases */}
-          <section id="cornerstone">
+          <section id="cornerstone" className="py-section">
             <div className="card bg-aqua">
               <h2>{caseSection.heading}</h2>
               <p>{caseSection.description}</p>
               <Link className="btn" to="/cases">{caseSection.linkText}</Link>
             </div>
-            {cases.nodes.map(node => {
+            {cornerstones.nodes.map(node => {
               const cas = node.frontmatter
               return (
-                <div className="card">
+                <div key={cas.caseName} className="card">
                   <h3>{cas.caseName}</h3>
                   <p>{cas.takeaway}</p>
                 </div>
               )
             })}
           </section>
+
           {/* About section */}
-          <section id="about">
-
+          <section id="about" className="py-section">
+            <GatsbyImage
+              image={aboutSection.image.imageFile.childImageSharp.gatsbyImageData}
+              alt={aboutSection.image.alt}
+              imgStyle={{ width: `auto`, padding: `3rem` }}
+            />
+            <div>
+              <h2>{aboutSection.heading}</h2>
+              <ReactMarkdown>{aboutSection.description}</ReactMarkdown>
+            </div>
           </section>
-          {/* Statistics section */}
-          <section id="statistics">
 
+          {/* Statistics section */}
+          <section id="stats" className="py-section">
+            <div className="card">
+              <h3>{caseCount}</h3>
+              <p>{statisticsSection.caseLabel}</p>
+            </div>
+            <div className="card">
+              <h3>{resourceCount}</h3>
+              <p>{statisticsSection.resourceLabel}</p>
+            </div>
+            <div className="card">
+              <h3>{statisticsSection.provinceCount}</h3>
+              <p>{statisticsSection.provinceLabel}</p>
+            </div>
           </section>
         </SiteBorderStyles>
       </HomePageStyles>
@@ -98,6 +135,11 @@ export default function IndexPage({ data: { page, supporters, cases } }) {
 }
 
 const HomePageStyles = styled.div`
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+
+  /* hero */
   #hero {
     h1 {
       margin-bottom: 1rem;
@@ -113,20 +155,21 @@ const HomePageStyles = styled.div`
     display: grid;
     grid-gap: 1rem;
     padding: 2rem 0;
-  }
-  .card-cta {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    align-items: center;
-    grid-gap: 1rem;
-    font-weight: 400;
-  }
-  .card-cta:first-child {
-    background-color: var(--yellow-light);
-  }
-  .card-cta:last-child {
-    background-color: var(--peach-light);
+
+    .card-cta {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      align-items: center;
+      grid-gap: 1rem;
+      font-weight: 400;
+    }
+    .card-cta:first-child {
+      background-color: var(--yellow-light);
+    }
+    .card-cta:last-child {
+      background-color: var(--peach-light);
+    }
   }
 
   /* supporter */
@@ -137,6 +180,7 @@ const HomePageStyles = styled.div`
     }
   }
 
+  /* logos */
   #logo-garden {
     overflow-x: scroll;
     display: grid;
@@ -155,26 +199,54 @@ const HomePageStyles = styled.div`
     display: grid;
     grid-gap: 1rem;
 
-    h2, h3 {
-      margin-bottom: 1rem;
-    }
-
     > div {
       padding: 1rem;
       background: var(--aqua-xlight);
     }
-
     div:first-child {
       padding: 3rem;
       background: var(--aqua-light);
       display: grid;
       place-content: center;
       text-align: center;
-
       p {
         margin-bottom: 3rem;
       }
+    }
+  }
 
+  /* about */
+  #about {
+    display: grid;
+    grid-gap: 2rem;
+    place-items: center;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /* stats */
+  #stats {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+    grid-gap: 1rem;
+
+    h3 {
+      font-size: 3rem;
+    }
+    div {
+      padding: 2rem;
+      text-align: center;
+    }
+    div:first-child {
+      background: var(--yellow-light);
+    }
+    div:nth-child(2) {
+      background: var(--peach-light);
+    }
+    div:last-child {
+      background: var(--aqua-xlight);
     }
   }
 
@@ -183,12 +255,20 @@ const HomePageStyles = styled.div`
       text-align: center;
     }
     #cta {
-      grid-gap: 2rem;
+      grid-gap: 3rem;
       grid-template-columns: repeat(2, 1fr);
     }
     #logo-garden {
       overflow-x: hidden;
       justify-content: center;
+    }
+    #cornerstone {
+      > div {
+        padding: 2rem;
+      }
+    }
+    #about {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -197,22 +277,21 @@ const HomePageStyles = styled.div`
       margin-top: -6rem;
       grid-template-columns: repeat(2, 420px);
       justify-content: center;
-    }
-    .card-cta {
-      padding: 2rem;
-      grid-template-columns: 1fr;
-      place-items: center;
-      text-align: center;
-      p {
-        font-size: 1.25rem;
+
+      .card-cta {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+        place-items: center;
+        text-align: center;
+
+        p {
+          font-size: 1.25rem;
+        }
       }
     }
     #cornerstone {
       grid-template-columns: repeat(2, 1fr);
 
-      > div {
-        padding: 2rem;
-      }
       div:first-child {
         grid-row: 1 / 3;
       }
@@ -285,31 +364,30 @@ export const data = graphql`
             caseLabel
             resourceLabel
             provinceLabel
-            provinceNum
+            provinceCount
           }
         }
       }
     }
-    supporters: allFile(filter: {relativeDirectory: {eq: "supporter"}}) {
-      nodes {
-        childMarkdownRemark {
-          frontmatter {
-            title
-            url
-            logo {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  placeholder: BLURRED
-                  layout: CONSTRAINED
-                )
+    collections: allFile(filter: {relativeDirectory: {in: ["cases", "resources", "supporters"]}}) {
+      group(field: relativeDirectory) {
+        fieldValue
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              url
+              logo {
+                childImageSharp {
+                  gatsbyImageData(width: 200, placeholder: BLURRED, layout: CONSTRAINED)
+                }
               }
             }
           }
         }
       }
     }
-    cases: allMarkdownRemark(filter: {frontmatter: {isCornerstone: {eq: true}}}) {
+    cornerstones: allMarkdownRemark(filter: {frontmatter: {isCornerstone: {eq: true}}}) {
       nodes {
         frontmatter {
           caseName
