@@ -1,4 +1,5 @@
 ---
+isCornerstone: false
 caseName: B v A
 citation: 1990 CanLII 7012 (ON SC)
 description: ' Whether originally female transsexual "man" within definition of

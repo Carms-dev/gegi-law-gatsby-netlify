@@ -1,4 +1,5 @@
 ---
+isCornerstone: false
 caseName: Re Reid
 citation: 1986 CarswellOnt 178
 description: Application by a 32 y/o unmarried man for a name change

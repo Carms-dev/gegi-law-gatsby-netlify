@@ -4,9 +4,12 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --aqua: #51C2BA;
     --aqua-light: #C4E8E2;
-    --aqua-dark: #32808D; 
+    --aqua-xlight: #EDF8F6;
+    --aqua-dark: #32808D;
     --peach: #F7A58D;
+    --peach-light: #FCDFD6;
     --yellow: #FCCC49;
+    --yellow-light: #FEF5DB;
     --grey-light: #ccc;
     --grey: #747474;
     --black: #2E2E2E;
@@ -61,15 +64,26 @@ const GlobalStyles = createGlobalStyle`
     white-space: pre-wrap;
     line-height: 1.6;
   }
-  /* .btn {
+  .card {
+    border-radius: 12px;
+    border: 1px solid var(--lighter);
+  }
+  .btn {
     text-align: center;
-    background: var(--aqua);
+    background: var(--aqua-dark);
     color: #fff;
-    padding: 10px 30px;
+    padding: 15px 30px;
     border-radius: 4px;
     width: 100%;
+    font-size: 1.25rem;
+    transition: opacity 0.7s ease;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
-  .btn-primary {
+  /* .btn-primary {
     background: var(--primary-alt);
   }
   .btn-secondary {

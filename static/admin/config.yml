@@ -105,8 +105,14 @@ collections:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
               - {label: Call to action, name: linkText, widget: string}
-          - {label: Introduce Resource Page, name: resourcePageLabel, widget: string}
-          - {label: Introduce Case Page, name: casePageLabel, widget: string}
+          - label: Secondary Call To Action
+            name: secondaryCTAs
+            widget: object
+            fields:
+            - {label: Resource Page (CTA), name: resourceCTA, widget: string}
+            - {label: Resource Page Icon, name: resourceIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+            - {label: Case Page (CTA), name: caseCTA, widget: string}
+            - {label: Case Page Icon, name: caseIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Introduce Supporter, name: supporterLabel, widget: string}
           - label: Cornerstone Cases Section
             name: caseSection
@@ -132,7 +138,7 @@ collections:
               - {label: Case Label, name: caseLabel, widget: string}
               - {label: Resource Label, name: resourceLabel, widget: string}
               - {label: Province Label, name: provinceLabel, widget: string}
-              - {label: "# Provinces", name: provinceNum, widget: number, value_type: int}
+              - {label: "# Provinces", name: provinceCount, widget: number, value_type: int}
 
       - file: content/pages/start.md
         label: "Get Started Page"
@@ -258,8 +264,8 @@ collections:
       - {label: Theme Category, name: category, widget: string, required: true}
 
   - label: Supporter Logo
-    name: supporter
-    folder: content/supporter
+    name: supporters
+    folder: content/supporters
     create: true
     identifier_field: category
     fields:
