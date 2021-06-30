@@ -73,7 +73,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
             <p>{supporterLabel}</p>
             <div id="logo-garden">
               {supporters.map(supporter => (
-                <a key={supporter.title} href={supporter.url} target='_blank' rel="noreferrer">
+                <a key={supporter.title} href={supporter.url} target="_blank" rel="noreferrer">
                   <GatsbyImage
                     image={supporter.logo.childImageSharp.gatsbyImageData}
                     alt={`${supporter.title} Logo`} />
@@ -92,10 +92,14 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
             {cornerstones.nodes.map(node => {
               const cas = node.frontmatter
               return (
-                <Link to="/cases" key={cas.caseName} className="card">
+                <a key={cas.caseName}
+                   className="card"
+                   href={cas.url}
+                   target="_blank"
+                   rel="noreferrer">
                   <h3>{cas.caseName}</h3>
                   <p>{cas.takeaway}</p>
-                </Link>
+                </a>
               )
             })}
           </section>
@@ -393,6 +397,7 @@ export const data = graphql`
         frontmatter {
           caseName
           takeaway
+          url
         }
       }
     }
