@@ -58,7 +58,6 @@ export const data = graphql`
       childMarkdownRemark {
         frontmatter {
           siteImage {
-            alt
             imageFile {
               childImageSharp {
                 gatsbyImageData(
@@ -68,6 +67,7 @@ export const data = graphql`
                 )
               }
             }
+            alt
           }
           privacyPage {
             heading

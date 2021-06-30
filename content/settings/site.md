@@ -1,6 +1,6 @@
 ---
 siteTitle: GEGI Law
-siteDescription: TBD
+siteDescription: Gender Expression and Gender Identity Human Rights Law for Ontario Students
 siteLogo: /assets/gegi_law.png
 siteImage:
   imageFile: /assets/gegi_wink.png
@@ -21,4 +21,12 @@ fourOhFourPage:
 
 
     [Home](/) | [Get Started](/start) | [Resources](/resources) | [Cases](/cases)
+footerNote: Gegi Law contains general legal information for people in Ontario,
+  Canada. It is not intended to be used as legal advice for a specific legal
+  problem
+socialMedia:
+  facebook: ""
+  github: https://github.com/Carms-dev/gegi-law-gatsby-netlify
+  twitter: https://twitter.com/gegi_ca
+  instagram: ""
 ---
