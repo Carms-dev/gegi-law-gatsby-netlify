@@ -73,7 +73,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
             <p>{supporterLabel}</p>
             <div id="logo-garden">
               {supporters.map(supporter => (
-                <a key={supporter.title} href={supporter.url}>
+                <a key={supporter.title} href={supporter.url} target='_blank' rel="noreferrer">
                   <GatsbyImage
                     image={supporter.logo.childImageSharp.gatsbyImageData}
                     alt={`${supporter.title} Logo`} />
@@ -85,17 +85,17 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
           {/* Cornerstone cases */}
           <section id="cornerstone" className="py-section">
             <div className="card bg-aqua">
-              <h2>{caseSection.heading}</h2>
+              <h2>{cornerstones.nodes.length} {caseSection.heading}</h2>
               <p>{caseSection.description}</p>
               <Link className="btn" to="/cases">{caseSection.linkText}</Link>
             </div>
             {cornerstones.nodes.map(node => {
               const cas = node.frontmatter
               return (
-                <div key={cas.caseName} className="card">
+                <Link to="/cases" key={cas.caseName} className="card">
                   <h3>{cas.caseName}</h3>
                   <p>{cas.takeaway}</p>
-                </div>
+                </Link>
               )
             })}
           </section>
@@ -115,18 +115,18 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
 
           {/* Statistics section */}
           <section id="stats" className="py-section">
-            <div className="card">
+            <Link to="/cases" className="card">
               <h3>{caseCount}</h3>
               <p>{statisticsSection.caseLabel}</p>
-            </div>
-            <div className="card">
+            </Link>
+            <Link to="/resources" className="card">
               <h3>{resourceCount}</h3>
               <p>{statisticsSection.resourceLabel}</p>
-            </div>
-            <div className="card">
+            </Link>
+            <Link to="/"className="card">
               <h3>{statisticsSection.provinceCount}</h3>
               <p>{statisticsSection.provinceLabel}</p>
-            </div>
+            </Link>
           </section>
         </SiteBorderStyles>
       </HomePageStyles>
@@ -138,7 +138,6 @@ const HomePageStyles = styled.div`
   h2, h3 {
     margin-bottom: 1rem;
   }
-
   /* hero */
   #hero {
     h1 {
@@ -149,7 +148,9 @@ const HomePageStyles = styled.div`
       margin-bottom: 4rem;
     }
   }
-
+  .card {
+    font-weight: 400;
+  }
   /* Call to action */
   #cta {
     display: grid;
@@ -199,11 +200,11 @@ const HomePageStyles = styled.div`
     display: grid;
     grid-gap: 1rem;
 
-    > div {
+    > .card {
       padding: 1rem;
       background: var(--aqua-xlight);
     }
-    div:first-child {
+    .card:first-child {
       padding: 3rem;
       background: var(--aqua-light);
       display: grid;
@@ -235,17 +236,17 @@ const HomePageStyles = styled.div`
     h3 {
       font-size: 3rem;
     }
-    div {
+    .card {
       padding: 2rem;
       text-align: center;
     }
-    div:first-child {
+    .card:first-child {
       background: var(--yellow-light);
     }
-    div:nth-child(2) {
+    .card:nth-child(2) {
       background: var(--peach-light);
     }
-    div:last-child {
+    .card:last-child {
       background: var(--aqua-xlight);
     }
   }
@@ -263,7 +264,7 @@ const HomePageStyles = styled.div`
       justify-content: center;
     }
     #cornerstone {
-      > div {
+      > .card {
         padding: 2rem;
       }
     }
@@ -292,7 +293,7 @@ const HomePageStyles = styled.div`
     #cornerstone {
       grid-template-columns: repeat(2, 1fr);
 
-      div:first-child {
+      .card:first-child {
         grid-row: 1 / 3;
       }
     }

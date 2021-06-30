@@ -1,7 +1,7 @@
-import * as React from "react"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
-import SiteBorderStyles from "../styles/SiteBorderStyles"
+import React from 'react'
+import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import SiteBorderStyles from '../styles/SiteBorderStyles'
 
 export default function Hero({ heading, description, image }) {
   return (
