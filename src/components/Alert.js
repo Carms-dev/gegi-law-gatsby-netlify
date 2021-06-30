@@ -10,11 +10,19 @@ import CloseIcon from '@material-ui/icons/Close'
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
+    position: 'absolute',
+    zIndex: 101,
+    width: 'calc(100% - 2rem)',
+    top: '50vh',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+
+    maxWidth: 500,
     "& .MuiPaper-root": {
-      marginTop: `1rem`,
-      borderRadius: 12,
+      borderRadius: `var(--br)`,
       padding: `1rem`,
+      border: `var(--border)`,
+      background: `var(--yellow-light)`,
     },
     "& .MuiAlert-action": {
       alignItems: `flex-start`,
@@ -31,7 +39,7 @@ export default function Disclaimer({ disclaimer }) {
     <SiteBorderStyles>
       <div className={classes.root}>
         <Collapse in={open}>
-          <Alert severity="warning"
+          <Alert
             action={
               <IconButton
                 aria-label="close"

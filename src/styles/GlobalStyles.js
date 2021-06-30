@@ -17,6 +17,8 @@ const GlobalStyles = createGlobalStyle`
     --lighter: #eee;
     --white: #fff;
     --off-white: #FFFBF3;
+    --border: 1px solid var(--lighter);
+    --br: 12px;
   }
   * {
     box-sizing: border-box;
@@ -65,15 +67,16 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.6;
   }
   .card {
-    border-radius: 12px;
-    border: 1px solid var(--lighter);
+    border-radius: var(--br);
+    border: var(--border);
   }
   .btn {
     text-align: center;
     background: var(--aqua-dark);
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 4px;
+    padding: 18px 36px;
+    border-radius: var(--br);
+    border: var(--border);
     width: 100%;
     font-size: 1.25rem;
     transition: opacity 0.7s ease;
