@@ -10,7 +10,9 @@ email: talklaw@halco.org
 phone: 416-340-7790 or 1-888-705-8889
 logo: /assets/halco.jpg
 resourceType: Community Organization
-service: Legal Representation
+service:
+  - Free Consultation
+  - Legal Representation
 location:
   - Ontario-wide
 cost: Free

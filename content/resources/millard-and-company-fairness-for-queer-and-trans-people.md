@@ -8,7 +8,8 @@ email: info@millardco.ca
 phone: 416-920-3030
 logo: /assets/millard_co_logo.png
 resourceType: Law Firm
-service: Legal Representation
+service:
+  - Legal Representation
 location:
   - Toronto
 cost: Service Dependent

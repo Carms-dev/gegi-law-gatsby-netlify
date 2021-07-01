@@ -40,7 +40,9 @@ collections:
         name: service
         widget: relation
         collection: serviceCategories
+        multiple: true
         required: true
+        min: 1
         search_fields: [category]
         value_field: category
         display_fields: [category]

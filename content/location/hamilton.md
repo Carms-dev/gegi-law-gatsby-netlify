@@ -1,4 +1,3 @@
 ---
-hiddenKey: Location
 category: Hamilton
 ---
