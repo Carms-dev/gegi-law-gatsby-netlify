@@ -8,11 +8,22 @@ import Footer from './Footer'
 import Typography from '../styles/Typography'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+  const { siteSettings } = useStaticQuery(graphql`
     query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+      siteSettings: file(relativeDirectory: {eq: "settings"}) {
+        childrenMarkdownRemark {
+          frontmatter {
+            siteTitle
+          }
         }
       }
     }
@@ -22,7 +33,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Typography />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={siteSettings.childrenMarkdownRemark.frontmatter?.siteTitle || `Title`} />
       <main>{children}</main>
       <Footer />
     </>

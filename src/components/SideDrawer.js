@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
 
 import { IconButton, Drawer, List, ListItem, ListItemText } from "@material-ui/core"
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SideDrawer({ navLinks }) {
+export default function SideDrawer({ navigation }) {
   const classes = useStyles();
 
   const [state, setState] = useState({ top: false })
@@ -38,10 +39,15 @@ export default function SideDrawer({ navLinks }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List component="nav">
-        {navLinks.map(({ title, path }) => (
-          <Link to={path} key={title} className={classes.linkText}>
+        {navigation.map(({ pagePath, label, icon }) => (
+          <Link to={pagePath} key={label} className={classes.linkText}>
             <ListItem button>
-              <ListItemText primary={title} />
+              <GatsbyImage
+                image={icon.imageFile.childImageSharp.gatsbyImageData}
+                alt={icon.alt}
+                imgStyle={{ width: `auto`}}
+                style={{ marginRight: `0.5rem` }}/>
+              <ListItemText primary={label} />
             </ListItem>
           </Link>
         ))}

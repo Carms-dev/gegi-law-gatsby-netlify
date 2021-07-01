@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 import Logo from "./Logo"
 import SideDrawer from "./SideDrawer"
@@ -30,11 +30,34 @@ const useStyles = makeStyles({
 const Header = () => {
   const classes = useStyles();
 
-  const navLinks = [
-    { title: `Get Started`, path: `/start` },
-    { title: `Resources`, path: `/resources` },
-    { title: `Cases`, path: `/cases` },
-  ]
+  const { siteSettings } = useStaticQuery(graphql`
+    query {
+      siteSettings: file(relativeDirectory: {eq: "settings"}) {
+        childMarkdownRemark {
+          frontmatter {
+            navigation {
+              pagePath
+              label
+              icon {
+                imageFile {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 50
+                      placeholder: BLURRED
+                      layout: CONSTRAINED
+                    )
+                  }
+                }
+                alt
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const { navigation } = siteSettings.childMarkdownRemark.frontmatter
 
   return (
     <AppBar position="static" style={{ background: `var(--aqua-light)`, boxShadow: `unset` }}>
@@ -47,10 +70,10 @@ const Header = () => {
               aria-labelledby="main navigation"
               className={classes.navDisplayFlex}
             >
-              {navLinks.map(({ title, path }) => (
-                <Link to={path} key={title} className={classes.linkText}>
+              {navigation.map(({ label, pagePath }) => (
+                <Link to={pagePath} key={label} className={classes.linkText}>
                   <ListItem button>
-                    <ListItemText primary={title} />
+                    <ListItemText primary={label} />
                   </ListItem>
                 </Link>
               ))}
@@ -58,7 +81,7 @@ const Header = () => {
           </Hidden>
 
           <Hidden mdUp>
-            <SideDrawer navLinks={navLinks} />
+            <SideDrawer navigation={navigation} />
           </Hidden>
         </Container>
 
