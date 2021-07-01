@@ -9,7 +9,6 @@ description: Application about the respondent’s repeal of the 2015 sex educati
 takeaway: This case affirmed that teachers must include LGBTQ+ students in their
   sexual education curriculum because the Human Rights Code and the Canadian
   Charter of Rights and Freedoms requires them to.
-hasWon: false
 url: https://www.canlii.org/en/on/onhrt/doc/2019/2019hrto685/2019hrto685.html
 themes:
   - Employment

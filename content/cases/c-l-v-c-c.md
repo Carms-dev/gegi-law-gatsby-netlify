@@ -11,7 +11,6 @@ takeaway: One of the applicant's in this case had not undergone gender affirming
   as a result, both of the applicants were viewed as women. The marriage was
   nulled because same sex marriage was not legalized (and would continute to be
   illegal until 2005).
-hasWon: false
 url: https://www.canlii.org/en/on/onsc/doc/1992/1992canlii7651/1992canlii7651.html?autocompleteStr=c(l)%20v%20C&autocompletePos=1
 themes:
   - Marriage

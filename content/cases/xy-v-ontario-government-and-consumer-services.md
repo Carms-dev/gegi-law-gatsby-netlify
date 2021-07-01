@@ -10,7 +10,6 @@ description: Transgender woman challenged the Government of Ontario's
   transgender folks to undergo surgery to have their sex designation on their
   identification match their gender identity.
 takeaway: "It affirms the importance of self-identifying gender for legal purposes. "
-hasWon: true
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto726/2012hrto726.html?resultIndex=1
 themes:
   - Identification

@@ -8,7 +8,6 @@ description: Applicants (employees of Gallagher's) allege that they asked JG to
 takeaway: This case, like many others, shows that consistently misusing gender
   pronouns and using slurs, even behind someone's back, is a direct violation of
   the Human Rights Code.
-hasWon: true
 url: https://www.canlii.org/en/on/onhrt/doc/2021/2021hrto240/2021hrto240.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=9
 themes:
   - Employment
