@@ -5,12 +5,22 @@ siteLogo: /assets/gegi_law.png
 siteImage:
   imageFile: /assets/gegi_wink.png
   alt: GEGI wink
-privacyPage:
-  heading: Privacy Policy
-  description: Gegi takes your privacy seriously and at all times complies with
-    applicable privacy laws in Ontario, Canada. You do not need to share any
-    information with Gegi to access the information and resources on this site.
-    Everything is 100% freely accessible — and it always will be.
+navigation:
+  - pagePath: /start
+    label: Get Started
+    icon:
+      imageFile: /assets/gegi_wink.png
+      alt: Gegi Wink
+  - icon:
+      imageFile: /assets/gegi_info.png
+      alt: Gegi Info
+    label: Resource Finder
+    pagePath: /resources
+  - icon:
+      imageFile: /assets/case.png
+      alt: Gegi Case
+    label: Case Collection
+    pagePath: /cases
 fourOhFourPage:
   heading: Oops!
   description: >-
@@ -24,6 +34,12 @@ fourOhFourPage:
 footerNote: Gegi Law contains general legal information for people in Ontario,
   Canada. It is not intended to be used as legal advice for a specific legal
   problem
+privacyPage:
+  heading: Privacy Policy
+  description: Gegi takes your privacy seriously and at all times complies with
+    applicable privacy laws in Ontario, Canada. You do not need to share any
+    information with Gegi to access the information and resources on this site.
+    Everything is 100% freely accessible — and it always will be.
 socialMedia:
   facebook: ""
   github: https://github.com/Carms-dev/gegi-law-gatsby-netlify
