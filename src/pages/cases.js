@@ -11,7 +11,7 @@ import SiteBorderStyles from "../styles/SiteBorderStyles"
 
 
 export default function CasesPage({ data: { page, collections } }) {
-  const { title, hero, wonIcon, lostIcon  } = page.childMarkdownRemark.frontmatter
+  const { title, hero, cornerstoneIcon, caseIcon  } = page.childMarkdownRemark.frontmatter
 
   // build themes (filter)
   const themes = collections.group
@@ -38,7 +38,7 @@ export default function CasesPage({ data: { page, collections } }) {
         <SiteBorderStyles>
           <CaseContentStyles>
             <Themes allCases={allCases} setCases={setCases} themes={themes}  />
-            <CaseCards cases={cases} wonIcon={wonIcon} lostIcon={lostIcon} />
+            <CaseCards cases={cases} cornerstoneIcon={cornerstoneIcon} caseIcon={caseIcon} />
           </CaseContentStyles>
         </SiteBorderStyles>
       </section>
@@ -86,7 +86,7 @@ export const data = graphql`
               }
             }
           }
-          wonIcon {
+          cornerstoneIcon {
             childImageSharp {
               gatsbyImageData(
                 width: 50
@@ -95,7 +95,7 @@ export const data = graphql`
               )
             }
           }
-          lostIcon {
+          caseIcon {
             childImageSharp {
               gatsbyImageData(
                 width: 50
@@ -113,12 +113,12 @@ export const data = graphql`
         nodes {
           childMarkdownRemark {
             frontmatter {
+              isCornerstone
               category
               caseName
               citation
               description
               takeaway
-              hasWon
               url
               themes
             }

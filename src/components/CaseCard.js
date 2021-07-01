@@ -9,11 +9,11 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 export default function CaseCard({ cas, icon }) {
   const {
+    isCornerstone,
     caseName,
     citation,
     description,
     takeaway,
-    hasWon,
     url,
     themes,
   } = cas
@@ -24,13 +24,13 @@ export default function CaseCard({ cas, icon }) {
         <div className="card-pre">
           <GatsbyImage
             image={icon.childImageSharp.gatsbyImageData}
-            alt={hasWon ? 'Case Won Icon' : 'Case Lost Icon'}
+            alt={isCornerstone ? 'Cornerstone Case Icon' : 'Case Icon'}
             imgStyle={{ width: `auto` }}
           />
-          <p style={{ color: `var(--grey)` }}>{citation} · {hasWon ? 'Won' : 'Lost'}</p>
+          <p style={{ color: `var(--grey)` }}>{citation}{isCornerstone ? ' · Cornerstone Case' : ''}</p>
         </div>
         <h3>
-          <span style={{ marginRight: `0.5rem` }}>{caseName}</span>
+          <a href={url} target='_blank' rel="noreferrer" style={{ marginRight: `0.5rem` }}>{caseName}</a>
           <Tooltip title="Open in Canlii" placement="right">
             <IconButton href={url} target='_blank' rel="noreferrer">
               <OpenInNewIcon fontSize='default' />

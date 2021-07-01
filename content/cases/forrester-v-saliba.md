@@ -11,7 +11,6 @@ description: Respondent askes the court to change the order of December 10, 1996
   custodial arrangement
 takeaway: "This case is important because it proves that a parent's gender
   transition does not necessarily impact their ability to effectively parent. "
-hasWon: false
 url: https://www.canlii.org/en/on/oncj/doc/2000/2000canlii28722/2000canlii28722.html?autocompleteStr=forrester%20v%20&autocompletePos=4
 themes:
   - Marriage

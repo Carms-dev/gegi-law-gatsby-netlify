@@ -76,7 +76,6 @@ collections:
       - {label: Citation, name: citation, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
       - {label: Takeaway, name: takeaway, widget: text, required: false}
-      - {label: "Has won?", name: hasWon, widget: boolean, default: false}
       - {label: Link, name: url, widget: string, required: true}
       - label: Themes
         name: themes
@@ -209,8 +208,8 @@ collections:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
               - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-          - {label: Won Icon, name: wonIcon, widget: image}
-          - {label: Lost Icon, name: lostIcon, widget: image}
+          - {label: Cornerstone Case Icon, name: cornerstoneIcon, widget: image}
+          - {label: Non-Cornerstone Case Icon, name: caseIcon, widget: image}
 
   - label: Settings
     name: settings
