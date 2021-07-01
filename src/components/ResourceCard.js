@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import SimplePopover from "./SimplePopover"
 
 export default function ResourceCard({ resource }) {
-  const { 
+  const {
     cost,
     eligibility,
     email,
@@ -36,7 +36,7 @@ export default function ResourceCard({ resource }) {
       <div style={{color: `var(--grey)`}}>{cost} · {resourceType}</div>
       <ul>
         {highlights && <li>Highlights: <span>{highlights}</span></li>}
-        <li>Service: <span>{service}</span></li>
+        <li>Service: <span>{service.join(', ')}</span></li>
         {eligibility && <li>Eligibility: <span>{eligibility}</span></li>}
         <li>Location: <span>{location.join(', ')}</span></li>
         {phone && <li>Phone: <span>{phone}</span></li>}

@@ -1,4 +1,3 @@
 ---
-hiddenKey: Cost
 category: Free
 ---
