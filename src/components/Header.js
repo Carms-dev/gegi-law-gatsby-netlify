@@ -41,7 +41,7 @@ const Header = () => {
       <Toolbar>
         <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
           <Logo />
-          <Hidden mdDown>
+          <Hidden smDown>
             <List
               component="nav"
               aria-labelledby="main navigation"
@@ -57,7 +57,7 @@ const Header = () => {
             </List>
           </Hidden>
 
-          <Hidden lgUp>
+          <Hidden mdUp>
             <SideDrawer navLinks={navLinks} />
           </Hidden>
         </Container>

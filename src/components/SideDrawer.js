@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 export default function SideDrawer({ navLinks }) {
   const classes = useStyles();
 
-  const [state, setState] = useState({ right: false })
+  const [state, setState] = useState({ top: false })
 
   const toggleDrawer = (anchor, open) => event => {
     if (
@@ -54,16 +54,16 @@ export default function SideDrawer({ navLinks }) {
       <IconButton
         edge="start"
         aria-label="menu"
-        onClick={toggleDrawer("right", true)}
+        onClick={toggleDrawer("top", true)}
       >
         <Menu fontSize="large" />
       </IconButton>
       <Drawer
-        anchor="right"
-        open={state.right}
-        onClose={toggleDrawer("right", false)}
+        anchor="top"
+        open={state.top}
+        onClose={toggleDrawer("top", false)}
       >
-        {sideDrawerList("right")}
+        {sideDrawerList("top")}
       </Drawer>
     </>
   )
