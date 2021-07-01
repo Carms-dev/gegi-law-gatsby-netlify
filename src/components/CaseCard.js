@@ -30,7 +30,7 @@ export default function CaseCard({ cas, icon }) {
           <p style={{ color: `var(--grey)` }}>{citation}{isCornerstone ? ' · Cornerstone Case' : ''}</p>
         </div>
         <h3>
-          <span style={{ marginRight: `0.5rem` }}>{caseName}</span>
+          <a href={url} target='_blank' rel="noreferrer" style={{ marginRight: `0.5rem` }}>{caseName}</a>
           <Tooltip title="Open in Canlii" placement="right">
             <IconButton href={url} target='_blank' rel="noreferrer">
               <OpenInNewIcon fontSize='default' />
