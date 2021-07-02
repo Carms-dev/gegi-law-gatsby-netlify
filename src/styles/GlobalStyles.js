@@ -58,6 +58,9 @@ const GlobalStyles = createGlobalStyle`
     background: var(--off-white);
     scroll-behavior: smooth;
   }
+  main {
+    min-height: calc(100vh - 295px);
+  }
   h1 {
     font-size: 2rem;
   }
