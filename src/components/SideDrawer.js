@@ -7,9 +7,6 @@ import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
   linkText: {
     textDecoration: `none`,
     color: `black`,
@@ -33,7 +30,6 @@ export default function SideDrawer({ navigation }) {
 
   const sideDrawerList = anchor => (
     <div
-      className={classes.list}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
