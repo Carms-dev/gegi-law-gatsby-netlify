@@ -258,7 +258,7 @@ const HomePageStyles = styled.div`
 
   @media (min-width: 640px) {
     #cta {
-      grid-gap: 3rem;
+      grid-gap: 1rem;
       grid-template-columns: repeat(2, 1fr);
     }
     #logo-garden {
@@ -277,6 +277,7 @@ const HomePageStyles = styled.div`
 
   @media (min-width: 1024px) {
     #cta {
+      grid-gap: 3rem;
       margin-top: -6rem;
       grid-template-columns: repeat(2, 420px);
       justify-content: center;
