@@ -40,22 +40,22 @@ export default function Footer() {
         <div>
           {socialMedia.facebook &&
           <IconButton aria-label="facebook" size="medium" href={socialMedia.facebook}>
-            <FacebookIcon fontSize="medium" />
+            <FacebookIcon fontSize="default" />
           </IconButton>}
 
           {socialMedia.instagram &&
           <IconButton aria-label="instagram" size="medium" href={socialMedia.instagram}>
-            <InstagramIcon fontSize="medium" />
+            <InstagramIcon fontSize="default" />
           </IconButton>}
 
           {socialMedia.twitter &&
           <IconButton aria-label="twitter" size="medium" href={socialMedia.twitter}>
-            <TwitterIcon fontSize="medium" />
+            <TwitterIcon fontSize="default" />
           </IconButton>}
 
           {socialMedia.github &&
           <IconButton aria-label="github" size="medium" href={socialMedia.github}>
-            <GitHubIcon fontSize="medium" />
+            <GitHubIcon fontSize="default" />
           </IconButton>}
         </div>
       </SiteBorderStyles>
@@ -75,7 +75,7 @@ const FooterStyles = styled.footer`
     > div {
       display: grid;
       grid-gap: 2rem;
-      grid-template-columns: 1fr 120px;
+      grid-template-columns: 1fr 200px;
       place-items: center;
       text-align: left;
     }
