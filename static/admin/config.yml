@@ -108,12 +108,17 @@ collections:
               - {label: Call to action, name: linkText, widget: string}
           - label: Secondary Call To Action
             name: secondaryCTAs
-            widget: object
+            widget: list
+            summary: '{{fields.pageLink}} - {{fields.heading}}'
+            min: 2
+            max: 2
             fields:
-            - {label: Resource Page (CTA), name: resourceCTA, widget: string}
-            - {label: Resource Page Icon, name: resourceIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-            - {label: Case Page (CTA), name: caseCTA, widget: string}
-            - {label: Case Page Icon, name: caseIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - label: Page Link
+                name: pageLink
+                widget: select
+                options: ["/start", "/resources", "/cases"]
+              - {label: Heading, name: heading, widget: string}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Introduce Supporter, name: supporterLabel, widget: string}
           - label: Cornerstone Cases Section
             name: caseSection
@@ -180,6 +185,19 @@ collections:
                   widget: markdown
                   buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
           - {label: Response Icon, name: responseIcon, widget: image}
+          - label: Page End Call To Actions
+            name: pageEndCTAs
+            widget: list
+            summary: '{{fields.pageLink}} - {{fields.heading}}'
+            min: 2
+            max: 2
+            fields:
+              - label: Page Link
+                name: pageLink
+                widget: select
+                options: ["/resources", "/cases"]
+              - {label: Heading, name: heading, widget: string}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
 
       - file: content/pages/resources.md
         label: Resources Page
@@ -229,18 +247,14 @@ collections:
           - label: Navigation
             name: navigation
             widget: list
-            summary: '{{fields.pagePath}} - {{fields.label}}'
+            summary: '{{fields.pageLink}} - {{fields.label}}'
             fields:
               - {label: Icon, name: icon, widget: object, collapsed: true, summary: '{{fields.imageFile}}', fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
               - {label: "Nav Item Label", name: label, widget: string}
-              - label: Page Path
-                name: pagePath
-                widget: relation
-                required: true
-                collection: pagePaths
-                search_fields: [path]
-                value_field: path
-                display_fields: [path]
+              - label: Page Link
+                name: pageLink
+                widget: select
+                options: ["/start", "/resources", "/cases"]
           - label: Privacy Policy Page
             name: privacyPage
             widget: object
@@ -319,11 +333,3 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: logo, name: logo, widget: image}
       - {label: Link, name: url, widget: string}
-
-  - label: Paths !DO NOT UPDATE!
-    name: pagePaths
-    folder: content/paths
-    create: false
-    identifier_field: path
-    fields:
-      - {label: path, name: path, widget: string}

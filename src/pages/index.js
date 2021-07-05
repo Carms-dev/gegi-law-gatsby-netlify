@@ -52,20 +52,15 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
         {/* secondary call to action */}
         <SiteBorderStyles>
           <section id="cta">
-            <Link to="/resources" className="card card-cta">
-              <GatsbyImage
-                image={secondaryCTAs.resourceIcon.imageFile.childImageSharp.gatsbyImageData}
-                alt={secondaryCTAs.resourceIcon.alt}
-                imgStyle={{ width: `auto` }} />
-              <p>{secondaryCTAs.resourceCTA}</p>
-            </Link>
-            <Link to="/cases" className="card card-cta">
-              <GatsbyImage
-                image={secondaryCTAs.caseIcon.imageFile.childImageSharp.gatsbyImageData}
-                alt={secondaryCTAs.caseIcon.alt}
-                imgStyle={{ width: `auto` }} />
-              <p>{secondaryCTAs.caseCTA}</p>
-            </Link>
+            {secondaryCTAs.map(cta => (
+              <Link to={cta.pageLink} className="card card-cta">
+                <GatsbyImage
+                  image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
+                  alt={cta.icon.alt}
+                  imgStyle={{ width: `auto` }} />
+                <p>{cta.heading}</p>
+              </Link>
+            ))}
           </section>
 
           {/* supporter logo garden */}
@@ -315,21 +310,9 @@ export const data = graphql`
             linkText
           }
           secondaryCTAs {
-            resourceCTA
-            caseCTA
-            resourceIcon {
-              alt
-              imageFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 70
-                    placeholder: BLURRED
-                    layout: CONSTRAINED
-                  )
-                }
-              }
-            }
-            caseIcon {
+            heading
+            pageLink
+            icon {
               alt
               imageFile {
                 childImageSharp {

@@ -35,8 +35,8 @@ export default function SideDrawer({ navigation }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List component="nav">
-        {navigation.map(({ pagePath, label, icon }) => (
-          <Link to={pagePath} key={label} className={classes.linkText}>
+        {navigation.map(({ pageLink, label, icon }) => (
+          <Link to={pageLink} key={label} className={classes.linkText}>
             <ListItem button>
               <GatsbyImage
                 image={icon.imageFile.childImageSharp.gatsbyImageData}

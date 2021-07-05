@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import ResponseCard from "./ResponseCard"
+import Response from "./Response"
 import { QuestionsSelect } from '../components/SimpleSelect'
 import ScrollBtn from '../components/ScrollBtn'
 
-export default function QuestionSection({ section, index, className, responseIcon, anchors, setStep, isLast }) {
+export default function QuestionSection({ section, index, className, responseIcon, anchors, setStep, isLast, pageEndCTAs }) {
   const { question, description, selectLabel, options } = section
 
   const [selected, setSelected] = useState(``)
@@ -23,7 +23,13 @@ export default function QuestionSection({ section, index, className, responseIco
         index={index}
         anchors={anchors}
       />
-      {response !== "" && <ResponseCard icon={responseIcon} response={response} />}
+      {response !== "" &&
+        <Response
+          icon={responseIcon}
+          response={response}
+          isLast={isLast}
+          pageEndCTAs={pageEndCTAs} />
+      }
 
       {/* No arrow down for the last question */}
       {!isLast &&
