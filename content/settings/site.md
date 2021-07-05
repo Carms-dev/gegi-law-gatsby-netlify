@@ -6,7 +6,7 @@ siteImage:
   imageFile: /assets/gegi_wink.png
   alt: GEGI wink
 navigation:
-  - pagePath: /start
+  - pageLink: /start
     label: Get Started
     icon:
       imageFile: /assets/gegi_wink.png
@@ -15,12 +15,12 @@ navigation:
       imageFile: /assets/gegi_info.png
       alt: Gegi Info
     label: Resource Finder
-    pagePath: /resources
+    pageLink: /resources
   - icon:
       imageFile: /assets/case.png
       alt: Gegi Case
     label: Case Collection
-    pagePath: /cases
+    pageLink: /cases
 fourOhFourPage:
   heading: Oops!
   description: >-

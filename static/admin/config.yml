@@ -108,12 +108,17 @@ collections:
               - {label: Call to action, name: linkText, widget: string}
           - label: Secondary Call To Action
             name: secondaryCTAs
-            widget: object
+            widget: list
+            summary: '{{fields.pageLink}} - {{fields.cta}}'
+            min: 2
+            max: 2
             fields:
-            - {label: Resource Page (CTA), name: resourceCTA, widget: string}
-            - {label: Resource Page Icon, name: resourceIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-            - {label: Case Page (CTA), name: caseCTA, widget: string}
-            - {label: Case Page Icon, name: caseIcon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - label: Page Link
+                name: pageLink
+                widget: select
+                options: ["/start", "/resources", "/cases"]
+              - {label: Heading, name: heading, widget: string}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Introduce Supporter, name: supporterLabel, widget: string}
           - label: Cornerstone Cases Section
             name: caseSection
@@ -229,17 +234,14 @@ collections:
           - label: Navigation
             name: navigation
             widget: list
-            summary: '{{fields.pagePath}} - {{fields.label}}'
+            summary: '{{fields.pageLink}} - {{fields.label}}'
             fields:
               - {label: Icon, name: icon, widget: object, collapsed: true, summary: '{{fields.imageFile}}', fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
               - {label: "Nav Item Label", name: label, widget: string}
-              - label: Page
-                name: pagePath
+              - label: Page Link
+                name: pageLink
                 widget: select
-                options:
-                  - { label: "Start", value: "/start" }
-                  - { label: "Resources", value: "/resources" }
-                  - { label: "Cases", value: "/cases" }
+                options: ["/start", "/resources", "/cases"]
           - label: Privacy Policy Page
             name: privacyPage
             widget: object

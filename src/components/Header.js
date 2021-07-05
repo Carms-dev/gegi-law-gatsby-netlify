@@ -36,7 +36,7 @@ const Header = () => {
         childMarkdownRemark {
           frontmatter {
             navigation {
-              pagePath
+              pageLink
               label
               icon {
                 imageFile {
@@ -70,8 +70,8 @@ const Header = () => {
               aria-labelledby="main navigation"
               className={classes.navDisplayFlex}
             >
-              {navigation.map(({ label, pagePath }) => (
-                <Link to={pagePath} key={label} className={classes.linkText}>
+              {navigation.map(({ label, pageLink }) => (
+                <Link to={pageLink} key={label} className={classes.linkText}>
                   <ListItem button>
                     <ListItemText primary={label} />
                   </ListItem>

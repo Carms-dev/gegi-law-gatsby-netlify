@@ -1,28 +1,25 @@
 ---
-statisticsSection:
-  caseLabel: Gender-related Human Rights Cases
-  resourceLabel: Vetted Organizations offering affortable Legal Specialty
-  provinceLabel: Province of Canada
-  provinceCount: 1
 title: Gender Expression and Gender Identity Human Rights Law for Ontario Students
 hero:
   heading: Gender Expression and Gender Identity Human Rights Law for Ontario Students
   description: We’re here to help you better understand human rights law in Ontario.
   linkText: Get Started
+secondaryCTAs:
+  - pageLink: /resources
+    heading: Where can I get legal advice from recognized organizations and firms?
+    icon:
+      imageFile: /assets/gegi_info.png
+      alt: GEGI Info
+  - pageLink: /cases
+    heading: How can I search relevant caselaw?
+    icon:
+      imageFile: /assets/case.png
+      alt: GEGI Case
 supporterLabel: We are supported by
 caseSection:
   heading: Cornerstone Cases
   description: You Should Know About
   linkText: See All
-secondaryCTAs:
-  resourceIcon:
-    imageFile: /assets/gegi_info.png
-    alt: GEGI info Icon
-  resourceCTA: Where can I get legal advice from recognized organizations and firms?
-  caseIcon:
-    imageFile: /assets/case.png
-    alt: GEGI Case Icon
-  caseCTA: How can I search relevant caselaw?
 aboutSection:
   heading: About Gegi Law
   description: >-
@@ -39,4 +36,9 @@ aboutSection:
     imageFile: /assets/gegi_legal_info.png
     alt: GEGI provides general information on Gender Expression and Gender Identity
       Human Rights Law for Ontario Students
+statisticsSection:
+  caseLabel: Gender-related Human Rights Cases
+  resourceLabel: Vetted Organizations offering affortable Legal Specialty
+  provinceLabel: Province of Canada
+  provinceCount: 1
 ---
