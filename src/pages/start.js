@@ -11,7 +11,7 @@ import QuestionSection from '../components/QuestionSection'
 import ScrollBtn from '../components/ScrollBtn'
 
 export default function GetStartedPage({ data: { page } }) {
-  const { title, hero, questions, responseIcon, disclaimer } = page.childMarkdownRemark.frontmatter
+  const { title, hero, questions, responseIcon, disclaimer, pageEndCTAs } = page.childMarkdownRemark.frontmatter
 
   // compile anchors
   const anchors = [...Array(questions.length).keys()].map(id => `step-${id + 1}`)
@@ -45,6 +45,7 @@ export default function GetStartedPage({ data: { page } }) {
             anchors={anchors}
             setStep={setStep}
             isLast={index === questions.length - 1}
+            pageEndCTAs={pageEndCTAs}
           />
         ))}
       </StartPageStyles>
@@ -121,6 +122,22 @@ export const data = graphql`
             options {
               option
               response
+            }
+          }
+          pageEndCTAs {
+            heading
+            pageLink
+            icon {
+              alt
+              imageFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 70
+                    placeholder: BLURRED
+                    layout: CONSTRAINED
+                  )
+                }
+              }
             }
           }
         }
