@@ -46,7 +46,6 @@ export default function GetStartedPage({ data: { page } }) {
             setStep={setStep}
             isLast={index === questions.length - 1}
           />
-
         ))}
       </StartPageStyles>
     </Layout>

@@ -53,7 +53,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
         <SiteBorderStyles>
           <section id="cta">
             {secondaryCTAs.map(cta => (
-              <Link to="{cta.pageLink}" className="card card-cta">
+              <Link to={cta.pageLink} className="card card-cta">
                 <GatsbyImage
                   image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
                   alt={cta.icon.alt}

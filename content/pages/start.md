@@ -9,20 +9,27 @@ hero:
 disclaimer:
   heading: Disclaimer
   description: >-
-    GEGI can provide general information about human rights law in Ontario. GEGI can’t provide legal advice or respond to specific situations.
+    GEGI can provide general information about human rights law in Ontario. GEGI
+    can’t provide legal advice or respond to specific situations.
 
 
     If you are looking for places to access legal advice for a specific problem, use our [Legal Resources Finder →](/resources)
 questions:
   - question: Where are you located?
-    description: Did you know that each province and territory has its own human rights system?
+    description: Did you know that each province and territory has its own human
+      rights system?
     selectLabel: Province and territory
     options:
       - option: Ontario
-        response: The Ontario Human Rights Code prohibits discrimination on the basis **protected grounds** in certain **protected social areas**. This includes schools across the province of Ontario.
+        response: The Ontario Human Rights Code prohibits discrimination on the basis
+          **protected grounds** in certain **protected social areas**. This
+          includes schools across the province of Ontario.
       - option: Quebec
         response: >-
-          I currently only provide general information on human rights law in Ontario. Each province and territory has its own human rights system. You should check to see whether your province or territory has information on your human rights system.
+          I currently only provide general information on human rights law in
+          Ontario. Each province and territory has its own human rights system.
+          You should check to see whether your province or territory has
+          information on your human rights system.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -31,24 +38,40 @@ questions:
     selectLabel: Yes or No
     options:
       - option: Yes
-        response: Discrimination means “unequal or different treatment or harassment that causes harm” (Human Rights Support Centre). Keep in mind that all negative behaviour is going to constitute discrimination. The treatment must be connected to a protected ground of discrimination (e.g. gender identity or gender expression).
+        response: Discrimination means “unequal or different treatment or harassment
+          that causes harm” (Human Rights Support Centre). Keep in mind that all
+          negative behaviour is going to constitute discrimination. The
+          treatment must be connected to a protected ground of discrimination
+          (e.g. gender identity or gender expression).
       - option: No
-        response: Great. I’m glad to hear that your school administrators are providing a learning environment free from discrimination.
+        response: Great. I’m glad to hear that your school administrators are providing
+          a learning environment free from discrimination.
     description: ""
-  - question: Are you or the person who might be experiencing discrimination at school under the age of 18?
+  - question: Are you or the person who might be experiencing discrimination at
+      school under the age of 18?
     selectLabel: Yes or No
     options:
       - option: Yes
-        response: Keep in mind that there are special rules about legal capacity for people under the age of 18. For more information on the rules and responsibilities of parents, guardians, and litigation guardians, here is a great [article](http://hrlsc.on.ca/en/node/381) written by Human Rights Legal Support Centre.
+        response: Keep in mind that there are special rules about legal capacity for
+          people under the age of 18. For more information on the rules and
+          responsibilities of parents, guardians, and litigation guardians, here
+          is a great [article](http://hrlsc.on.ca/en/node/381) written by Human
+          Rights Legal Support Centre.
       - option: No
-        response: Everyone who is 18 years of age or older is presumed to have legal capacity. In case, you are curious, here is a great [article](http://hrlsc.on.ca/en/node/381) written by Human Rights Legal Support Centre.
+        response: Everyone who is 18 years of age or older is presumed to have legal
+          capacity. In case, you are curious, here is a great
+          [article](http://hrlsc.on.ca/en/node/381) written by Human Rights
+          Legal Support Centre.
     description: ""
   - question: Are you thinking about filing a human rights complaint?
     selectLabel: Yes or No
     options:
       - option: Yes
         response: >-
-          You should consider speaking with a lawyer to obtain legal advice. I can only provide general information about the human rights system in Ontario. Use our Resource Finder to access services, including some that are free or low-cost.
+          You should consider speaking with a lawyer to obtain legal advice. I
+          can only provide general information about the human rights system in
+          Ontario. Use our Resource Finder to access services, including some
+          that are free or low-cost.
 
 
           An individual who believes they have experienced a human rights violation can file a complaint (called an application) directly to the Ontario Human Rights Tribunal. An individual typically has one year from the date of the last incident of discrimination to file their application. 
@@ -69,7 +92,19 @@ questions:
 
           http://hrlsc.on.ca/en/home
       - option: No
-        response: No problem. I have general information here if you ever change your mind.
+        response: No problem. I have general information here if you ever change your
+          mind.
     description: ""
 responseIcon: /assets/gegi_sparkle.png
+pageEndCTAs:
+  - pageLink: /resources
+    heading: Get legal advice from recognized organizations and firms
+    icon:
+      imageFile: /assets/gegi_info.png
+      alt: GEGI Info
+  - pageLink: /cases
+    heading: Search for relevant caselaw
+    icon:
+      imageFile: /assets/case.png
+      alt: GEGI Case
 ---

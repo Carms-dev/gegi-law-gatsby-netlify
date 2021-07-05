@@ -109,7 +109,7 @@ collections:
           - label: Secondary Call To Action
             name: secondaryCTAs
             widget: list
-            summary: '{{fields.pageLink}} - {{fields.cta}}'
+            summary: '{{fields.pageLink}} - {{fields.heading}}'
             min: 2
             max: 2
             fields:
@@ -185,6 +185,19 @@ collections:
                   widget: markdown
                   buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
           - {label: Response Icon, name: responseIcon, widget: image}
+          - label: Page End Call To Actions
+            name: pageEndCTAs
+            widget: list
+            summary: '{{fields.pageLink}} - {{fields.heading}}'
+            min: 2
+            max: 2
+            fields:
+              - label: Page Link
+                name: pageLink
+                widget: select
+                options: ["/resources", "/cases"]
+              - {label: Heading, name: heading, widget: string}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
 
       - file: content/pages/resources.md
         label: Resources Page
