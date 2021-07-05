@@ -233,14 +233,13 @@ collections:
             fields:
               - {label: Icon, name: icon, widget: object, collapsed: true, summary: '{{fields.imageFile}}', fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
               - {label: "Nav Item Label", name: label, widget: string}
-              - label: Page Path
+              - label: Page
                 name: pagePath
-                widget: relation
-                required: true
-                collection: pagePaths
-                search_fields: [path]
-                value_field: path
-                display_fields: [path]
+                widget: select
+                options:
+                  - { label: "Start", value: "/start" }
+                  - { label: "Resources", value: "/resources" }
+                  - { label: "Cases", value: "/cases" }
           - label: Privacy Policy Page
             name: privacyPage
             widget: object
@@ -319,11 +318,3 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: logo, name: logo, widget: image}
       - {label: Link, name: url, widget: string}
-
-  - label: Paths !DO NOT UPDATE!
-    name: pagePaths
-    folder: content/paths
-    create: false
-    identifier_field: path
-    fields:
-      - {label: path, name: path, widget: string}

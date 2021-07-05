@@ -19,10 +19,10 @@ secondaryCTAs:
     imageFile: /assets/gegi_info.png
     alt: GEGI info Icon
   resourceCTA: Where can I get legal advice from recognized organizations and firms?
-  caseCTA: How can I search relevant caselaw?
   caseIcon:
     imageFile: /assets/case.png
     alt: GEGI Case Icon
+  caseCTA: How can I search relevant caselaw?
 aboutSection:
   heading: About Gegi Law
   description: >-
