@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Lewis v Sugar Daddys Nightclub
+caseName: Lewis v. Sugar Daddys Nightclub
 citation: 2016 HRTO 793
 description: The applicant (transgender neutral questioning transgender male)
   subject to adverse treatment when attempting to use the male washroom. The
