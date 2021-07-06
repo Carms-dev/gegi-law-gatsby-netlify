@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Finan v Cosmetic Surgicentre (Toronto)
+caseName: Finan v. Cosmetic Surgicentre (Toronto)
 citation: 2008 HRTO 47
 description: In this case, a surgeon at Toronto's Cosmetic Surgicentre refused
   to perform surgery on transgender patients. The OHRT held that this was not
