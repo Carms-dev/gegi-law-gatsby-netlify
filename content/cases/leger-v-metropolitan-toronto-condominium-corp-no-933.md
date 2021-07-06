@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Leger v Metropolitan Toronto Condominium Corp. No. 933
+caseName: Leger v. Metropolitan Toronto Condominium Corp. No. 933
 citation: 2015 HRTO 630
 description: The applicant was not permitted access to records of the
   condominium corporation which governs the building in which the applicant owns
