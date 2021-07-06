@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: HP v PLC
+caseName: HP v. PLC
 citation: 2013 ONCJ 399
 description: In this case, the applicant alleges that their co-parent is seeking
   to restrict the applicant from seeing their children because of their gender
