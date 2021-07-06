@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: LaLonde v Toronto East General Hospital
+caseName: LaLonde v. Toronto East General Hospital
 citation: 2012 HRTO 2153
 description: The applicant contends that the respondent did not provide the
   staff training on “Transgendered Health Competency” that it confirmed it had
