@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Hogan v Minister of Health and Long-Term Care
+caseName: Hogan v. Minister of Health and Long-Term Care
 citation: 2006 HRTO 32
 description: The primary issue, in this case, is whether the Government of
   Ontario was discriminating against transgender individuals by delisting Sex
