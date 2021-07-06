@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Forrester v Saliba
+caseName: Forrester v. Saliba
 citation: 2000 CanLII 28722
 description: The primary issue of this case is whether the applicant's gender
   transition constituted a sufficient material change of circumstance that would
