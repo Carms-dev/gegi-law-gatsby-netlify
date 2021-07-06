@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: RA v Dr. Raza Khan Medicine Professional Corp.
+caseName: RA v. Dr. Raza Khan Medicine Professional Corp.
 citation: 2014 HRTO  1274
 description: The applicant is a transgender man who has brought
   an Application alleging that the respondents discriminated against him in the
