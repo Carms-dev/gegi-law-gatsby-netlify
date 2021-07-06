@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Forrester v Peel (Regional Municipality) Police Services Board et al.
+caseName: Forrester v. Peel (Regional Municipality) Police Services Board et al.
 citation: 2006 HRTO 13
 description: The complainant, a transgender woman, was subject to unjust strip
   searches by male police officers, despite asking for a female officer to
