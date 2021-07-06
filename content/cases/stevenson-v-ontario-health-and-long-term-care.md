@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Stevenson v Ontario (Health and Long-Term Care)
+caseName: Stevenson v. Ontario (Health and Long-Term Care)
 citation: 2010 HRTO 179
 description: In this case, the applicant alleges that their employer will not
   alter their records to reflect their correct gender. The OHRT deferred the
