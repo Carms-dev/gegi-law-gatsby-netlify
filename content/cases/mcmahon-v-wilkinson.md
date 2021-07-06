@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: "McMahon v Wilkinson "
+caseName: "McMahon v. Wilkinson "
 citation: 2015 HRTO 1019
 description: The applicants, one of whom is transgender, submit that they were
   subjected to discrimination on the basis of sexual orientation and gender
