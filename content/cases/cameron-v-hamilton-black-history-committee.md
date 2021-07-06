@@ -1,6 +1,6 @@
 ---
 isCornerstone: true
-caseName: Cameron v Hamilton Black History Committee
+caseName: Cameron v. Hamilton Black History Committee
 citation: 2016 HRTO 541
 description: "Complainant alleges that the respondent rejected her request to
   establish a scholarship for Black lesbian, gay, bisexual or transgender youth
