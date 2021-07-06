@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: "McIntosh v Ontario (Government Services) "
+caseName: "McIntosh v. Ontario (Government Services) "
 citation: 2010 HRTO 2363
 description: The applicant argues that section 36 of the Vital Statistics Act
   which deals with the change of sex designation on birth certificates
