@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Heron v Canadian Blood Services
+caseName: Heron v. Canadian Blood Services
 citation: 2015 HRTO 664
 description: The applicant alleges that he suffered harassment in the workplace
   due to his association with a transgender individual. The OHRT held that the
