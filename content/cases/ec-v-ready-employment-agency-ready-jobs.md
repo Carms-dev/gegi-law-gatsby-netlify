@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: EC v Ready Employment Agency (Ready Jobs)
+caseName: EC v. Ready Employment Agency (Ready Jobs)
 citation: 2016 HRTO 1630
 description: The applicant, a transgender woman, alleged that the respondent's
   ad searching for a "woman" (which was later changed to "person") to fill a
