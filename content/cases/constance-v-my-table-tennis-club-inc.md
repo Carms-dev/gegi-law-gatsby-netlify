@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Constance v My Table Tennis Club Inc.
+caseName: Constance v. My Table Tennis Club Inc.
 citation: 2017 HRTO 205
 description: The applicant alleges that when she began her transition, she was
   faced with adverse treatment in her workplace. The respondent requested a
