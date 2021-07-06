@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Lewis v Sugar Daddys Nightclub
+caseName: Lewis v. Sugar Daddys Nightclub
 citation: 2016 HRTO 347
 description: The applicant, a questioning transgender male, was subject to
   adverse treatment when attempting to use the men's washroom. The OHRT held
