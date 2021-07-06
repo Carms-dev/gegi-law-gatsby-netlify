@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Larabee v YWCA Sudbury
+caseName: Larabee v. YWCA Sudbury
 citation: 2013 HRTO 947
 description: The applicant, a transgender woman, was harassed and subsequently
   refused access to the respondent's shelter for women and children escaping
