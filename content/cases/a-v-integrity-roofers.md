@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: A v Integrity Roofers
+caseName: A v. Integrity Roofers
 citation: 2017 HRTO 919
 description: The applicant alleges that she was subjected to discriminatory
   treatment when she attended a job interview. The applicant requests that the
