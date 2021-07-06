@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Ross v Morguard Corp.
+caseName: Ross v. Morguard Corp.
 citation: 2017 HRTO 28
 description: The applicant is a transgender woman with a permanent disability.
   She applied for an unfurnished apartment in the respondent's building, and the
