@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Re Reid
+caseName: Re. Reid
 citation: 1986 CarswellOnt 178
 description: A 32-year-old unmarried, transgender man requested a name change.
   The OHRT granted his request.
