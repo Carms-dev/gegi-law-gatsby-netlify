@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Bryant v Best
+caseName: Bryant v. Best
 citation: 2017 HRTO 297
 description: The applicant alleges discrimination on several protected grounds
   because the respondent had refused to provide him access to his late father's
