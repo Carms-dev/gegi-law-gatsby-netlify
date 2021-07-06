@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: B v A
+caseName: B v. A
 citation: 1990 CanLII 7012 (ON SC)
 description: The primary question of this case is whether a transgender man
   falls within the definition of a "spouse" in section 29 of the Family Law Act,
