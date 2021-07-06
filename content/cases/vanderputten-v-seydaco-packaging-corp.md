@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Vanderputten v Seydaco Packaging Corp.
+caseName: Vanderputten v. Seydaco Packaging Corp.
 citation: 2012 HRTO 1977
 description: The applicant alleges that she was harassed, subjected to a
   poisoned work environment, and dismissed in violation of the Human Rights
