@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: KM v Sunnybrook Health Sciences Centre
+caseName: KM v. Sunnybrook Health Sciences Centre
 citation: 2012 HRTO 1505
 description: The applicant submitted a request to be anonymized in future
   proceedings. The OHRT granted their request.
