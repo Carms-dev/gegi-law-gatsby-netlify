@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Vaiakis v Ontario (Health and Long-Term Care)
+caseName: Vaiakis v. Ontario (Health and Long-Term Care)
 citation: 2010 HRTO 1866
 description: The applicant alleges that the respondent discriminated against her
   by failing to pay for her Sex Reassignment Surgery (SRS), despite SRS being an
