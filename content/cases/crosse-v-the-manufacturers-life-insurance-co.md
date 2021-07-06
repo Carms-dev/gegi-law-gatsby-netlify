@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Crosse v The Manufacturers Life Insurance Co.
+caseName: Crosse v. The Manufacturers Life Insurance Co.
 citation: 2016 HRTO 1143
 description: The applicant underwent gender-affirming surgery and submitted an
   application to the respondent for long-term disability benefits. The
