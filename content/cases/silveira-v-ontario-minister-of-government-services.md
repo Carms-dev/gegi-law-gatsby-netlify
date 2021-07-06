@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Silveira v Ontario (Minister of Government Services)
+caseName: Silveira v. Ontario (Minister of Government Services)
 citation: 2011 HRTO 249
 description: The applicant wishes to have the sex designation on his birth
   certificate changed, but under section 36 of the Vital Statistics Act, this is
