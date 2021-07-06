@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: JV v Ontario (Health Insurance Plan)
+caseName: JV v. Ontario (Health Insurance Plan)
 citation: 2009 CanLII 84982
 description: "The appellant, a transgender woman, was approved for Sex
   Reassignment Surgery (SRS), and it was deemed medically necessary by her
