@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Macdonald v Downtown Health Club for Women
+caseName: Macdonald v. Downtown Health Club for Women
 citation: 2009 HRTO 1043
 description: The applicant, a transgender woman, had requested access to a
   women-only fitness centre and was refused admission because she had not
