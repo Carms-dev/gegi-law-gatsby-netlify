@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Brodeur v Ontario (Health and Long-Term Care)
+caseName: Brodeur v. Ontario (Health and Long-Term Care)
 citation: 2013 HRTO 1229
 description: The primary issue, in this case, is the difference between how
   female and male transgender folks are treated in the provision of benefits.
