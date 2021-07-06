@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: "Worley v Ontario Cycling Association "
+caseName: "Worley v. Ontario Cycling Association "
 citation: 2016 HRTO 952
 description: The applicant, a transgender woman, alleges that the policies of
   Ontario Cycling Associations, in accordance with the World Anti-Doping Code,
