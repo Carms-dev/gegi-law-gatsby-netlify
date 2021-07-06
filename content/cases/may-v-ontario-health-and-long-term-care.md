@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: May v Ontario (Health and Long-Term Care)
+caseName: May v. Ontario (Health and Long-Term Care)
 citation: 2011 HRTO 2179
 description: The issue, in this case, is whether it is an abuse of process to
   relitigate the delisting of sex reassignment surgery in 1998 as an insured
