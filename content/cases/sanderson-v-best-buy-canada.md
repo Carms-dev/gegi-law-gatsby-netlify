@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Sanderson v Best Buy Canada
+caseName: Sanderson v. Best Buy Canada
 citation: 2016 HRTO 468
 description: The applicant alleges that he was subject to a poisoned work
   environment. The main issue is whether the application should be dismissed
