@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: "Laffan v Hewitt Material Handling "
+caseName: "Laffan v. Hewitt Material Handling "
 citation: 2017 HRTO 619
 description: The applicant alleges that she has been discriminated against in
   her workplace. She requested that the grounds of gender identity and gender
