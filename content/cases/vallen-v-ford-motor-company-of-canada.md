@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Vallen v Ford Motor Company of Canada
+caseName: Vallen v. Ford Motor Company of Canada
 citation: 2012 HRTO 932
 description: The applicant, a transgender woman, alleges that she was subjected
   to harassment and discrimination in the workplace. The OHRT proceeded to state
