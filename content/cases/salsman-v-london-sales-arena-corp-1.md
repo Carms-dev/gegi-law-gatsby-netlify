@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Salsman v London Sales Arena Corp.
+caseName: Salsman v. London Sales Arena Corp.
 citation: 2014 HRTO 775
 description: The transgender complainants allege that the respondent
   discriminated against them because they are transgender and that the
