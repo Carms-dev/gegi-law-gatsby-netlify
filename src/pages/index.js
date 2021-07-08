@@ -53,7 +53,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
         <SiteBorderStyles>
           <section id="cta">
             {secondaryCTAs.map(cta => (
-              <Link to={cta.pageLink} className="card card-cta">
+              <Link key={cta.pageLink} to={cta.pageLink} className="card card-cta">
                 <GatsbyImage
                   image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
                   alt={cta.icon.alt}
@@ -84,10 +84,10 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
               <p>{caseSection.description}</p>
               <Link className="btn" to="/cases">{caseSection.linkText}</Link>
             </div>
-            {cornerstones.nodes.map(node => {
+            {cornerstones.nodes.map((node, index) => {
               const cas = node.frontmatter
               return (
-                <a key={cas.caseName}
+                <a key={`${cas.caseName}-${index}`}
                    className="card"
                    href={cas.url}
                    target="_blank"
