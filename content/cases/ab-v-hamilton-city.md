@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: AB v. Hamilton (City)
+caseName: A.B. v. Hamilton (City)
 citation: 2015 HRTO 745
 description: The applicant submitted a request to be anonymized in future
   proceedings. The OHRT granted their request.
