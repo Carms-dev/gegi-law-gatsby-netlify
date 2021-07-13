@@ -2,7 +2,7 @@
 resourceName: Law Society Referral Service
 eligibility: Residents of Ontario
 serviceDescription: "The Law Society Referral Service (LSRS) of the Law Society
-  of  Ontario is an on-line service that provides a referral to a lawyer or
+  of  Ontario is an online service that provides a referral to a lawyer or
   paralegal for an in-person or phone consultation of up to 30 minutes at no
   charge. "
 website: https://lsrs.lso.ca/lsrs/welcome
