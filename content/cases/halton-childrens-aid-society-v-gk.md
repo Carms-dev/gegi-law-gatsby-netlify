@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Halton Children's Aid Society v. GK
+caseName: Halton Children's Aid Society v. G.K.
 citation: 2015 ONCJ 307
 description: The Children's Aid Society brought a motion seeking that the
   children be placed in temporary care and custody of the father. CAS subjects
