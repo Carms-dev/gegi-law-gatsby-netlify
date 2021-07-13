@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: C(L) v. C(C)
+caseName: C.(L). v. C.(C).
 citation: 1992 CanLII 7651 (ON SC)
 description: The issue, in this case, is whether or not the transgender
   applicant's marriage licence was obtained under false pretences. The tribunal
