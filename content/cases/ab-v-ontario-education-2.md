@@ -1,6 +1,6 @@
 ---
 isCornerstone: true
-caseName: AB v. Ontario (Education)
+caseName: A.B. v. Ontario (Education)
 citation: 2019 HRTO 685
 description: This application concerns the respondent's repeal of the 2015 sex
   education curriculum and the reintroduction of the 2010 curriculum for the
