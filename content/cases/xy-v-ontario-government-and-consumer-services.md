@@ -1,6 +1,6 @@
 ---
 isCornerstone: true
-caseName: XY v. Ontario (Government and Consumer Services)
+caseName: X.Y. v. Ontario (Government and Consumer Services)
 citation: 2012 HRTO 726
 description: A transgender woman challenged the Government of Ontario's
   requirement that to change your birth certificate, you must undergo what the
