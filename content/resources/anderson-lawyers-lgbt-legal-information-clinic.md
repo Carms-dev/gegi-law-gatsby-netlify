@@ -12,6 +12,6 @@ resourceType: Law Firm
 service:
   - Legal Representation
 location:
-  - Ontario-wide
+  - Ottawa
 cost: Free
 ---
