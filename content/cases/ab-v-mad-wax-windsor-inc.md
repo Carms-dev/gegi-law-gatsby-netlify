@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: AB v. Mad Wax Windsor Inc.
+caseName: A.B. v. Mad Wax Windsor Inc.
 citation: 2020 HRTO 407
 description: The transgender applicant sought waxing services and was refused
   because the only person working at the time was a Muslim woman. The applicant
