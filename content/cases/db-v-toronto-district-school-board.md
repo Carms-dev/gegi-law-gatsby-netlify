@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: DB v. Toronto District School Board
+caseName: D.B. v. Toronto District School Board
 citation: 2015 HRTO 1592
 description: This case deals with several incidents relating to a minor. In
   grade 2, the complainant asked his teacher to refer to him as "Happy Face",
