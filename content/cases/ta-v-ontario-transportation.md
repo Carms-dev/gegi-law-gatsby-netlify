@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: TA v. Ontario (Transportation)
+caseName: T.A. v. Ontario (Transportation)
 citation: 2016 HRTO 17
 description: The applicant identifies as pan-gendered and uses gender-neutral
   pronouns. The applicant alleges discrimination through the use of binary
