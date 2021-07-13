@@ -37,8 +37,8 @@ aboutSection:
     alt: GEGI provides general information on Gender Expression and Gender Identity
       Human Rights Law for Ontario Students
 statisticsSection:
-  caseLabel: Gender-related Human Rights Cases
-  resourceLabel: Vetted Organizations offering affortable Legal Specialty
+  caseLabel: Gender-Related Human Rights Cases
+  resourceLabel: Vetted Organizations and Firms Offering Affordable Legal Services
   provinceLabel: Province of Canada
   provinceCount: 1
 ---
