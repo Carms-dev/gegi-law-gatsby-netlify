@@ -1,3 +1,3 @@
 ---
-category: Low Cost
+category: $$
 ---
