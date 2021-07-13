@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName:  AB v. Ontario (Education)
+caseName:  A.B. v. Ontario (Education)
 citation: 2018 HRTO 1746
 description: The applicant, an 11-year-old transgender child, submitted a
   publication ban and anonymization request. The OHRT granted their request.
