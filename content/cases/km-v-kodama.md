@@ -1,6 +1,6 @@
 ---
 isCornerstone: true
-caseName: KM v. Kodama
+caseName: K.M. v. Kodama
 citation: 2014 HRTO 526
 description: The applicant alleges that the respondent, a urologist, made
   derogatory remarks to him during his appointment. The applicant filed a
