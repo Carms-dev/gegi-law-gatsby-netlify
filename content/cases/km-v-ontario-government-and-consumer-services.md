@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: KM v. Ontario (Government and Consumer Services)
+caseName: K.M. v. Ontario (Government and Consumer Services)
 citation: 2015 HRTO 434
 description: The applicant identified as a transgender male. The applicant
   submitted a request for anonymization, which was granted by the OHRT.
