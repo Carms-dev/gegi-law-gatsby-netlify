@@ -23,14 +23,13 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: Resource Name, name: resourceName, widget: string, required: true}
-      - {label: Highlights, name: highlights, widget: string, required: false}
-      - {label: Eligibility, name: eligibility, widget: string, required: true}
+      - {label: Resource Name, name: resourceName, widget: string}
+      - {label: Eligibility, name: eligibility, widget: string}
       - {label: Service Description, name: serviceDescription, widget: text}
-      - {label: Website, name: website, widget: string, required: true}
+      - {label: Website, name: website, widget: string}
       - {label: Email, name: email, widget: string, required: false}
       - {label: Phone, name: phone, widget: string, required: false}
-      - {label: Logo, name: logo, widget: image, required: true}
+      - {label: Logo (Only supports PNG & JPG.), name: logo, widget: image, choose_url: false}
       - label: Organization or Firm
         name: resourceType
         widget: select
@@ -118,7 +117,7 @@ collections:
                 widget: select
                 options: ["/start", "/resources", "/cases"]
               - {label: Heading, name: heading, widget: string}
-              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
           - {label: Introduce Supporter, name: supporterLabel, widget: string}
           - label: Cornerstone Cases Section
             name: caseSection
@@ -136,7 +135,7 @@ collections:
                 name: description
                 widget: markdown
                 buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
-              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
           - label: Statistics Section
             name: statisticsSection
             widget: object
@@ -157,7 +156,7 @@ collections:
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
           - label: Disclaimer
             name: disclaimer
             widget: object
@@ -184,7 +183,7 @@ collections:
                   name: response
                   widget: markdown
                   buttons: [bold, italic, link, quote, bulleted-list, numbered-list]
-          - {label: Response Icon, name: responseIcon, widget: image}
+          - {label: Response Icon, name: responseIcon, widget: image, choose_url: false}
           - label: Page End Call To Actions
             name: pageEndCTAs
             widget: list
@@ -197,7 +196,7 @@ collections:
                 widget: select
                 options: ["/resources", "/cases"]
               - {label: Heading, name: heading, widget: string}
-              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Icon, name: icon, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
 
       - file: content/pages/resources.md
         label: Resources Page
@@ -210,7 +209,7 @@ collections:
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
           - label: Filters
             name: filters
             widget: hidden
@@ -227,9 +226,9 @@ collections:
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
-              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
-          - {label: Cornerstone Case Icon, name: cornerstoneIcon, widget: image}
-          - {label: Non-Cornerstone Case Icon, name: caseIcon, widget: image}
+              - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
+          - {label: Cornerstone Case Icon, name: cornerstoneIcon, widget: image, choose_url: false}
+          - {label: Non-Cornerstone Case Icon, name: caseIcon, widget: image, choose_url: false}
 
   - label: Settings
     name: settings
@@ -242,14 +241,14 @@ collections:
         fields:
           - {label: Site Title, name: siteTitle, widget: string}
           - {label: Site Description, name: siteDescription, widget: text}
-          - {label: Site Logo, name: siteLogo, widget: image}
-          - {label: Site Image, name: siteImage, widget: object, fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+          - {label: Site Logo, name: siteLogo, widget: image, choose_url: false}
+          - {label: Site Image, name: siteImage, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
           - label: Navigation
             name: navigation
             widget: list
             summary: '{{fields.pageLink}} - {{fields.label}}'
             fields:
-              - {label: Icon, name: icon, widget: object, collapsed: true, summary: '{{fields.imageFile}}', fields: [{label: Image File, name: imageFile, widget: image}, {label: Alt, name: alt, widget: string}]}
+              - {label: Icon, name: icon, widget: object, collapsed: true, summary: '{{fields.imageFile}}', fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
               - {label: "Nav Item Label", name: label, widget: string}
               - label: Page Link
                 name: pageLink
@@ -331,5 +330,5 @@ collections:
     identifier_field: category
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: logo, name: logo, widget: image}
+      - {label: logo, name: logo, widget: image, choose_url: false}
       - {label: Link, name: url, widget: string}
