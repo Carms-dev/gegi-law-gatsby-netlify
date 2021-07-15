@@ -8,7 +8,7 @@ serviceDescription: "The Law Society Referral Service (LSRS) of the Law Society
 website: https://lsrs.lso.ca/lsrs/welcome
 email: lawsociety@lso.ca
 phone: 1-800-668-7380
-logo: https://lawsocietyontario.azureedge.net/media/lso/media/widget-images/logos/site-logo-2018.svg
+logo: /assets/lso.png
 resourceType: Community Organization
 service:
   - Legal Representation

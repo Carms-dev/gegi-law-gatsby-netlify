@@ -7,7 +7,7 @@ serviceDescription: "The Queer Justice Project (QJP) is designed to address
   to justice for queer people. "
 website: https://hamiltonjustice.ca/en/community-justice/queer-justice/ 
 phone: 905-527-4572
-logo: https://queerjustice.ca/wp-content/uploads/2019/02/TheQueerJusticeProject_Logo_PurpleMaroon.png
+logo: /assets/TheQueerJusticeProject.png
 resourceType: Community Organization
 service:
   - Free Consultation

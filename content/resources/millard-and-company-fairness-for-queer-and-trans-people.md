@@ -8,7 +8,7 @@ serviceDescription: Millard & Co. specializes in human rights law practice in
 website: https://www.millardco.ca/our-services/lgbtq-rights/
 email: info@millardco.ca
 phone: 416-920-3030
-logo: /assets/millard-co-logo2_page_1-removebg-preview.png
+logo: /assets/millard_co.png
 resourceType: Law Firm
 service:
   - Legal Representation
