@@ -6,7 +6,7 @@ serviceDescription: Pro Bono Ontario is an access to justice charity. It
   range of civil problems.
 website: https://www.probonoontario.org/hotline/
 phone: 1-855-255-7256
-logo: /assets/pbo_20_years_square_highres__1_-removebg-preview.png
+logo: /assets/pbo.png
 resourceType: Community Organization
 service:
   - Free Consultation

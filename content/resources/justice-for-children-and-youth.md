@@ -8,7 +8,7 @@ serviceDescription: "Justice for Children and Youth’s staff lawyers provide
 website: https://jfcy.org/en/
 email: info@jfcy.org
 phone: 1-866-999-5329
-logo: https://lh3.googleusercontent.com/proxy/Qt-SD3UyGxrjCkMZM9GIoQfilEThc4pNQjVqvLJ-abjdezGri7V9DvZ4DURtB55yFDYDmdwM11BGS413drZICZdDxh0yi6eo_fVbSlDxQITTqoEfppKVIVubuu86K-P7lSLBLOuHmri5
+logo: /assets/jcy.png
 resourceType: Community Organization
 service:
   - Free Consultation

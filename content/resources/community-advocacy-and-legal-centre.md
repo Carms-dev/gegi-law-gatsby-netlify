@@ -9,7 +9,7 @@ serviceDescription: "The Community Advocacy & Legal Centre (CALC) is a
   Ontario. "
 website: https://communitylegalcentre.ca/contact-us/ 
 phone: 1-877-966-8714
-logo: https://communitylegalcentre.ca/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2018/02/logo-1.png.webp
+logo: /assets/calc.png
 resourceType: Community Organization
 service:
   - Legal Representation

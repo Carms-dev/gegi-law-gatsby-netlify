@@ -7,7 +7,7 @@ serviceDescription: Legal Aid Ontario (LAO) provides many programs and services
 website: info@lao.on.ca
 email: talklaw@halco.org
 phone: 1‑800‑668‑8258
-logo: /assets/1200px-legal_aid_ontario_logo.svg.png
+logo: /assets/legal_aid_ontario_logo.png
 resourceType: Community Organization
 service:
   - Legal Representation

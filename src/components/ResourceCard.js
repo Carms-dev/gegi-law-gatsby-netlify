@@ -10,7 +10,6 @@ export default function ResourceCard({ resource }) {
     email,
     location,
     logo,
-    highlights,
     resourceType,
     phone,
     resourceName,
@@ -25,7 +24,7 @@ export default function ResourceCard({ resource }) {
         <GatsbyImage
           image={logo.childImageSharp.gatsbyImageData}
           alt={`${resourceName} logo`}
-          imgStyle={{width: `auto`}}
+          imgStyle={{width: `auto`, margin: `0 auto`}}
         />
       </div>
       <h3>{resourceName}</h3>
@@ -35,7 +34,6 @@ export default function ResourceCard({ resource }) {
       </div>
       <div style={{color: `var(--grey)`}}>{cost} · {resourceType}</div>
       <ul>
-        {highlights && <li>Highlights: <span>{highlights}</span></li>}
         <li>Service: <span>{service.join(', ')}</span></li>
         {eligibility && <li>Eligibility: <span>{eligibility}</span></li>}
         <li>Location: <span>{location.join(', ')}</span></li>
@@ -53,7 +51,6 @@ const ResourceCardStyles = styled.div`
   border-radius: 12px;
   position: relative;
 
-
   .card-img {
     height: 200px;
     display: grid;
@@ -63,6 +60,7 @@ const ResourceCardStyles = styled.div`
   h3 {
     font-weight: 500;
     min-height: 72px;
+    margin: 0.5rem 0;
   }
   /* TODO: generalized */
   .btns-inline {

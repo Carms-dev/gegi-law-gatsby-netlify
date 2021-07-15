@@ -8,7 +8,7 @@ serviceDescription: Anderson Lawyers offers short (30 minutes), free, and
 website: https://www.andersonlawyers.ca/community 
 email: james@andersonlawyers.ca
 phone: 613-261-9024
-logo: /assets/unnamed-removebg-preview.png
+logo: /assets/james_anderson.png
 resourceType: Law Firm
 service:
   - Legal Representation
