@@ -11,6 +11,21 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Rubik`,
+                variants: [`300`, `400`, `500`, `700`],
+              },
+            ],
+          },
+        },
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
