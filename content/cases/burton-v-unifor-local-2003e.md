@@ -11,5 +11,6 @@ description: The applicant alleges that her local and national union
 takeaway: This case affirms that misgendering constitutes discrimination.
 url: https://www.canlii.org/en/on/onhrt/doc/2018/2018hrto276/2018hrto276.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=16
 themes:
-  - Identification
+  - Pronouns
+  - Identity
 ---
