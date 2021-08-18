@@ -14,6 +14,7 @@ takeaway: This case is important as it highlights how children have the right to
   encouraged to accept and respect their children's decisions.
 url: https://www.canlii.org/en/on/oncj/doc/2015/2015oncj307/2015oncj307.html?resultIndex=1
 themes:
-  - Identification
   - Accessibility and Accomodation
+  - Names
+  - Pronouns
 ---
