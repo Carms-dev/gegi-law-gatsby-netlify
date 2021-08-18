@@ -12,5 +12,6 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
   will be used instead of her name. "
 url: https://www.canlii.org/en/on/onhrt/doc/2018/2018hrto1224/2018hrto1224.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=2
 themes:
-  - Identification
+  - Names
+  - Pronouns
 ---
