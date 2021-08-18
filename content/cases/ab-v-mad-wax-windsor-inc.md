@@ -12,4 +12,6 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
 url: https://www.canlii.org/en/on/onhrt/doc/2020/2020hrto407/2020hrto407.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=1
 themes:
   - Accessibility and Accomodation
+  - Pronouns
+  - Names
 ---
