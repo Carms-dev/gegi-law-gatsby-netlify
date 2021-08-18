@@ -12,5 +12,5 @@ takeaway: This case illustrates how transgender folks could not enter into a
 url: https://www.canlii.org/en/on/onhrt/doc/2009/2009hrto1043/2009hrto1043.html?autocompleteStr=Macdonald%20v%20Downtown%20Health%20Club%20for%20Women&autocompletePos=2
 themes:
   - Accessibility and Accomodation
-  - Identification
+  - Identity
 ---
