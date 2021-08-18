@@ -12,4 +12,5 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
 url: https://www.canlii.org/en/on/onhrt/doc/2017/2017hrto919/2017hrto919.html?resultIndex=1
 themes:
   - Employment
+  - Names
 ---
