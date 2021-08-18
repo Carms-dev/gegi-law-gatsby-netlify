@@ -14,5 +14,5 @@ service:
   - Legal Representation
 location:
   - Hamilton
-cost: Low Cost
+cost: $$
 ---
