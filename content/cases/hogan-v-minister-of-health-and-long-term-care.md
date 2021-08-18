@@ -15,4 +15,5 @@ takeaway: During Hogan "Gender Identity Disorder" was viewed as a disability,
 url: https://www.canlii.org/en/on/onhrt/doc/2006/2006hrto32/2006hrto32.html?resultIndex=1
 themes:
   - Health Care
+  - Identity
 ---
