@@ -8,5 +8,6 @@ description: The applicant wishes to have the sex designation on his birth
   this case until after XY v Ontario (Government and Consumer Services).
 url: https://www.canlii.org/en/on/onhrt/doc/2011/2011hrto249/2011hrto249.html?autocompleteStr=Silveira%20v%20Ontario%20(Minister%20of%20Government%20Services)&autocompletePos=1
 themes:
-  - Identification
+  - Names
+  - Identity
 ---
