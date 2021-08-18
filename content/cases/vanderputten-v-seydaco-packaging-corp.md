@@ -13,4 +13,5 @@ takeaway: This case is important as it highlights how an applicant does not
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto1977/2012hrto1977.html?autocompleteStr=Vanderputten%20v%20Seydaco%20Packaging%20Co&autocompletePos=1
 themes:
   - Employment
+  - Harassment
 ---
