@@ -14,4 +14,5 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
 url: https://www.canlii.org/en/on/onhrt/doc/2018/2018hrto1607/2018hrto1607.html
 themes:
   - Health Care
+  - Names
 ---
