@@ -13,4 +13,5 @@ takeaway: This case is important as the applicant was not adversely impacted by
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto1630/2016hrto1630.html?resultIndex=1
 themes:
   - Employment
+  - Identity
 ---
