@@ -12,4 +12,6 @@ takeaway: This case, among a multitude of others, is important as it shows that
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto793/2016hrto793.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+  - Washrooms
+  - Identity
 ---
