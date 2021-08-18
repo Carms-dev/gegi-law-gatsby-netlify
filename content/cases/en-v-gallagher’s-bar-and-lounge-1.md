@@ -13,6 +13,7 @@ takeaway: This case, like many others, shows that consistently misusing gender
 url: https://www.canlii.org/en/on/onhrt/doc/2021/2021hrto240/2021hrto240.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=9
 themes:
   - Accessibility and Accomodation
-  - Identification
   - Employment
+  - Names
+  - Pronouns
 ---
