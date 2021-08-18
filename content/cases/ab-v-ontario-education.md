@@ -11,5 +11,7 @@ takeaway: This case affirmed that teachers must include LGBTQ+ students in their
   Charter of Rights and Freedoms requires them to.
 url: https://www.canlii.org/en/on/onhrt/doc/2019/2019hrto685/2019hrto685.html
 themes:
-  - Employment
+  - Accessibility and Accomodation
+  - Pronouns
+  - Names
 ---
