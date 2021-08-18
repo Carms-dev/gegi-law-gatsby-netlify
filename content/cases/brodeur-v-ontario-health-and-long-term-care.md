@@ -15,6 +15,7 @@ takeaway: This case is important because it shows how cosmetic procedures, like
   feelings of gender dysphoria, which was not discussed in the case at hand.
 url: https://www.canlii.org/en/on/onhrt/doc/2013/2013hrto1229/2013hrto1229.html?resultIndex=1
 themes:
-  - Identification
   - Health Care
+  - Accessibility and Accomodation
+  - Identity
 ---
