@@ -10,4 +10,5 @@ description: The applicant was not permitted access to records of the
 url: https://www.canlii.org/en/on/onhrt/doc/2015/2015hrto630/2015hrto630.html?resultIndex=1
 themes:
   - Housing
+  - Identity
 ---
