@@ -8,4 +8,5 @@ description: The applicant alleges that he suffered harassment in the workplace
 url: https://www.canlii.org/en/on/onhrt/doc/2015/2015hrto664/2015hrto664.html?resultIndex=1
 themes:
   - Employment
+  - Harassment
 ---
