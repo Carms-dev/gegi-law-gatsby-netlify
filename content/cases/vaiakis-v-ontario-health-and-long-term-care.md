@@ -9,4 +9,5 @@ description: The applicant alleges that the respondent discriminated against her
 url: https://www.canlii.org/en/on/onhrt/doc/2010/2010hrto1866/2010hrto1866.html?autocompleteStr=Vaiakis%20v%20Ontario%20(Health%20and%20Long-Term%20Care)&autocompletePos=2
 themes:
   - Health Care
+  - Identity
 ---
