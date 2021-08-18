@@ -15,6 +15,8 @@ takeaway: This case is important as it outlines how school boards ought to take
   eliminated,
 url: https://www.canlii.org/en/on/onhrt/doc/2015/2015hrto1592/2015hrto1592.html?resultIndex=1
 themes:
-  - Identification
   - Accessibility and Accomodation
+  - Pronouns
+  - Names
+  - Identity
 ---
