@@ -1,8 +1,14 @@
 module.exports = {
-  siteMetadata: {
-    title: "GEGI Law",
-  },
   plugins: [
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#FCCC49`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

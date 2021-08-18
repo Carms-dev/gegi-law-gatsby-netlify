@@ -114,6 +114,10 @@ const GlobalStyles = createGlobalStyle`
   .bg-aqua {
     background: var(--aqua-light);
   }
+
+  #nprogress .bar {
+    height: 5px !important;
+  }
   /* curve hero section bottom */
   #curve {
     background-color: var(--grey-light);
