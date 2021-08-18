@@ -12,5 +12,7 @@ takeaway: Historically, surgery was required in order for transgender folks to
   not recognized under the law.
 url: https://www.canlii.org/en/on/onsc/doc/1990/1990canlii7012/1990canlii7012.html?autocompleteStr=b%20v%20a%201990&autocompletePos=1
 themes:
-  - Identification
+  - Names
+  - Pronouns
+  - Identity
 ---
