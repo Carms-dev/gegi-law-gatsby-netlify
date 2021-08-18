@@ -1,3 +1,3 @@
 ---
-category: Namess
+category: Names
 ---
