@@ -10,6 +10,7 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
   initials will be used instead of their name. "
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto1505/2012hrto1505.html?resultIndex=1
 themes:
-  - Identification
   - Health Care
+  - Identity
+  - Names
 ---
