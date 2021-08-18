@@ -9,6 +9,6 @@ description: The applicant, a transgender woman, was harassed and subsequently
 url: https://www.canlii.org/en/on/onhrt/doc/2013/2013hrto947/2013hrto947.html?resultIndex=1
 themes:
   - Housing
-  - Identification
   - Accessibility and Accomodation
+  - Harassment
 ---
