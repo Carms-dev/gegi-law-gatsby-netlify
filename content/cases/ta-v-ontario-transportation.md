@@ -15,5 +15,6 @@ takeaway: While this case was unsuccessful, it is important as the applicant
   government documents.
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto17/2016hrto17.html?resultIndex=1
 themes:
-  - Identification
+  - Identity
+  - Names
 ---
