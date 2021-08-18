@@ -9,5 +9,6 @@ description: The applicant is a transgender man who has brought
 takeaway: ""
 url: https://www.canlii.org/en/on/onhrt/doc/2014/2014hrto1274/2014hrto1274.html?resultIndex=1
 themes:
-  - Identification
+  - Health Care
+  - Identity
 ---
