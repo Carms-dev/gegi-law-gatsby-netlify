@@ -12,4 +12,5 @@ takeaway: Refusing to let someone use their preferred washroom constitutes
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto347/2016hrto347.html?resultIndex=2
 themes:
   - Accessibility and Accomodation
+  - Washrooms
 ---
