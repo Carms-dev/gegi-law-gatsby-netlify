@@ -14,4 +14,5 @@ takeaway: This case is important because it shows how a school was willing to
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto541/2016hrto541.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+  - Identity
 ---
