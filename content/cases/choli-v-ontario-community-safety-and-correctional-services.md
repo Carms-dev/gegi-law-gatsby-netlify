@@ -16,4 +16,6 @@ takeaway: This case is important because it highlights how transgender women
 url: https://www.canlii.org/en/on/onhrt/doc/2018/2018hrto244/2018hrto244.html?searchUrlHash=AAAAAQBPImdlbmRlciBleHByZXNzaW9uIiwgImdlbmRlciBpZGVudGl0eSIsICJnZW5kZXIiLCAiZGlzY3JpbWluYXRpb24iLCB0cmFuc2dlbmRlcgAAAAAB&resultIndex=12
 themes:
   - Accessibility and Accomodation
+  - Identity
+  - Pronouns
 ---
