@@ -14,4 +14,7 @@ takeaway: This case is important because the Human Rights Tribunal stated that
 url: https://www.canlii.org/en/on/onhrt/doc/2014/2014hrto526/2014hrto526.html?resultIndex=1
 themes:
   - Health Care
+  - Pronouns
+  - Names
+  - Harassment
 ---
