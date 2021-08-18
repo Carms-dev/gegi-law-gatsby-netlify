@@ -12,5 +12,7 @@ description: A transgender woman challenged the Government of Ontario's
 takeaway: "It affirms the importance of self-identifying gender for legal purposes. "
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto726/2012hrto726.html?resultIndex=1
 themes:
-  - Identification
+  - Identity
+  - Names
+  - Pronouns
 ---
