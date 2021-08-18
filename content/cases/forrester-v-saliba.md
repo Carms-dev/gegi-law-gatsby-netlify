@@ -13,4 +13,5 @@ takeaway: "This case is important because it proves that a parent's gender
 url: https://www.canlii.org/en/on/oncj/doc/2000/2000canlii28722/2000canlii28722.html?autocompleteStr=forrester%20v%20&autocompletePos=4
 themes:
   - Marriage
+  - Identity
 ---
