@@ -10,5 +10,6 @@ takeaway: "In this case, the OHRT recognizes that \"outing\" the applicant would
   initials will be used instead of their name. "
 url: https://www.canlii.org/en/on/onhrt/doc/2015/2015hrto434/2015hrto434.html?resultIndex=1
 themes:
-  - Identification
+  - Identity
+  - Names
 ---
