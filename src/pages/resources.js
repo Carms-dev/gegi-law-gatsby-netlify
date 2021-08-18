@@ -29,7 +29,9 @@ export default function ResourcesPage({ data: { page, collections } }) {
     const menuItems = select.map(item => ({
       label: item.category,
       value: stringToSlug(item.category)
-    }))
+    })).sort((a, b) => (a.value > b.value) ? 1 : (b.value > a.value) ? -1 : 0)
+
+
 
     return {selectLabel: filter, menuItems: menuItems}
   })

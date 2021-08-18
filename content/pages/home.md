@@ -8,7 +8,7 @@ secondaryCTAs:
   - pageLink: /resources
     heading: Where can I get legal advice from recognized organizations and firms?
     icon:
-      imageFile: /assets/gegi_info.png
+      imageFile: /assets/gegi_how-to.png
       alt: GEGI Info
   - pageLink: /cases
     heading: How can I search relevant caselaw?
