@@ -13,4 +13,5 @@ url: https://www.canlii.org/en/on/onhrt/doc/2017/2017hrto919/2017hrto919.html?re
 themes:
   - Employment
   - Names
+  - Pronouns
 ---
