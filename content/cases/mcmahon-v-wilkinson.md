@@ -14,4 +14,5 @@ takeaway: "This case is important as it illustrates how refusal to rent out a
 url: https://www.canlii.org/en/on/onhrt/doc/2015/2015hrto1019/2015hrto1019.html?resultIndex=1
 themes:
   - Housing
+  - Identity
 ---
