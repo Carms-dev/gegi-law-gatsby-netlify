@@ -7,5 +7,6 @@ description: In this case, the applicant alleges that their employer will not
   case depending on the outcome of the arbitration.
 url: https://www.canlii.org/en/on/onhrt/doc/2010/2010hrto179/2010hrto179.html?autocompleteStr=Stevenson%20v%20Ontario%20(Health%20and%20Long-Term%20Care)&autocompletePos=1
 themes:
-  - Identification
+  - Names
+  - Identity
 ---
