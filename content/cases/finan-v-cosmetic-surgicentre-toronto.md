@@ -13,4 +13,5 @@ takeaway: Refusing to perform surgery on a transgender individual solely because
 url: https://www.canlii.org/en/on/onhrt/doc/2008/2008hrto47/2008hrto47.html?autocompleteStr=cosmetic%20sur&autocompletePos=3
 themes:
   - Health Care
+  - Identity
 ---
