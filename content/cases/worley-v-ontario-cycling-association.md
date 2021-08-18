@@ -15,4 +15,5 @@ url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto952/2016hrto952.html?re
 themes:
   - Accessibility and Accomodation
   - Health Care
+  - Identity
 ---
