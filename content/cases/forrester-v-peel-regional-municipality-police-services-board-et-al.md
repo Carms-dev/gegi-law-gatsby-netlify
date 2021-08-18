@@ -15,4 +15,5 @@ takeaway: This case is important as it outlines the proper procedure for strip
 url: https://www.canlii.org/en/on/onhrt/doc/2006/2006hrto13/2006hrto13.html?autocompleteStr=forrester%20v%20&autocompletePos=3
 themes:
   - Accessibility and Accomodation
+  - Identity
 ---
