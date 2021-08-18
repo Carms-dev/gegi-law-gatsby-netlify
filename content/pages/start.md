@@ -100,7 +100,7 @@ pageEndCTAs:
   - pageLink: /resources
     heading: Get legal advice from recognized organizations and firms
     icon:
-      imageFile: /assets/gegi_info.png
+      imageFile: /assets/gegi_how-to.png
       alt: GEGI Info
   - pageLink: /cases
     heading: Search for relevant caselaw
