@@ -6,7 +6,7 @@ serviceDescription: The Human Rights Legal Support Centre (HRLSC) offers human
   experienced discrimination. The Centre’s services range from legal assistance
   in filing an application at the Tribunal to legal representation on human
   rights applications.
-website: http://www.hrlsc.on.ca/en/welcome 
+website: http://www.hrlsc.on.ca/en/home
 email: notices@hrlsc.on.ca
 phone: 1-866-625-5179
 logo: /assets/hrlsc.png
@@ -17,5 +17,5 @@ location:
   - Toronto
   - Hamilton
   - London
-cost: Service Dependent
+cost: $$
 ---
