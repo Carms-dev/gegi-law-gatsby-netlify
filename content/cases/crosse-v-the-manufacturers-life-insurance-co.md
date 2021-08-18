@@ -12,4 +12,5 @@ takeaway: "This case shows that it is not discriminatory for an employer to
 url: https://www.canlii.org/en/on/onhrt/doc/2016/2016hrto1143/2016hrto1143.html?resultIndex=1
 themes:
   - Health Care
+  - Identity
 ---
