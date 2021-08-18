@@ -15,5 +15,5 @@ service:
   - Legal Representation
 location:
   - Ontario-wide
-cost: Low Cost
+cost: $
 ---
