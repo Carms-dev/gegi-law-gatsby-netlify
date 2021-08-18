@@ -12,4 +12,5 @@ takeaway: "This case affirms that different kinds of harassment that take place
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto932/2012hrto932.html?resultIndex=1
 themes:
   - Employment
+  - Harassment
 ---
