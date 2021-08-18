@@ -14,4 +14,5 @@ takeaway: This case is important as it affirms that transgender folks ought to
 url: https://www.canlii.org/en/on/onhrt/doc/2014/2014hrto775/2014hrto775.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+  - Washrooms
 ---
