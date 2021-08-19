@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import { graphql } from 'gatsby'
-import Hero from '../components/Hero'
+import { Hero } from '../components/Hero'
 import ResourceCards from '../components/ResourceCards'
 import Filters from '../components/Filters'
 import { cleanObject, stringToSlug } from '../utils/helpers'
@@ -30,8 +30,6 @@ export default function ResourcesPage({ data: { page, collections } }) {
       label: item.category,
       value: stringToSlug(item.category)
     })).sort((a, b) => (a.value > b.value) ? 1 : (b.value > a.value) ? -1 : 0)
-
-
 
     return {selectLabel: filter, menuItems: menuItems}
   })

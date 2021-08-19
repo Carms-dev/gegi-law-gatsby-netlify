@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import Hero from '../components/Hero'
-import { cleanObject } from '../utils/helpers'
+import { HeroAlt } from '../components/Hero'
+import { cleanObject, stringToSlug } from '../utils/helpers'
 import CaseCards from '../components/CaseCards'
 import Themes from '../components/Themes'
 import SiteBorderStyles from "../styles/SiteBorderStyles"
@@ -14,7 +14,7 @@ export default function CasesPage({ data: { page, collections } }) {
   const { title, hero, cornerstoneIcon, caseIcon  } = page.childMarkdownRemark.frontmatter
 
   // build themes (filter)
-  const themes = collections.group
+  const allThemes = collections.group
     .find(collection => collection.fieldValue === "theme")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
 
@@ -23,13 +23,43 @@ export default function CasesPage({ data: { page, collections } }) {
     .find(collection => collection.fieldValue === "cases")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
 
-  const [cases, setCases] = useState(allCases)
+  // build themes (filter)
+  const provinces = collections.group
+    .find(collection => collection.fieldValue === "province")
+    .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
+
+  // TODO: Create field in CRM
+  const selectLabel = "Provinces & Territories"
+
+  const menuItems = provinces.map(item => ({
+    label: item.category,
+    value: stringToSlug(item.category)
+  })).sort((a, b) => (a.value > b.value) ? 1 : (b.value > a.value) ? -1 : 0)
+
+  // default province is to `ontario`
+  const ontarioCases = allCases.filter((cas) => cas.province === "Ontario")
+  const [cases, setCases] = useState(ontarioCases)
+  const [province, setProvince] = useState("ontario")
+
+  // defualt theme is `all`
+  const [theme, setTheme] = useState("All")
 
   return (
     <Layout>
       <Seo title={title} />
       <section className="pb-section bg-aqua">
-        <Hero heading={hero.heading} description={`${allCases.length} ${hero.description}`} image={hero.image} />
+        <HeroAlt
+          heading={hero.heading}
+          description={`${allCases.length} ${hero.description}`}
+          image={hero.image}
+          selectLabel={selectLabel}
+          menuItems={menuItems}
+          province={province}
+          setProvince={setProvince}
+          allCases={allCases}
+          setCases={setCases}
+          theme={theme}
+        />
       </section>
       <div id="wave-container">
         <div id="wave" />
@@ -37,7 +67,14 @@ export default function CasesPage({ data: { page, collections } }) {
       <section className="py-section">
         <SiteBorderStyles>
           <CaseContentStyles>
-            <Themes allCases={allCases} setCases={setCases} themes={themes}  />
+            <Themes
+              allCases={allCases}
+              setCases={setCases}
+              allThemes={allThemes}
+              province={province}
+              theme={theme}
+              setTheme={setTheme}
+            />
             <CaseCards cases={cases} cornerstoneIcon={cornerstoneIcon} caseIcon={caseIcon} />
           </CaseContentStyles>
         </SiteBorderStyles>
@@ -107,7 +144,7 @@ export const data = graphql`
         }
       }
     }
-    collections: allFile(filter: {relativeDirectory: {in: ["cases", "theme"]}}) {
+    collections: allFile(filter: {relativeDirectory: {in: ["cases", "theme", "province"]}}) {
       group(field: relativeDirectory) {
         fieldValue
         nodes {
@@ -121,6 +158,7 @@ export const data = graphql`
               takeaway
               url
               themes
+              province
             }
           }
         }
