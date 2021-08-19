@@ -115,6 +115,7 @@ const GlobalStyles = createGlobalStyle`
     background: var(--aqua-light);
   }
 
+  /* nprogress bar */
   #nprogress .bar {
     height: 5px !important;
   }

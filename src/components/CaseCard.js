@@ -48,7 +48,7 @@ export default function CaseCard({ cas, icon }) {
             variant="outlined"
             size="medium"
             label={theme}
-            style={{ borderRadius: 8, marginRight: `0.5rem` }}
+            style={{ borderRadius: 8, marginRight: `0.5rem`, marginBottom: `0.5rem` }}
           />
         ))}
       </div>
