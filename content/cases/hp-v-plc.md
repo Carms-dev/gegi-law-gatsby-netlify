@@ -15,4 +15,5 @@ takeaway: This case is an important example of how unfair treatment does not
 url: https://www.canlii.org/en/on/oncj/doc/2013/2013oncj399/2013oncj399.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+province: Ontario
 ---

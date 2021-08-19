@@ -87,6 +87,14 @@ collections:
         search_fields: [category]
         value_field: category
         display_fields: [category]
+      - label: "Provinces & Territories"
+        name: province
+        widget: relation
+        required: true
+        collection: caseProvince
+        search_fields: [category]
+        value_field: category
+        display_fields: [category]
 
   - label: Pages
     name: pages
@@ -311,22 +319,36 @@ collections:
       preview: false
     folder: content/location
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Location Category, name: category, widget: string, required: true}
 
   - label: Theme (Case Category)
     name: caseThemes
+    editor:
+      preview: false
     folder: content/theme
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Theme Category, name: category, widget: string, required: true}
+
+  - label: Province (Case Category)
+    name: caseProvince
+    folder: content/province
+    create: true
+    delete: true
+    identifier_field: category
+    fields:
+      - {label: "Provinces & Territories", name: category, widget: string, required: true}
 
   - label: Supporter Logo
     name: supporters
     folder: content/supporters
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Title, name: title, widget: string}

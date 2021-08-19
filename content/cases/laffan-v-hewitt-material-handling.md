@@ -12,4 +12,5 @@ takeaway: This case is important as the applicant requested that the Tribunal
 url: https://www.canlii.org/en/on/onhrt/doc/2017/2017hrto619/2017hrto619.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+province: Ontario
 ---

@@ -12,4 +12,5 @@ takeaway: This case is important because it affirms that the Human Rights
 url: https://www.canlii.org/en/on/onhrt/doc/2011/2011hrto2179/2011hrto2179.html?resultIndex=1
 themes:
   - Health Care
+province: Ontario
 ---
