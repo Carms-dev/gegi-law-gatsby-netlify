@@ -18,10 +18,11 @@ export default function CasesPage({ data: { page, collections } }) {
     .find(collection => collection.fieldValue === "theme")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
 
-  // build cases
+  // build cases, newest first
   const allCases = collections.group
     .find(collection => collection.fieldValue === "cases")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
+    .sort((a, b) => (b.citation > a.citation) ? 1 : (a.citation > b.citation) ? -1 : 0)
 
   // build themes (filter)
   const provinces = collections.group
