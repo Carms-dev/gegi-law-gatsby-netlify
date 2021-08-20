@@ -16,6 +16,7 @@ export default function CaseCard({ cas, icon }) {
     takeaway,
     url,
     themes,
+    province,
   } = cas
 
   return (
@@ -27,7 +28,10 @@ export default function CaseCard({ cas, icon }) {
             alt={isCornerstone ? 'Cornerstone Case Icon' : 'Case Icon'}
             imgStyle={{ width: `auto` }}
           />
-          <p style={{ color: `var(--grey)` }}>{citation}{isCornerstone ? ' · Cornerstone Case' : ''}</p>
+          <p style={{ color: `var(--grey)` }}>
+            {citation}
+            {province ? ` · ${province}` : '' }
+          </p>
         </div>
         <h3>
           <a href={url} target='_blank' rel="noreferrer" style={{ marginRight: `0.5rem` }}>{caseName}</a>
@@ -59,6 +63,10 @@ export default function CaseCard({ cas, icon }) {
 const CaseCardStyles = styled.div`
   margin-bottom: 4rem;
 
+  h3 {
+    display: flex;
+    align-items: center;
+  }
   .card-pre {
     display: inline-flex;
     align-items: center;
