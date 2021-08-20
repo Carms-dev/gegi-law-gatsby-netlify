@@ -40,5 +40,4 @@ statisticsSection:
   caseLabel: Gender-Related Human Rights Cases
   resourceLabel: Vetted Organizations and Firms Offering Affordable Legal Services
   provinceLabel: Province of Canada
-  provinceCount: 1
 ---

@@ -35,6 +35,11 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
   .find(collection => collection.fieldValue === "resources")
   .nodes.length
 
+  // Get province count
+  const provinceCount = collections.group
+    .find(collection => collection.fieldValue === "province")
+    .nodes.length
+
   return (
     <Layout>
       <Seo title={title} />
@@ -123,7 +128,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
               <p>{statisticsSection.resourceLabel}</p>
             </Link>
             <Link to="/"className="card">
-              <h3>{statisticsSection.provinceCount}</h3>
+              <h3>{provinceCount}</h3>
               <p>{statisticsSection.provinceLabel}</p>
             </Link>
           </section>
@@ -351,12 +356,11 @@ export const data = graphql`
             caseLabel
             resourceLabel
             provinceLabel
-            provinceCount
           }
         }
       }
     }
-    collections: allFile(filter: {relativeDirectory: {in: ["cases", "resources", "supporters"]}}) {
+    collections: allFile(filter: {relativeDirectory: {in: ["cases", "resources", "supporters", "province"]}}) {
       group(field: relativeDirectory) {
         fieldValue
         nodes {

@@ -87,6 +87,14 @@ collections:
         search_fields: [category]
         value_field: category
         display_fields: [category]
+      - label: "Provinces & Territories"
+        name: province
+        widget: relation
+        required: true
+        collection: caseProvince
+        search_fields: [category]
+        value_field: category
+        display_fields: [category]
 
   - label: Pages
     name: pages
@@ -143,7 +151,6 @@ collections:
               - {label: Case Label, name: caseLabel, widget: string}
               - {label: Resource Label, name: resourceLabel, widget: string}
               - {label: Province Label, name: provinceLabel, widget: string}
-              - {label: "# Provinces", name: provinceCount, widget: number, value_type: int}
 
       - file: content/pages/start.md
         label: "Get Started Page"
@@ -227,6 +234,7 @@ collections:
               - {label: Heading, name: heading, widget: string}
               - {label: Description, name: description, widget: text}
               - {label: Image, name: image, widget: object, fields: [{label: Image File, name: imageFile, widget: image, choose_url: false}, {label: Alt, name: alt, widget: string}]}
+              - {label: Province Filter Label, name: filterLabel, widget: string}
           - {label: Cornerstone Case Icon, name: cornerstoneIcon, widget: image, choose_url: false}
           - {label: Non-Cornerstone Case Icon, name: caseIcon, widget: image, choose_url: false}
 
@@ -311,22 +319,36 @@ collections:
       preview: false
     folder: content/location
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Location Category, name: category, widget: string, required: true}
 
   - label: Theme (Case Category)
     name: caseThemes
+    editor:
+      preview: false
     folder: content/theme
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Theme Category, name: category, widget: string, required: true}
+
+  - label: Province (Case Category)
+    name: caseProvince
+    folder: content/province
+    create: true
+    delete: true
+    identifier_field: category
+    fields:
+      - {label: "Provinces & Territories", name: category, widget: string, required: true}
 
   - label: Supporter Logo
     name: supporters
     folder: content/supporters
     create: true
+    delete: true
     identifier_field: category
     fields:
       - {label: Title, name: title, widget: string}

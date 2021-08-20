@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Chip from '@material-ui/core/Chip'
 import Avatar from '@material-ui/core/Avatar'
 import { makeStyles } from '@material-ui/core/styles'
+import { stringToSlug } from '../utils/helpers';
 
 const useStyles = makeStyles(() => ({
   chip: {
@@ -23,47 +24,55 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default function Themes({ themes, allCases, setCases }) {
+export default function Themes({ allCases, setCases, province, allThemes, theme, setTheme }) {
   const classes = useStyles();
 
-  const casesGroupByThemes = themes
+  const casesGroupByThemes = allThemes
   .map(theme => ({
-    theme: theme.category,
-    cases: allCases.filter(cas => cas.themes.includes(theme.category))
+    title: theme.category,
+    cases: allCases
+      .filter(cas => stringToSlug(cas.province) === province)
+      .filter(cas => cas.themes.includes(theme.category))
   }))
   .sort((a, b) => b.cases.length - a.cases.length)
 
   // Add `All` filter as the first group in the array
   casesGroupByThemes.unshift({
-    theme: `All`,
-    cases: allCases
+    title: `All`,
+    cases: allCases.filter(cas => stringToSlug(cas.province) === province)
   })
 
   // default active theme to be `All`
-  const [activeTheme, setActiveTheme] = useState(`All`)
 
   const handleClick = (event) => {
-    const targetedTheme = event.currentTarget.getAttribute("name")
+    const updatedTheme = event.currentTarget.getAttribute("name")
 
     // update activeTheme
-    setActiveTheme(targetedTheme)
+    setTheme(updatedTheme)
 
     // update the cases rendered
-    const updatedCases = casesGroupByThemes.find(group => targetedTheme === group.theme).cases
+    const updatedCases = allCases
+      .filter(cas => {
+        const matchProv = stringToSlug(cas.province) === province
+        const matchTheme = updatedTheme === "All" ? true : cas.themes.includes(updatedTheme)
+
+        return matchProv && matchTheme
+      })
+
     setCases(updatedCases)
   }
 
   return (
     <div>
-      {casesGroupByThemes.map(({ theme, cases }) => (
+      {casesGroupByThemes.map(({ title, cases }) => (
         <Chip
-          key={theme + `Chip`}
-          name={theme}
+          key={title}
+          name={title}
           variant="outlined"
           size="medium"
-          color={activeTheme === theme ? 'primary' : 'default'}
+          color={theme === title ? 'primary' : 'default'}
           avatar={<Avatar>{cases.length}</Avatar>}
-          label={theme}
+          label={title}
           onClick={handleClick}
           className={classes.chip}
         />

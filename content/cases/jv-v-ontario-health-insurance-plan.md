@@ -12,4 +12,5 @@ takeaway: This case is important as it shows that SRS is not covered under OHIP,
 url: https://www.canlii.org/en/on/onhsarb/doc/2009/2009canlii84982/2009canlii84982.html?autocompleteStr=2009%20CanLII%2084982&autocompletePos=1
 themes:
   - Health Care
+province: Ontario
 ---

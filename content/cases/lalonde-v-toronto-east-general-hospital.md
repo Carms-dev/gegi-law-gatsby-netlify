@@ -12,4 +12,5 @@ takeaway: Not providing health training relating to minority groups that were
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto2153/2012hrto2153.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+province: Ontario
 ---

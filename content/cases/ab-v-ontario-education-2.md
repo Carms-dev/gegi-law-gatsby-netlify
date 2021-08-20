@@ -15,4 +15,5 @@ takeaway: While the applicant was unsuccessful, this case is still important.
 url: https://www.canlii.org/en/on/onhrt/doc/2019/2019hrto685/2019hrto685.html
 themes:
   - Accessibility and Accomodation
+province: Ontario
 ---

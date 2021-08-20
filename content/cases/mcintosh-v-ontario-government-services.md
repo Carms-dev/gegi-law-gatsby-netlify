@@ -9,4 +9,5 @@ description: The applicant argues that section 36 of the Vital Statistics Act
 url: https://www.canlii.org/en/on/onhrt/doc/2010/2010hrto2363/2010hrto2363.html?autocompleteStr=McIntosh%20v%20Ontario%20(Government%20Services)%20&autocompletePos=1
 themes:
   - Identity
+province: Ontario
 ---

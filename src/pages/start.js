@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Indicator from '../components/Indicator'
 import { Disclaimer } from '../components/Alert'
-import Hero from '../components/Hero'
+import { Hero } from '../components/Hero'
 import QuestionSection from '../components/QuestionSection'
 import ScrollBtn from '../components/ScrollBtn'
 

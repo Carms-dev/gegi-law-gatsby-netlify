@@ -14,4 +14,5 @@ url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto1977/2012hrto1977.html?
 themes:
   - Employment
   - Harassment
+province: Ontario
 ---

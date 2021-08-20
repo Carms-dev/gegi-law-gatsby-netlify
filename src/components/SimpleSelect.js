@@ -85,7 +85,6 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
 }
 
 // Start Page Questions
-
 function QuestionsSelect({ selectLabel, selected, options, index, anchors, setSelected, setResponse }) {
   const classes = useStyles(selected);
 
@@ -126,4 +125,45 @@ function QuestionsSelect({ selectLabel, selected, options, index, anchors, setSe
   );
 }
 
-export { ResourcesSelect, QuestionsSelect }
+// Cases Select
+function CasesSelect({ selectLabel, menuItems, province, setProvince, allCases, setCases, theme }) {
+  const classes = useStyles();
+
+  const handleChange = (event) => {
+    // Update value for Select
+    const updatedProvince = event.target.value
+    setProvince(updatedProvince)
+
+    // Find the cases that matches Province & Theme selected
+    const updatedCases = allCases
+      .filter(cas => {
+        const matchProv = stringToSlug(cas.province) === updatedProvince
+        const matchTheme = theme === "All" ? true : cas.themes.includes(theme)
+
+        return matchProv && matchTheme
+      })
+
+    // Set Cases based the selected province
+    setCases(updatedCases)
+  }
+
+  return (
+    <FormControl variant="outlined" className={classes.formControl}>
+      <InputLabel id={"select-province"}>{selectLabel}</InputLabel>
+      <Select
+        labelId={"select-province"}
+        value={province}
+        onChange={handleChange}
+        label={selectLabel}
+        IconComponent={KeyboardArrowDownIcon}
+      >
+        {menuItems.map(item => (
+          <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  );
+}
+
+
+export { ResourcesSelect, QuestionsSelect, CasesSelect }

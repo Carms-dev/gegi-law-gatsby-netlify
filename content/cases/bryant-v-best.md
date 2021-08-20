@@ -12,4 +12,5 @@ takeaway: "This case is important as it proves that unfair treatment does not
 url: https://www.canlii.org/en/on/onhrt/doc/2017/2017hrto297/2017hrto297.html?resultIndex=1
 themes:
   - Accessibility and Accomodation
+province: Ontario
 ---
