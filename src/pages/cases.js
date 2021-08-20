@@ -28,20 +28,18 @@ export default function CasesPage({ data: { page, collections } }) {
     .find(collection => collection.fieldValue === "province")
     .nodes.map(node => (cleanObject(node.childMarkdownRemark.frontmatter)))
 
-  // TODO: Create field in CRM
-  const selectLabel = "Provinces & Territories"
-
+  // build menuItems from province categories
   const menuItems = provinces.map(item => ({
     label: item.category,
     value: stringToSlug(item.category)
   })).sort((a, b) => (a.value > b.value) ? 1 : (b.value > a.value) ? -1 : 0)
 
-  // default province is to `ontario`
+  // default province to `ontario`
   const ontarioCases = allCases.filter((cas) => cas.province === "Ontario")
   const [cases, setCases] = useState(ontarioCases)
   const [province, setProvince] = useState("ontario")
 
-  // defualt theme is `all`
+  // defualt theme to `all`
   const [theme, setTheme] = useState("All")
 
   return (
@@ -52,7 +50,7 @@ export default function CasesPage({ data: { page, collections } }) {
           heading={hero.heading}
           description={`${allCases.length} ${hero.description}`}
           image={hero.image}
-          selectLabel={selectLabel}
+          selectLabel={hero.filterLabel}
           menuItems={menuItems}
           province={province}
           setProvince={setProvince}
@@ -110,6 +108,7 @@ export const data = graphql`
           hero {
             heading
             description
+            filterLabel
             image {
               alt
               imageFile {
