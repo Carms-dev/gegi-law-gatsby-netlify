@@ -151,7 +151,6 @@ collections:
               - {label: Case Label, name: caseLabel, widget: string}
               - {label: Resource Label, name: resourceLabel, widget: string}
               - {label: Province Label, name: provinceLabel, widget: string}
-              - {label: "# Provinces", name: provinceCount, widget: number, value_type: int}
 
       - file: content/pages/start.md
         label: "Get Started Page"
