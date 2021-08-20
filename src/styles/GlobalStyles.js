@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     --off-white: #FFFBF3;
     --border: 1px solid var(--lighter);
     --br: 12px;
+    --trans-time: 0.5s;
   }
   * {
     box-sizing: border-box;
@@ -36,11 +37,12 @@ const GlobalStyles = createGlobalStyle`
   a, button {
     font-weight: 500;
     color: var(--darker);
+    transition: all var(--trans-time) ease;
   }
+
   a {
     text-decoration: none;
     color: var(--aqua-dark);
-    /* transition: color 0.7s ease; */
 
     &:hover {
       color: var(--aqua-xdark);
@@ -89,7 +91,6 @@ const GlobalStyles = createGlobalStyle`
     border: var(--border);
     width: 100%;
     font-size: 1.25rem;
-    transition: opacity 0.7s ease;
     opacity: 1;
 
     &:hover {
@@ -97,12 +98,6 @@ const GlobalStyles = createGlobalStyle`
       opacity: 0.9;
     }
   }
-  /* .btn-primary {
-    background: var(--primary-alt);
-  }
-  .btn-secondary {
-    background: var(--secondary);
-  } */
 
   // Section
   .pb-section {
