@@ -10,6 +10,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Rubik`,
+                variants: [`300`, `400`, `500`, `700`],
+              },
+            ],
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-material-ui`,
       options: {
         stylesProvider: {
