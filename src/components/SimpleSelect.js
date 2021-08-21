@@ -85,14 +85,14 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
 }
 
 // Start Page Questions
-function QuestionsSelect({ selectLabel, selected, options, index, anchors, setSelected, setResponse }) {
+function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse }) {
   const classes = useStyles(selected);
 
   const handleChange = (event) => {
     // Find the corresponding section
     const item = event.currentTarget
-    const i = parseInt(item.dataset.index)
-    const section = document.getElementById(anchors[i])
+    const i = item.dataset.index
+    const section = document.querySelector(`[data-step=${i}]`)
     // update style: add class to move the question up
     section.classList.add('reduce-pt')
 

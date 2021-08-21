@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -12,12 +12,12 @@ import QuestionSection from '../components/QuestionSection'
 import ScrollBtn from '../components/ScrollBtn'
 import SiteBorderStyles from '../styles/SiteBorderStyles'
 
+function useOnScreen(options) {
+  const ref = useRef();
+}
+
 export default function GetStartedPage({ data: { page } }) {
   const { title, hero, questions, responseIcon, disclaimer, pageEndCTAs } = page.childMarkdownRemark.frontmatter
-
-  // compile anchors
-  const anchors = [...Array(questions.length).keys()].map(id => `step-${id + 1}`)
-  anchors.unshift('intro')
 
   const [step, setStep] = useState(0)
 
@@ -26,16 +26,13 @@ export default function GetStartedPage({ data: { page } }) {
       <Seo title={title} />
       <StartPageStyles>
         <Disclaimer disclaimer={disclaimer} />
-        <Indicator step={step} setStep={setStep} anchors={anchors} />
-        <section className="section section-intro" id="intro">
+        <Indicator step={step} count={questions.length + 1} />
+        <section className="section section-intro" id="intro" data-step="0">
           <Hero
             heading={hero.heading}
             description={hero.description}
             image={hero.image} />
-          <ScrollBtn
-            index={1}
-            anchors={anchors}
-            setStep={setStep} />
+          <ScrollBtn index={0} />
         </section>
         {questions.map((section, index) => (
           <QuestionSection
@@ -44,15 +41,13 @@ export default function GetStartedPage({ data: { page } }) {
             index={index + 1}
             className="section"
             responseIcon={responseIcon}
-            anchors={anchors}
-            setStep={setStep}
             isLast={index === questions.length - 1}
             pageEndCTAs={pageEndCTAs}
           />
         ))}
         {/* Call to action */}
         <SiteBorderStyles>
-          <section id="cta">
+          <div id="cta">
             {pageEndCTAs.map(cta => (
               <Link key={cta.heading} to={cta.pageLink} className="card card-cta">
                 <GatsbyImage
@@ -62,7 +57,7 @@ export default function GetStartedPage({ data: { page } }) {
                 <p>{cta.heading}</p>
               </Link>
             ))}
-          </section>
+          </div>
         </SiteBorderStyles>
       </StartPageStyles>
     </Layout>

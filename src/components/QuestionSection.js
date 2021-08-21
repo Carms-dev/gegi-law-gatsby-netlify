@@ -4,14 +4,17 @@ import Response from "./Response"
 import { QuestionsSelect } from '../components/SimpleSelect'
 import ScrollBtn from '../components/ScrollBtn'
 
-export default function QuestionSection({ section, index, className, responseIcon, anchors, setStep, isLast, pageEndCTAs }) {
+export default function QuestionSection({ section, index, className, responseIcon, isLast, pageEndCTAs }) {
   const { question, description, selectLabel, options } = section
 
   const [selected, setSelected] = useState(``)
   const [response, setResponse] = useState(``)
 
   return (
-    <QuestionSectionStyles id={anchors[index]} className={className} >
+    <QuestionSectionStyles
+      className={className}
+      data-step={index}
+    >
       <h3>{question}</h3>
       {description && <p>{description}</p>}
       <QuestionsSelect
@@ -21,7 +24,6 @@ export default function QuestionSection({ section, index, className, responseIco
         setResponse={setResponse}
         options={options}
         index={index}
-        anchors={anchors}
       />
       {response !== "" &&
         <Response
@@ -33,10 +35,7 @@ export default function QuestionSection({ section, index, className, responseIco
 
       {/* No arrow down for the last question */}
       {!isLast &&
-        <ScrollBtn
-          index={index + 1}
-          anchors={anchors}
-          setStep={setStep} />
+        <ScrollBtn index={index} />
       }
     </QuestionSectionStyles>
   )
