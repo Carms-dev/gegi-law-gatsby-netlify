@@ -80,8 +80,8 @@ const StartPageStyles = styled.div`
   }
   .section#intro {
     min-height: 100vh;
-    margin-top: -91px;
-    padding-top: 91px;
+    margin-top: -108px;
+    padding-top: 108px;
   }
   .reduce-pt {
     padding-top: 5vmax;

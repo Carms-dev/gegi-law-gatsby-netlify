@@ -38,5 +38,5 @@ const ScrollBtnStyles = styled.div`
   left: 50%;
   bottom: 3vmax;
   transform: translateX(-50%);
-
+  margin: 1rem 0;
 `

@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
   linkText: {
     textDecoration: `none`,
-    color: `black`
+    color: `black`,
   }
 });
 
@@ -60,7 +60,10 @@ const Header = () => {
   const { navigation } = siteSettings.childMarkdownRemark.frontmatter
 
   return (
-    <AppBar position="static" style={{ background: `var(--aqua-light)`, boxShadow: `unset` }}>
+    <AppBar
+      position="static"
+      style={{ display: `grid`, height: `108px`, background: `var(--aqua-light)`, boxShadow: `unset` }}
+    >
       <Toolbar>
         <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
           <Logo />
