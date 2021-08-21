@@ -13,19 +13,6 @@ export default function Response({ icon, response, isLast, pageEndCTAs }) {
         imgStyle={{ width: `auto` }} />
       <div className="content-wrapper">
         <ReactMarkdown>{response}</ReactMarkdown>
-        {isLast &&
-          <div className="cards-cta">
-            {pageEndCTAs.map(cta => (
-              <Link key={cta.heading} to={cta.pageLink} className="card">
-                <GatsbyImage
-                  image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
-                  alt={cta.icon.alt}
-                  imgStyle={{ width: `auto` }} />
-                <p>{cta.heading}</p>
-              </Link>
-            ))}
-          </div>
-        }
       </div>
     </ResponseStyles>
   )
@@ -41,26 +28,6 @@ const ResponseStyles = styled.div`
   .content-wrapper {
     max-height: 50vh;
     overflow-y: scroll;
-  }
-
-  .cards-cta {
-    padding: 1rem 0;
-    display: grid;
-    grid-gap: 1rem;
-    .card {
-      padding: 1rem;
-      display: grid;
-      grid-template-columns: 70px 1fr;
-      align-items: center;
-      grid-gap: 1rem;
-      font-weight: 400;
-    }
-    .card:first-child {
-      background: var(--yellow-light);
-    }
-    .card:last-child {
-      background: var(--peach-light);
-    }
   }
 
   @media (min-width: 640px) {
