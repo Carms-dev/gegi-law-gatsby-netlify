@@ -92,7 +92,7 @@ function QuestionsSelect({ selectLabel, selected, options, index, setSelected, s
     // Find the corresponding section
     const item = event.currentTarget
     const i = item.dataset.index
-    const section = document.querySelector(`[data-step=${i}]`)
+    const section = document.querySelector(`[data-step="${i}"]`)
     // update style: add class to move the question up
     section.classList.add('reduce-pt')
 

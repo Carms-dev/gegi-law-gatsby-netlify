@@ -8,18 +8,57 @@ import Seo from '../components/Seo'
 import Indicator from '../components/Indicator'
 import { Disclaimer } from '../components/Alert'
 import { Hero } from '../components/Hero'
-import QuestionSection from '../components/QuestionSection'
+import Question from '../components/Question'
 import ScrollBtn from '../components/ScrollBtn'
 import SiteBorderStyles from '../styles/SiteBorderStyles'
 
-function useOnScreen(options) {
-  const ref = useRef();
-}
 
-export default function GetStartedPage({ data: { page } }) {
+function GetStartedPage({ data: { page } }) {
   const { title, hero, questions, responseIcon, disclaimer, pageEndCTAs } = page.childMarkdownRemark.frontmatter
 
+  // you can access the elements with itemsRef.current[n]
+  const sectionRefs = useRef([]);
+  sectionRefs.current = []
+
+  // Compile all the refs
+  const addToRefs = (el) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el)
+    }
+  }
+
   const [step, setStep] = useState(0)
+
+  useEffect(() => {
+    // Set up observer
+    const options = { rootMargin: "-300px" }
+
+    const callback = ([entry]) => {
+      if (entry.isIntersecting) {
+        // setStep
+        const currentStep = parseInt(entry.target.dataset.step)
+        setStep(currentStep)
+      }
+    }
+
+    const observer = new IntersectionObserver(callback, options)
+
+    // Observer to observe each ref
+    sectionRefs.current.forEach(sectionRef => {
+      if (sectionRef) {
+        observer.observe(sectionRef)
+      }
+    })
+
+    // Clean up Observer to unobserve each ref
+    return () => {
+      sectionRefs.current.forEach(sectionRef => {
+        if (sectionRef) {
+          observer.unobserve(sectionRef)
+        }
+      })
+    }
+  }, [questions.length, sectionRefs, step])
 
   return (
     <Layout>
@@ -27,7 +66,12 @@ export default function GetStartedPage({ data: { page } }) {
       <StartPageStyles>
         <Disclaimer disclaimer={disclaimer} />
         <Indicator step={step} count={questions.length + 1} />
-        <section className="section section-intro" id="intro" data-step="0">
+        <section
+          className="section section-intro"
+          id="intro"
+          data-step="0"
+          ref={addToRefs}
+        >
           <Hero
             heading={hero.heading}
             description={hero.description}
@@ -35,15 +79,16 @@ export default function GetStartedPage({ data: { page } }) {
           <ScrollBtn index={0} />
         </section>
         {questions.map((section, index) => (
-          <QuestionSection
-            key={section.question}
-            section={section}
-            index={index + 1}
-            className="section"
-            responseIcon={responseIcon}
-            isLast={index === questions.length - 1}
-            pageEndCTAs={pageEndCTAs}
-          />
+          <section ref={addToRefs} data-step={index + 1} key={`question-${index + 1}`} >
+            <Question
+              section={section}
+              index={index + 1}
+              className="section"
+              responseIcon={responseIcon}
+              isLast={index === questions.length - 1}
+              pageEndCTAs={pageEndCTAs}
+            />
+          </section>
         ))}
         {/* Call to action */}
         <SiteBorderStyles>
@@ -63,6 +108,8 @@ export default function GetStartedPage({ data: { page } }) {
     </Layout>
   )
 }
+
+export default GetStartedPage
 
 const StartPageStyles = styled.div`
   position: relative;

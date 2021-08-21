@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'

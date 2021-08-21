@@ -20,15 +20,17 @@ export default function Indicator({ step, count }) {
     <IndicatorStyles>
       {[...Array(count).keys()].map(index => {
         return (
-          <a
-            href="#"
+          <div
             key={`indicator-${index}`}
+            role="button"
+            tabIndex={index}
             data-index={index}
             onClick={handleClick}
+            onKeyDown={handleClick}
             style={{ color: `${step === index ? 'var(--yellow)' : 'var(--darker)'}` }}
           >
             {step === index ? '●' : '○'}
-          </a>
+          </div>
         )
       })}
     </IndicatorStyles>
@@ -36,6 +38,7 @@ export default function Indicator({ step, count }) {
 }
 
 const IndicatorStyles = styled.div`
+  cursor: pointer;
   z-index: 1;
   display: none;
   position: fixed;

@@ -4,16 +4,15 @@ import Response from "./Response"
 import { QuestionsSelect } from '../components/SimpleSelect'
 import ScrollBtn from '../components/ScrollBtn'
 
-export default function QuestionSection({ section, index, className, responseIcon, isLast, pageEndCTAs }) {
+export default function Question({ section, index, className, responseIcon, isLast, pageEndCTAs }) {
   const { question, description, selectLabel, options } = section
 
   const [selected, setSelected] = useState(``)
   const [response, setResponse] = useState(``)
 
   return (
-    <QuestionSectionStyles
+    <QuestionStyles
       className={className}
-      data-step={index}
     >
       <h3>{question}</h3>
       {description && <p>{description}</p>}
@@ -37,11 +36,11 @@ export default function QuestionSection({ section, index, className, responseIco
       {!isLast &&
         <ScrollBtn index={index} />
       }
-    </QuestionSectionStyles>
+    </QuestionStyles>
   )
 }
 
-const QuestionSectionStyles = styled.section`
+const QuestionStyles = styled.div`
   min-height: 100vh;
   padding: 0 20px;
   max-width: 800px;
