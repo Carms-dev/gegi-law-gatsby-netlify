@@ -40,22 +40,22 @@ export default function Footer() {
         <div>
           {socialMedia.facebook &&
           <IconButton aria-label="facebook" size="medium" href={socialMedia.facebook}>
-            <FacebookIcon fontSize="default" />
+            <FacebookIcon fontSize="medium" />
           </IconButton>}
 
           {socialMedia.instagram &&
           <IconButton aria-label="instagram" size="medium" href={socialMedia.instagram}>
-            <InstagramIcon fontSize="default" />
+            <InstagramIcon fontSize="medium" />
           </IconButton>}
 
           {socialMedia.twitter &&
           <IconButton aria-label="twitter" size="medium" href={socialMedia.twitter}>
-            <TwitterIcon fontSize="default" />
+            <TwitterIcon fontSize="medium" />
           </IconButton>}
 
           {socialMedia.github &&
           <IconButton aria-label="github" size="medium" href={socialMedia.github}>
-            <GitHubIcon fontSize="default" />
+            <GitHubIcon fontSize="medium" />
           </IconButton>}
         </div>
       </SiteBorderStyles>
