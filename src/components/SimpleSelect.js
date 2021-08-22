@@ -89,9 +89,9 @@ function QuestionsSelect({ selectLabel, selected, options, index, setSelected, s
 
   const handleChange = (event) => {
     // Find the corresponding section
-    // const i = event.currentTarget.dataset.index
-    // const section = document.querySelector(`[data-step="${i}"]`)
-    // TODO: update style: move the question
+    const i = event.currentTarget.dataset.index
+    const question = document.querySelector(`[data-step="${i}"] .question`).parentElement
+    question.style.paddingTop = `8vmax`
 
     // Update value for Select
     setSelected(event.target.value)
