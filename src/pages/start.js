@@ -29,13 +29,13 @@ function GetStartedPage({ data: { page } }) {
 
   useEffect(() => {
     // Set up observer
-    const options = { rootMargin: "0px 0px -300px 0px" }
+    const options = { threshold: 0.8 }
 
     const callback = ([entry]) => {
-      if ( entry.isIntersecting && entry.intersectionRatio < 0.1 ) {
+      if (entry.isIntersecting) {
         // update the step
-        const currentStep = parseInt(entry.target.dataset.step)
-        setStep(currentStep)
+        const updatedStep = parseInt(entry.target.dataset.step)
+        setStep(updatedStep)
       }
     }
 
@@ -119,11 +119,16 @@ const StartPageStyles = styled.div`
     margin-bottom: 0.5rem;
   }
 
+  section:last-child .response {
+    padding-top: 20px;
+    max-height: unset;
+  }
+
   /* CTA cards */
   #cta {
     display: grid;
     grid-gap: 1rem;
-    padding: 2rem;
+    padding-top: 2rem;
 
     .card-cta {
       padding: 1rem;
