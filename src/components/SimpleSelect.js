@@ -8,7 +8,6 @@ import FormControl from "@material-ui/core/FormControl"
 import Select from "@material-ui/core/Select"
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-
 const useStyles = makeStyles(() => ({
   formControl: {
     minWidth: 200,
@@ -90,11 +89,9 @@ function QuestionsSelect({ selectLabel, selected, options, index, setSelected, s
 
   const handleChange = (event) => {
     // Find the corresponding section
-    const item = event.currentTarget
-    const i = item.dataset.index
-    const section = document.querySelector(`[data-step="${i}"]`)
-    // update style: add class to move the question up
-    section.classList.add('reduce-pt')
+    // const i = event.currentTarget.dataset.index
+    // const section = document.querySelector(`[data-step="${i}"]`)
+    // TODO: update style: move the question
 
     // Update value for Select
     setSelected(event.target.value)
