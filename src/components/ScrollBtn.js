@@ -3,17 +3,14 @@ import styled from 'styled-components'
 import { IconButton } from '@material-ui/core'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
-export default function ScrollBtn({ index, anchors, setStep }) {
+export default function ScrollBtn({ index }) {
   const handleClick = (event) => {
     event.preventDefault()
-    const btn = event.currentTarget
 
-    // Update step
-    const updatedStep = parseInt(btn.dataset.index)
-    setStep(updatedStep)
+    const updatedStep = event.currentTarget.dataset.index
 
     // Scroll to the anchor
-    document.getElementById(anchors[updatedStep]).scrollIntoView({
+    document.querySelector(`[data-step="${updatedStep}"]`).scrollIntoView({
       behavior: 'smooth'
     })
   }
@@ -21,12 +18,12 @@ export default function ScrollBtn({ index, anchors, setStep }) {
   return (
     <ScrollBtnStyles>
       <IconButton
-        data-index={index}
+        data-index={index + 1}
         aria-label="scroll to next section"
         className="scroll-to"
         onClick={handleClick}
       >
-        <ArrowDownwardIcon size='medium'/>
+        <ArrowDownwardIcon size='medium' />
       </IconButton>
     </ScrollBtnStyles>
   )
@@ -38,5 +35,5 @@ const ScrollBtnStyles = styled.div`
   left: 50%;
   bottom: 3vmax;
   transform: translateX(-50%);
-
+  margin: 1rem 0;
 `

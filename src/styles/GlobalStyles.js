@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-weight: 700;
     color: var(--darker);
-    line-height: 1.15;
+    line-height: 1.2;
   }
   a, button {
     font-weight: 500;
@@ -66,11 +66,11 @@ const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: 2rem;
   }
-  h2 {
+  h1, h2 {
     font-size: 1.75rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.3;
   }
   li, p {
@@ -174,6 +174,15 @@ const GlobalStyles = createGlobalStyle`
   @media (min-width: 640px) {
     html {
       font-size: 16px;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    h3 {
+      font-size: 1.5rem;
     }
   }
 

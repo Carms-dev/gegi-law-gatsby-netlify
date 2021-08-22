@@ -139,6 +139,10 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
 }
 
 const HomePageStyles = styled.div`
+  h1 {
+    max-width: 920px;
+    margin: 0 auto;
+  }
   h2, h3 {
     margin-bottom: 1rem;
   }

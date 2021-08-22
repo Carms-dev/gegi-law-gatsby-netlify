@@ -1,39 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Indicator({step, setStep, anchors}) {
+export default function Indicator({ step, count }) {
+
   const handleClick = (event) => {
     event.preventDefault()
     const btn = event.currentTarget
 
-    // Update step
-    const updatedStep = parseInt(btn.dataset.index)
-    setStep(updatedStep)
+    // // Update step
+    const updatedStep = btn.dataset.index
 
     // Scroll to the anchor
-    document.getElementById(anchors[updatedStep]).scrollIntoView({
+    document.querySelector(`[data-step="${updatedStep}"]`).scrollIntoView({
       behavior: 'smooth'
     })
   }
 
   return (
     <IndicatorStyles>
-      {anchors.map((anchor, index) => (
-        <a
-          key={anchor}
-          href={`#${anchor}`}
-          data-index={index}
-          onClick={handleClick}
-          style={{ color: `${step === index ? 'var(--yellow)' : 'var(--darker)'}`}}
-        >
-          {step === index ? '●' : '○'}
-        </a>
-      ))}
+      {[...Array(count).keys()].map(index => {
+        return (
+          <div
+            key={`indicator-${index}`}
+            role="button"
+            tabIndex={index}
+            data-index={index}
+            onClick={handleClick}
+            onKeyDown={handleClick}
+            style={{ color: `${step === index ? 'var(--yellow)' : 'var(--darker)'}` }}
+          >
+            {step === index ? '●' : '○'}
+          </div>
+        )
+      })}
     </IndicatorStyles>
   )
 }
 
 const IndicatorStyles = styled.div`
+  cursor: pointer;
   z-index: 1;
   display: none;
   position: fixed;
