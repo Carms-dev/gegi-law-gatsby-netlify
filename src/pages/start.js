@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -10,7 +9,6 @@ import { Disclaimer } from '../components/Alert'
 import { Hero } from '../components/Hero'
 import Question from '../components/Question'
 import ScrollBtn from '../components/ScrollBtn'
-import SiteBorderStyles from '../styles/SiteBorderStyles'
 
 
 function GetStartedPage({ data: { page } }) {
@@ -31,11 +29,11 @@ function GetStartedPage({ data: { page } }) {
 
   useEffect(() => {
     // Set up observer
-    const options = { rootMargin: "-300px" }
+    const options = { rootMargin: "0px 0px -300px 0px" }
 
     const callback = ([entry]) => {
-      if (entry.isIntersecting) {
-        // setStep
+      if ( entry.isIntersecting && entry.intersectionRatio < 0.1 ) {
+        // update the step
         const currentStep = parseInt(entry.target.dataset.step)
         setStep(currentStep)
       }
@@ -67,7 +65,6 @@ function GetStartedPage({ data: { page } }) {
         <Disclaimer disclaimer={disclaimer} />
         <Indicator step={step} count={questions.length + 1} />
         <section
-          className="section section-intro"
           id="intro"
           data-step="0"
           ref={addToRefs}
@@ -90,20 +87,7 @@ function GetStartedPage({ data: { page } }) {
             />
           </section>
         ))}
-        {/* Call to action */}
-        <SiteBorderStyles>
-          <div id="cta">
-            {pageEndCTAs.map(cta => (
-              <Link key={cta.heading} to={cta.pageLink} className="card card-cta">
-                <GatsbyImage
-                  image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
-                  alt={cta.icon.alt}
-                  imgStyle={{ width: `auto` }} />
-                <p>{cta.heading}</p>
-              </Link>
-            ))}
-          </div>
-        </SiteBorderStyles>
+
       </StartPageStyles>
     </Layout>
   )
@@ -114,20 +98,23 @@ export default GetStartedPage
 const StartPageStyles = styled.div`
   position: relative;
 
-  .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  .section#intro {
+  section {
     min-height: 100vh;
+    display: grid;
+    align-items: center;
+  }
+  section#intro {
+    position: relative;
     margin-top: -108px;
     padding-top: 108px;
+    padding-bottom: 10vmax;
+
+    h1 {
+      margin-top: -2.5rem;
+      margin-bottom: 0.5rem;
+    }
   }
-  .reduce-pt {
-    padding-top: 5vmax;
-  }
+
   p {
     margin-bottom: 0.5rem;
   }
@@ -136,13 +123,12 @@ const StartPageStyles = styled.div`
   #cta {
     display: grid;
     grid-gap: 1rem;
-    padding: 2rem 0;
+    padding: 2rem;
 
     .card-cta {
       padding: 1rem;
       display: grid;
-      grid-template-columns: 70px 1fr;
-      align-items: center;
+      place-items: center;
       grid-gap: 1rem;
       font-weight: 400;
     }
@@ -155,30 +141,19 @@ const StartPageStyles = styled.div`
   }
 
   @media (min-width: 640px) {
-    .section#intro {
-      padding-top: 30vh;
+    section#intro {
+      h1 {
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+      }
     }
     #cta {
-      grid-gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    #cta {
-      grid-gap: 3rem;
-      margin-top: -6rem;
-      grid-template-columns: repeat(2, 420px);
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
       justify-content: center;
 
       .card-cta {
-        padding: 2rem;
         grid-template-columns: 1fr;
-        place-items: center;
-        text-align: center;
-
-        p {
-          font-size: 1.25rem;
-        }
       }
     }
   }
