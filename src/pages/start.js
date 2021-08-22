@@ -29,13 +29,13 @@ function GetStartedPage({ data: { page } }) {
 
   useEffect(() => {
     // Set up observer
-    const options = { rootMargin: "0px 0px -300px 0px" }
+    const options = { threshold: 0.8 }
 
     const callback = ([entry]) => {
-      if ( entry.isIntersecting && entry.intersectionRatio < 0.1 ) {
+      if (entry.isIntersecting) {
         // update the step
-        const currentStep = parseInt(entry.target.dataset.step)
-        setStep(currentStep)
+        const updatedStep = parseInt(entry.target.dataset.step)
+        setStep(updatedStep)
       }
     }
 
@@ -63,7 +63,7 @@ function GetStartedPage({ data: { page } }) {
       <Seo title={title} />
       <StartPageStyles>
         <Disclaimer disclaimer={disclaimer} />
-        <Indicator step={step} count={questions.length + 1} />
+        <Indicator step={step} sectionRefs={sectionRefs} count={questions.length + 1} />
         <section
           id="intro"
           data-step="0"
@@ -73,7 +73,7 @@ function GetStartedPage({ data: { page } }) {
             heading={hero.heading}
             description={hero.description}
             image={hero.image} />
-          <ScrollBtn index={0} />
+          <ScrollBtn index={0} sectionRefs={sectionRefs} />
         </section>
         {questions.map((section, index) => (
           <section ref={addToRefs} data-step={index + 1} key={`question-${index + 1}`} >
@@ -84,6 +84,7 @@ function GetStartedPage({ data: { page } }) {
               responseIcon={responseIcon}
               isLast={index === questions.length - 1}
               pageEndCTAs={pageEndCTAs}
+              sectionRefs={sectionRefs}
             />
           </section>
         ))}
@@ -119,11 +120,16 @@ const StartPageStyles = styled.div`
     margin-bottom: 0.5rem;
   }
 
+  section:last-child .response {
+    padding-top: 20px;
+    max-height: unset;
+  }
+
   /* CTA cards */
   #cta {
     display: grid;
     grid-gap: 1rem;
-    padding: 2rem;
+    padding-top: 2rem;
 
     .card-cta {
       padding: 1rem;

@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Indicator({ step, count }) {
+export default function Indicator({ step, count, sectionRefs }) {
 
   const handleClick = (event) => {
     event.preventDefault()
     const btn = event.currentTarget
 
     // // Update step
-    const updatedStep = btn.dataset.index
+    const updatedStep = parseInt(btn.dataset.index)
 
     // Scroll to the anchor
-    document.querySelector(`[data-step="${updatedStep}"]`).scrollIntoView({
+    sectionRefs.current[updatedStep].scrollIntoView({
       behavior: 'smooth'
     })
   }

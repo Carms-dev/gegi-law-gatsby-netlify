@@ -4,7 +4,7 @@ import Response from "./Response"
 import { QuestionsSelect } from '../components/SimpleSelect'
 import ScrollBtn from '../components/ScrollBtn'
 
-export default function Question({ section, index, responseIcon, isLast, pageEndCTAs }) {
+export default function Question({ section, index, responseIcon, isLast, pageEndCTAs, sectionRefs }) {
   const { question, description, selectLabel, options } = section
 
   const [selected, setSelected] = useState(``)
@@ -22,6 +22,7 @@ export default function Question({ section, index, responseIcon, isLast, pageEnd
           setResponse={setResponse}
           options={options}
           index={index}
+          sectionRefs={sectionRefs}
         />
       </div>
       {response !== "" &&
@@ -34,7 +35,7 @@ export default function Question({ section, index, responseIcon, isLast, pageEnd
 
       {/* No arrow down for the last question */}
       {!isLast &&
-        <ScrollBtn index={index} />
+        <ScrollBtn index={index} sectionRefs={sectionRefs} />
       }
     </QuestionStyles>
   )
@@ -42,14 +43,13 @@ export default function Question({ section, index, responseIcon, isLast, pageEnd
 
 const QuestionStyles = styled.div`
   height: 100%;
-  padding: 20px;
-  padding-bottom: 10vmax;
+  padding: 18vmax 20px 10vmax 20px;
   text-align: center;
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  grid-gap: 30px;
   overflow: hidden;
+  transition: padding-top 1s ease;
 
   > * {
     max-width: 800px;
@@ -66,5 +66,8 @@ const QuestionStyles = styled.div`
   .response {
     max-height: 40vh;
     overflow-y: auto;
+  }
+  @media (min-width: 640px) {
+    grid-gap: 30px;
   }
 `

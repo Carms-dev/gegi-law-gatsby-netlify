@@ -84,14 +84,14 @@ function ResourcesSelect({ allResources, setResources, selection, setSelection, 
 }
 
 // Start Page Questions
-function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse }) {
+function QuestionsSelect({ selectLabel, selected, options, index, setSelected, setResponse, sectionRefs }) {
   const classes = useStyles(selected);
 
   const handleChange = (event) => {
     // Find the corresponding section
-    // const i = event.currentTarget.dataset.index
-    // const section = document.querySelector(`[data-step="${i}"]`)
-    // TODO: update style: move the question
+    const i = parseInt(event.currentTarget.dataset.index)
+    const question = sectionRefs.current[i].children[0]
+    question.style.paddingTop = `8vmax`
 
     // Update value for Select
     setSelected(event.target.value)
