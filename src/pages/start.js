@@ -63,7 +63,7 @@ function GetStartedPage({ data: { page } }) {
       <Seo title={title} />
       <StartPageStyles>
         <Disclaimer disclaimer={disclaimer} />
-        <Indicator step={step} count={questions.length + 1} />
+        <Indicator step={step} sectionRefs={sectionRefs} count={questions.length + 1} />
         <section
           id="intro"
           data-step="0"
@@ -73,7 +73,7 @@ function GetStartedPage({ data: { page } }) {
             heading={hero.heading}
             description={hero.description}
             image={hero.image} />
-          <ScrollBtn index={0} />
+          <ScrollBtn index={0} sectionRefs={sectionRefs} />
         </section>
         {questions.map((section, index) => (
           <section ref={addToRefs} data-step={index + 1} key={`question-${index + 1}`} >
@@ -84,6 +84,7 @@ function GetStartedPage({ data: { page } }) {
               responseIcon={responseIcon}
               isLast={index === questions.length - 1}
               pageEndCTAs={pageEndCTAs}
+              sectionRefs={sectionRefs}
             />
           </section>
         ))}

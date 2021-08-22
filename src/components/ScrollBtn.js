@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { IconButton } from '@material-ui/core'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
-export default function ScrollBtn({ index }) {
+export default function ScrollBtn({ index, sectionRefs }) {
   const handleClick = (event) => {
     event.preventDefault()
 
-    const updatedStep = event.currentTarget.dataset.index
+    const updatedStep = parseInt(event.currentTarget.dataset.index)
 
     // Scroll to the anchor
-    document.querySelector(`[data-step="${updatedStep}"]`).scrollIntoView({
+    sectionRefs.current[updatedStep].scrollIntoView({
       behavior: 'smooth'
     })
   }
