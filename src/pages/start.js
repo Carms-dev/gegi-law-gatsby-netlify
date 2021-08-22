@@ -16,7 +16,6 @@ function GetStartedPage({ data: { page } }) {
 
   // you can access the elements with itemsRef.current[n]
   const sectionRefs = useRef([]);
-  sectionRefs.current = []
 
   // Compile all the refs
   const addToRefs = (el) => {
