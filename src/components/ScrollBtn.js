@@ -6,9 +6,8 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 export default function ScrollBtn({ index }) {
   const handleClick = (event) => {
     event.preventDefault()
-    const btn = event.currentTarget
 
-    const updatedStep = btn.dataset.index
+    const updatedStep = event.currentTarget.dataset.index
 
     // Scroll to the anchor
     document.querySelector(`[data-step="${updatedStep}"]`).scrollIntoView({

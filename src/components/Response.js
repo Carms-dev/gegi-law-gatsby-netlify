@@ -2,18 +2,35 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 export default function Response({ icon, response, isLast, pageEndCTAs }) {
   return (
-    <ResponseStyles>
-      <GatsbyImage
-        image={icon.childImageSharp.gatsbyImageData}
-        alt="Response Icon"
-        imgStyle={{ width: `auto` }} />
-      <div className="content-wrapper">
-        <ReactMarkdown>{response}</ReactMarkdown>
-      </div>
-    </ResponseStyles>
+    <div className="response">
+      <ResponseStyles>
+        <GatsbyImage
+          image={icon.childImageSharp.gatsbyImageData}
+          alt="Response Icon"
+          imgStyle={{ width: `auto` }} />
+        <div className="content-wrapper">
+          <ReactMarkdown>{response}</ReactMarkdown>
+        </div>
+      </ResponseStyles>
+      {isLast &&
+        <div id="cta">
+          {pageEndCTAs.map(cta => (
+            <Link key={cta.heading} to={cta.pageLink} className="card card-cta">
+              <GatsbyImage
+                image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
+                alt={cta.icon.alt}
+                imgStyle={{ width: `auto` }}
+              />
+              <p>{cta.heading}</p>
+            </Link>
+          ))}
+        </div>
+      }
+    </div>
   )
 }
 
