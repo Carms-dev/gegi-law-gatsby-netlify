@@ -28,34 +28,31 @@ function GetStartedPage({ data: { page } }) {
 
   useEffect(() => {
     // Set up observer
-    const options = { threshold: 0.8 }
-
-    const callback = ([entry]) => {
+    const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         // update the step
         const updatedStep = parseInt(entry.target.dataset.step)
         setStep(updatedStep)
       }
-    }
+    }, { threshold: 0.8 })
 
-    const observer = new IntersectionObserver(callback, options)
-
+    const refs = sectionRefs.current
     // Observer to observe each ref
-    sectionRefs.current.forEach(sectionRef => {
-      if (sectionRef) {
-        observer.observe(sectionRef)
+    refs.forEach(ref => {
+      if (ref) {
+        observer.observe(ref)
       }
     })
 
     // Clean up Observer to unobserve each ref
     return () => {
-      sectionRefs.current.forEach(sectionRef => {
-        if (sectionRef) {
-          observer.unobserve(sectionRef)
+      refs.current.forEach(ref => {
+        if (ref) {
+          observer.unobserve(ref)
         }
       })
     }
-  }, [questions.length, sectionRefs, step])
+  }, [sectionRefs])
 
   return (
     <Layout>
