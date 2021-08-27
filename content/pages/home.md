@@ -1,7 +1,7 @@
 ---
 title: Gender Expression and Gender Identity Human Rights Law for Ontario Students
 hero:
-  heading: Gender Expression and Gender Identity Human Rights Law for Ontario Students
+  heading: Gender Expression and Gender Identity Human Rights Law in Ontario Schools
   description: We’re here to help you better understand human rights law in Ontario.
   linkText: Get Started
 secondaryCTAs:
