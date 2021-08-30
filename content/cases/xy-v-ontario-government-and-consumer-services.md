@@ -9,7 +9,8 @@ description: A transgender woman challenged the Government of Ontario's
   insulting, and unfair to transgender individuals. The OHRT agreed with the
   applicant and stated that the government had not established evidence that the
   surgery requirement is necessary.
-takeaway: "It affirms the importance of self-identifying gender for legal purposes. "
+takeaway: "This case affirms the importance of self-identifying gender for legal
+  purposes. "
 url: https://www.canlii.org/en/on/onhrt/doc/2012/2012hrto726/2012hrto726.html?resultIndex=1
 themes:
   - Identity
