@@ -159,7 +159,7 @@ questions:
           Rights Legal Support Centre.
       - option: No
         response: Everyone who is 18 years of age or older is presumed to have legal
-          capacity. In case, you are curious, here is a great
+          capacity. In case you are curious, here is a great
           [article](http://hrlsc.on.ca/en/node/381) written by Human Rights
           Legal Support Centre.
     description: ""
