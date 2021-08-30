@@ -18,5 +18,5 @@ service:
   - Free Consultation
 location:
   - Ontario-wide
-cost: $$
+cost: $$$
 ---
