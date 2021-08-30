@@ -14,5 +14,5 @@ service:
   - Legal Representation
 location:
   - Toronto
-cost: $
+cost: $$
 ---
