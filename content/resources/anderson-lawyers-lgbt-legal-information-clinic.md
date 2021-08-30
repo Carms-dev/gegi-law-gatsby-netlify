@@ -14,5 +14,5 @@ service:
   - Legal Representation
 location:
   - Ottawa
-cost: $
+cost: $$$
 ---
