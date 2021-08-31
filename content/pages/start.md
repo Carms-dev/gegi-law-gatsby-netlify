@@ -24,8 +24,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Alberta Human Rights Act
-          *[here.](https://www.qp.alberta.ca/documents/Acts/A25P5.pdf)*
+          You can learn more about the Alberta Human Rights Commission
+          *[here.](https://www.albertahumanrights.ab.ca/)*
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -33,8 +33,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the British Columbia Human Rights Code
-          *[here](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00_96210_01)*.
+          You can learn more about the British Columbia Human Rights Commission
+          *[here](https://bchumanrights.ca/)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -46,8 +46,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Manitoba Human Rights Code
-          *[here](https://web2.gov.mb.ca/laws/statutes/ccsm/_pdf.php?cap=h175).*
+          You can learn more about the Manitoba Human Rights Commission
+          *[here](http://www.manitobahumanrights.ca/).*
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -55,8 +55,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the New Brunswick Human Rights Act
-          *[here](http://laws.gnb.ca/en/ShowPdf/cs/2011-c.171.pdf)*.
+          You can learn more about the New Brunswick Human Rights Commission
+          *[here](https://www2.gnb.ca/content/gnb/en/departments/nbhrc.html)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -65,8 +65,7 @@ questions:
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
           You can learn more about the Newfoundland and Labrador Human Rights
-          Act
-          *[here](https://assembly.nl.ca/legislation/sr/statutes/h13-1.htm)*.
+          Commission *[here](https://thinkhumanrights.ca/)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -74,8 +73,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Northwest Territories Human Rights Act
-          *[here](https://www.justice.gov.nt.ca/en/files/legislation/human-rights/human-rights.a.pdf).*
+          You can learn more about the Northwest Territories Human Rights
+          Commission *[here](https://nwthumanrights.ca/).*
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -83,8 +82,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Nova Scotia Human Rights Act
-          *[here](https://nslegislature.ca/sites/default/files/legc/statutes/human%20rights.pdf).*
+          You can learn more about the Nova Scotia Human Rights Commission
+          *[here](https://humanrights.novascotia.ca/).*
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -92,8 +91,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Nunavut Human Rights Act
-          *[here](http://www.nhrt.ca/files/NHR_Act_Eng.pdf).*
+          You can learn more about the Nunavut Human Rights Commission
+          *[here](http://www.nhrt.ca/english/home).*
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -101,8 +100,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Prince Edward Island Human Rights Act
-          *[here](https://www.princeedwardisland.ca/sites/default/files/legislation/H-12%20-Human%20Rights%20Act.pdf)*.
+          You can learn more about the Prince Edward Island Human Rights
+          Commission *[here](https://www.peihumanrights.ca/home)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -110,8 +109,9 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Quebec Charter of Human Rights and
-          Freedoms *[here](http://legisquebec.gouv.qc.ca/en/pdf/cs/C-12.pdf)*.
+          You can learn more about the Quebec Charter of Human Rights Commission
+          (*Commission des droits de la personne et des droits de la jeunesse*)
+          *[here](https://www.cdpdj.qc.ca/en)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -119,8 +119,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Saskatchewan Human Rights Code
-          *[here](https://saskatchewanhumanrights.ca/wp-content/uploads/2020/03/Code2018.pdf)*.
+          You can learn more about the Saskatchewan Human Rights Commission
+          *[here](https://saskatchewanhumanrights.ca/)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
@@ -128,8 +128,8 @@ questions:
         response: >-
           I currently only provide general information on human rights law in
           Ontario. Each province and territory has its own human rights system.
-          You can learn more about the Yukon Human Rights Act
-          *[here](https://laws.yukon.ca/cms/images/LEGISLATION/PRINCIPAL/2002/2002-0116/2002-0116.pdf)*.
+          You can learn more about the Yukon Human Rights Commission
+          *[here](https://yukonhumanrights.ca/)*.
 
 
           The Canadian Human Rights Act applies to federally-regulated environments, such as banks, airlines, and the military. Schools generally fall under provincial or territorial jurisdiction.
