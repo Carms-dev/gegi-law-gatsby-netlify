@@ -4,7 +4,7 @@ hero:
   heading: I’m glad you’re here.
   description: Let me share a few nuggets with you about human rights law in Ontario!
   image:
-    imageFile: /assets/gegi_legal_info.png
+    imageFile: /assets/gegilaw-color.png
     alt: Gegi Law with sparkles
 disclaimer:
   heading: Disclaimer

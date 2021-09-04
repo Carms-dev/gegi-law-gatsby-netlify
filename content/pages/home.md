@@ -33,7 +33,7 @@ aboutSection:
 
     The site contains a variety of legal resources, including information on the Ontario Human Rights Code, where to access legal advice for a specific legal problem, and examples of publicly-accessible decisions of the Ontario Human Rights Tribunal. law.gegi.ca does not provide legal advice.
   image:
-    imageFile: /assets/gegi_legal_info.png
+    imageFile: /assets/gegilaw-color.png
     alt: GEGI provides general information on Gender Expression and Gender Identity
       Human Rights Law for Ontario Students
 statisticsSection:
