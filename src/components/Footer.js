@@ -11,7 +11,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import InstagramIcon from '@material-ui/icons/Instagram'
 
-export default function Footer() {
+export default function Footer({ pausedRef }) {
   const { siteSettings } = useStaticQuery(graphql`
     query {
       siteSettings: file(relativeDirectory: {eq: "settings"}) {
@@ -32,10 +32,20 @@ export default function Footer() {
   const { footerNote, socialMedia } = siteSettings.childMarkdownRemark.frontmatter
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    // For start page only, where the pausedRef is defined
+    if (pausedRef) {
+      // Pause the observer effect to scroll into view of each section
+      pausedRef.current = true
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Un-pause the effect after the scroll to top is completed
+      setTimeout(() => {
+        pausedRef.current = false
+      }, 1000);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   return (

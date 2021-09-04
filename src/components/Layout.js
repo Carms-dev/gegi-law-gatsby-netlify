@@ -7,7 +7,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Typography from '../styles/Typography'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pausedRef}) => {
   const { siteSettings } = useStaticQuery(graphql`
     query SiteTitleQuery {
       siteSettings: file(relativeDirectory: {eq: "settings"}) {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
       <Typography />
       <Header siteTitle={siteSettings.childrenMarkdownRemark.frontmatter?.siteTitle || `Title`} />
       <main>{children}</main>
-      <Footer />
+      <Footer pausedRef={pausedRef}/>
     </>
   )
 }
