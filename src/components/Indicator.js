@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Indicator({ step, count, sectionRefs }) {
+export default function Indicator({ step, count, sectionRefs, pausedRef }) {
 
-  const handleClick = (event) => {
-    event.preventDefault()
-    const btn = event.currentTarget
+  const handleClick = (ev) => {
+    ev.preventDefault()
+    // Pause Observer Scroll Effect
+    pausedRef.current = true
 
-    // // Update step
-    const updatedStep = parseInt(btn.dataset.index)
+    // Update step
+    const updatedStep = parseInt(ev.currentTarget.dataset.index)
 
     // Scroll to the anchor
     sectionRefs.current[updatedStep].scrollIntoView({
       behavior: 'smooth'
     })
+    // Un-pause Observer Scroll Effect
+    setTimeout(() => {
+      pausedRef.current = false
+    }, 1000);
   }
 
   return (
