@@ -14,9 +14,12 @@ import ScrollBtn from '../components/ScrollBtn'
 function GetStartedPage({ data: { page } }) {
   const { title, hero, questions, responseIcon, disclaimer, pageEndCTAs } = page.childMarkdownRemark.frontmatter
 
-  // you can access the elements with itemsRef.current[n]
+
+  // You can access the elements with itemsRef.current[n]
   const sectionRefs = useRef([]);
 
+  // Set a reference to pause the observer effects on scroll
+  const pausedRef = useRef(false)
   // Compile all the refs
   const addToRefs = (el) => {
     if (el && !sectionRefs.current.includes(el)) {
@@ -30,11 +33,17 @@ function GetStartedPage({ data: { page } }) {
     // Set up observer
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        // update the step
+        // Update the step
         const updatedStep = parseInt(entry.target.dataset.step)
         setStep(updatedStep)
+
+        // Scroll into view
+        if (!pausedRef.current) {
+          const top = entry.target.offsetTop;
+          window.scrollTo({ top, behavior: 'smooth' })
+        }
       }
-    }, { threshold: 0.8 })
+    }, { threshold: 0.05 })
 
     const refs = sectionRefs.current
     // Observer to observe each ref
@@ -46,29 +55,33 @@ function GetStartedPage({ data: { page } }) {
 
     // Clean up Observer to unobserve each ref
     return () => {
-      refs.current.forEach(ref => {
+      refs.current?.forEach(ref => {
         if (ref) {
           observer.unobserve(ref)
         }
       })
     }
-  }, [sectionRefs])
+  }, [sectionRefs, pausedRef])
 
   return (
-    <Layout>
+    <Layout pausedRef={pausedRef}>
       <Seo title={title} />
       <StartPageStyles>
         <Disclaimer disclaimer={disclaimer} />
-        <Indicator step={step} sectionRefs={sectionRefs} count={questions.length + 1} />
-        <section
-          id="intro"
-          data-step="0"
-          ref={addToRefs}
-        >
+        {/* Indicator with Navigation buttons on the right */}
+        <Indicator
+          step={step}
+          sectionRefs={sectionRefs}
+          count={questions.length + 1}
+          pausedRef={pausedRef}
+        />
+
+        <section id="intro"data-step="0" ref={addToRefs}>
           <Hero
             heading={hero.heading}
             description={hero.description}
-            image={hero.image} />
+            image={hero.image}
+          />
           <ScrollBtn index={0} sectionRefs={sectionRefs} />
         </section>
         {questions.map((section, index) => (
