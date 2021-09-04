@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://law.gegi.ca",
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-nprogress`,
@@ -42,11 +45,10 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-react-helmet",
-    // "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
     "gatsby-plugin-sharp",
