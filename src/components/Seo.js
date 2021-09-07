@@ -35,7 +35,6 @@ function Seo({ description, lang, meta, title }) {
   const metaDescription = description || siteSettings.childrenMarkdownRemark[0]?.frontmatter?.siteDescription
   const defaultTitle = siteSettings.childrenMarkdownRemark[0]?.frontmatter?.siteTitle
 
-  console.log(ogImage)
   return (
     <Helmet
       defer={false}

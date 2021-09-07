@@ -75,7 +75,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
               {supporters.map(supporter => (
                 <a key={supporter.title} href={supporter.url} target="_blank" rel="noreferrer">
                   <GatsbyImage
-                    image={supporter.logo.childImageSharp.gatsbyImageData}
+                    image={supporter.logo?.childImageSharp.gatsbyImageData}
                     alt={`${supporter.title} Logo`} />
                 </a>
               ))}
@@ -200,7 +200,8 @@ const HomePageStyles = styled.div`
     grid-auto-flow: column;
     grid-auto-columns: 200px;
     align-items: center;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
+    padding: 2rem 0;
 
     > * {
       display: inline-block
@@ -351,7 +352,7 @@ export const data = graphql`
               imageFile {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 400
+                    width: 300
                     placeholder: BLURRED
                     layout: CONSTRAINED
                   )
