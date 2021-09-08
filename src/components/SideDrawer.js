@@ -39,7 +39,7 @@ export default function SideDrawer({ navigation }) {
           <Link to={pageLink} key={label} className={classes.linkText}>
             <ListItem button>
               <GatsbyImage
-                image={icon.imageFile.childImageSharp.gatsbyImageData}
+                image={icon.imageFile?.childImageSharp.gatsbyImageData}
                 alt={icon.alt}
                 imgStyle={{ width: `auto`}}
                 style={{ marginRight: `0.5rem` }}/>
