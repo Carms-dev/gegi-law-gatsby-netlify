@@ -60,7 +60,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
             {secondaryCTAs.map(cta => (
               <Link key={cta.pageLink} to={cta.pageLink} className="card card-cta">
                 <GatsbyImage
-                  image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
+                  image={cta.icon.imageFile?.childImageSharp.gatsbyImageData}
                   alt={cta.icon.alt}
                   imgStyle={{ width: `auto` }} />
                 <p>{cta.heading}</p>
@@ -107,7 +107,7 @@ export default function IndexPage({ data: { page, collections, cornerstones } })
           {/* About section */}
           <section id="about" className="py-section">
             <GatsbyImage
-              image={aboutSection.image.imageFile.childImageSharp.gatsbyImageData}
+              image={aboutSection.image.imageFile?.childImageSharp.gatsbyImageData}
               alt={aboutSection.image.alt}
               imgStyle={{ width: `auto`, padding: `3rem` }}
             />

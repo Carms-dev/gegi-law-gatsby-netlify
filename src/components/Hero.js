@@ -9,7 +9,7 @@ function Hero({ heading, description, image }) {
     <SiteBorderStyles>
       <HeroStyles>
         <GatsbyImage
-          image={image.imageFile.childImageSharp.gatsbyImageData}
+          image={image.imageFile?.childImageSharp.gatsbyImageData}
           alt={image.alt}
           imgStyle={{width: `auto`, padding: `3rem`}}
         />
@@ -27,7 +27,7 @@ function HeroAlt({ heading, description, image, selectLabel, menuItems, province
     <SiteBorderStyles>
       <HeroStyles>
         <GatsbyImage
-          image={image.imageFile.childImageSharp.gatsbyImageData}
+          image={image.imageFile?.childImageSharp.gatsbyImageData}
           alt={image.alt}
           imgStyle={{width: `auto`, padding: `3rem`}}
         />

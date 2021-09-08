@@ -12,7 +12,7 @@ navigation:
       imageFile: /assets/gegi_wink.png
       alt: Gegi Wink
   - icon:
-      imageFile: /assets/gegi_info.png
+      imageFile: /assets/gegi_how-to.png
       alt: Gegi Info
     label: Resource Finder
     pageLink: /resources

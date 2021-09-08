@@ -15,7 +15,7 @@ export default function NotFoundPage({ data }) {
       <Seo title={heading} />
       <FourOhFourPageStyles>
         <GatsbyImage
-          image={siteImage.imageFile.childImageSharp.gatsbyImageData}
+          image={siteImage.imageFile?.childImageSharp.gatsbyImageData}
           alt={siteImage.alt}
           imgStyle={{ width: `auto`, padding: `1rem` }}
         />

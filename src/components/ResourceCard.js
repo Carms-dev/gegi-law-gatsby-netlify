@@ -22,7 +22,7 @@ export default function ResourceCard({ resource }) {
     <ResourceCardStyles>
       <div className="card-img">
         <GatsbyImage
-          image={logo.childImageSharp.gatsbyImageData}
+          image={logo?.childImageSharp.gatsbyImageData}
           alt={`${resourceName} logo`}
           imgStyle={{width: `auto`, margin: `0 auto`}}
         />

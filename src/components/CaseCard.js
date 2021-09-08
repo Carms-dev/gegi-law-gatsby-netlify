@@ -24,7 +24,7 @@ export default function CaseCard({ cas, icon }) {
       <div>
         <div className="card-pre">
           <GatsbyImage
-            image={icon.childImageSharp.gatsbyImageData}
+            image={icon?.childImageSharp.gatsbyImageData}
             alt={isCornerstone ? 'Cornerstone Case Icon' : 'Case Icon'}
             imgStyle={{ width: `auto` }}
           />

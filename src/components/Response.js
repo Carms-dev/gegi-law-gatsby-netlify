@@ -9,7 +9,7 @@ export default function Response({ icon, response, isLast, pageEndCTAs }) {
     <div className="response">
       <ResponseStyles>
         <GatsbyImage
-          image={icon.childImageSharp.gatsbyImageData}
+          image={icon?.childImageSharp.gatsbyImageData}
           alt="Response Icon"
           imgStyle={{ width: `auto` }} />
         <div className="content-wrapper">
@@ -21,7 +21,7 @@ export default function Response({ icon, response, isLast, pageEndCTAs }) {
           {pageEndCTAs.map(cta => (
             <Link key={cta.heading} to={cta.pageLink} className="card card-cta">
               <GatsbyImage
-                image={cta.icon.imageFile.childImageSharp.gatsbyImageData}
+                image={cta.icon.imageFile?.childImageSharp.gatsbyImageData}
                 alt={cta.icon.alt}
                 imgStyle={{ width: `auto` }}
               />

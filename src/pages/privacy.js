@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage({ data }) {
       <Seo title={heading} />
       <PolicyPageStyles className="py-section">
         <GatsbyImage
-          image={siteImage.imageFile.childImageSharp.gatsbyImageData}
+          image={siteImage.imageFile?.childImageSharp.gatsbyImageData}
           alt={siteImage.alt}
           imgStyle={{ width: `auto`, padding: `1rem` }}
         />
