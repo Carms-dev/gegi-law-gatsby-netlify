@@ -1,5 +1,5 @@
 ---
-isCornerstone: true
+isCornerstone: false
 caseName: Choli v. Ontario (Community Safety and Correctional Services)
 citation: 2018 HRTO 244
 description: The applicant, a transgender woman, alleges that Toronto Police
