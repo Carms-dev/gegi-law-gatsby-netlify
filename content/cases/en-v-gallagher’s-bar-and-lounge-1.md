@@ -1,5 +1,5 @@
 ---
-isCornerstone: true
+isCornerstone: false
 caseName: EN v. Gallagher’s Bar and Lounge
 citation: 2021 HRTO 240
 description: The applicants are employed by the respondent. They allege that
