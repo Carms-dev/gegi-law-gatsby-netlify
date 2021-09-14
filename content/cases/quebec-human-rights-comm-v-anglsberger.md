@@ -1,5 +1,5 @@
 ---
-isCornerstone: false
+isCornerstone: true
 caseName: Quebec (Human Rights Comm.) v. Anglsberger
 citation: "1982 CarswellQue 358 "
 description: The complainant, a transgender woman, alleged that she was kicked
