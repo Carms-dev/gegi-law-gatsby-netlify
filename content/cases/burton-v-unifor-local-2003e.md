@@ -1,5 +1,5 @@
 ---
-isCornerstone: true
+isCornerstone: false
 caseName: Burton v. Unifor Local 2003E
 citation: 2018 HRTO 276
 description: The applicant alleges that her local and national union
