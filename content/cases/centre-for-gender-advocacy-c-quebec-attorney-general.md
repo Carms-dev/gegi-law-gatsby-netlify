@@ -1,5 +1,5 @@
 ---
-isCornerstone: false
+isCornerstone: true
 caseName: Centre for Gender Advocacy c. Quebec (Attorney General)
 citation: 2015 QCCS 6026
 description: The plaintiffs in this case successfully argued that several
