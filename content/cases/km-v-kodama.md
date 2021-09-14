@@ -1,5 +1,5 @@
 ---
-isCornerstone: true
+isCornerstone: false
 caseName: K.M. v. Kodama
 citation: 2014 HRTO 526
 description: The applicant alleges that the respondent, a urologist, made
