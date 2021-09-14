@@ -1,5 +1,5 @@
 ---
-isCornerstone: false
+isCornerstone: true
 caseName: T.A. v. Manitoba (Justice)
 citation: 2019 MBHR 12
 description: 'The complainant alleged that the government of Manitoba
