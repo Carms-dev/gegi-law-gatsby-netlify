@@ -1,5 +1,5 @@
 ---
-isCornerstone: true
+isCornerstone: false
 caseName: Cameron v. Hamilton Black History Committee
 citation: 2016 HRTO 541
 description: "Complainant alleges that the respondent rejected her request to
