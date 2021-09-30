@@ -5,7 +5,7 @@ hero:
   description: >-2
      gender-related cases.
 
-    Read, Relate, Apply! Search through the following Canada-wide Human Rights Tribunal cases to find an issue similar to the one you or someone you know may be facing at school. Read through the selected cases, and use them to create an argument to present to your administration.
+    Check out these selected examples of human rights tribunal decisions across Canada. You can look for past cases that are similar to the issues you or someone you know may be facing at school. 
   image:
     imageFile: /assets/gegi_law-400x386.png
     alt: Gegi Law
