@@ -8,8 +8,8 @@ description: The complainant, a transgender woman, alleged that two employees of
   female. While the application raises significant issues under the Code, the
   case was dismissed because the complainant alleged discrimination on the basis
   of  "sexual orientation" rather than "sex", and the complaint should have been
-  made against eh agency at large, not the individuals responsible for the Act's
-  administration.
+  made against the agency at large, not the individuals responsible for the
+  Act's administration.
 takeaway: This case highlights the importance of transgender individuals' access
   to legal documents that reflect their lived experience.
 url: https://www.canlii.org/en/bc/bchrt/doc/2006/2006bchrt499/2006bchrt499.html?resultIndex=1
