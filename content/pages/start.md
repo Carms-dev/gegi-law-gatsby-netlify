@@ -177,7 +177,7 @@ questions:
           An individual who believes they have experienced a human rights violation can file a complaint (called an application) directly to the Ontario Human Rights Tribunal. An individual typically has one year from the date of the last incident of discrimination to file their application. 
 
 
-          The Human Rights Legal Support Centre (HRLSC) helps individuals who file applications to the Ontario Human Rights Tribunal. They may be able to provide individuals with advice, support, and legal representation.  
+          [The Human Rights Legal Support Centre (HRLSC)](http://hrlsc.on.ca/en/home) helps individuals who file applications to the Ontario Human Rights Tribunal. They may be able to provide individuals with advice, support, and legal representation.  
 
 
           **HRLSC Contact Information:**
