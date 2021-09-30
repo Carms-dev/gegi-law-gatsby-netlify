@@ -139,8 +139,8 @@ questions:
     options:
       - option: Yes
         response: Discrimination means “unequal or different treatment or harassment
-          that causes harm” (Human Rights Support Centre). Keep in mind that all
-          negative behaviour is going to constitute discrimination. The
+          that causes harm” (Human Rights Support Centre). Keep in mind that not
+          all negative behaviour is going to constitute discrimination. The
           treatment must be connected to a protected ground of discrimination
           (e.g. gender identity or gender expression).
       - option: No
@@ -155,8 +155,8 @@ questions:
         response: Keep in mind that there are special rules about legal capacity for
           people under the age of 18. For more information on the rules and
           responsibilities of parents, guardians, and litigation guardians, here
-          is a great [article](http://hrlsc.on.ca/en/node/381) written by Human
-          Rights Legal Support Centre.
+          is a great [article](http://hrlsc.on.ca/en/node/381) written by [Human
+          Rights Legal Support Centre](http://hrlsc.on.ca/en/home).
       - option: No
         response: Everyone who is 18 years of age or older is presumed to have legal
           capacity. In case you are curious, here is a great
