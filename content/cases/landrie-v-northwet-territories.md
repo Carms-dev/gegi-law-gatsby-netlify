@@ -1,6 +1,6 @@
 ---
 isCornerstone: false
-caseName: Landrie v. Northwet Territories
+caseName: Landrie v. Northwest Territories
 citation: 2013 CanLII 148584 (NT HRAP)
 description: The complainant alleged that the respondent denied her goods,
   services, accommodation or facilities because she is transgender. She was
