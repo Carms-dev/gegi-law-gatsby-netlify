@@ -1,7 +1,7 @@
 ---
 isCornerstone: false
 caseName: S.B. Newfoundland and Labrador (Service)
-citation: 82 CHRR 334
+citation: 2015 CanLII 153582 (NL HRC)
 description: The complainant requested that Vital Statistics change her gender
   designation on her birth registration. Vital Statistics refused, arguing that
   individuals must undergo surgery before gender designations can be changed.
