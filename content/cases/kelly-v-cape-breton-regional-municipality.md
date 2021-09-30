@@ -3,7 +3,7 @@ isCornerstone: false
 caseName: "Kelly v. Cape Breton Regional Municipality "
 citation: 2016 CanLII 97515 (NS HRC)
 description: The complainant alleged that her male co-workers were given
-  promotion opportunities, while she was not. However, The respondent provided
+  promotion opportunities, while she was not. However, the respondent provided
   evidence that proved that the male coworkers had scored higher than the
   complainant on a promotional routine test. The employer had provided a fair
   process of obtaining a promotion, therefore, there was no discrimination and
