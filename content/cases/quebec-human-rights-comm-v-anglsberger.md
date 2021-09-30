@@ -7,10 +7,8 @@ description: The complainant, a transgender woman, alleged that she was kicked
   abused by the defendant. The Tribunal held that the defendant's actions were
   discriminatory and humiliating to the complainant, and ordered the defendant
   to pay damages.
-takeaway: Anglsberger is the first Canadian trans human rights case. The success
-  of this case shows that transgender individuals have been protected from
-  discrimination on the basis of gender identity, gender expression, and sex
-  since 1998.
+takeaway: The success of this case shows that transgender individuals have been
+  protected by human rights law for decades.
 url: https://www.canlii.org/fr/qc/qccq/doc/1982/1982canlii4924/1982canlii4924.html?autocompleteStr=Qu%C3%A9bec%20c.%20Anglsberger&autocompletePos=1
 themes:
   - Identity
