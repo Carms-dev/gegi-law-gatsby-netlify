@@ -22,7 +22,7 @@ npm start
 npx netlify-cms-proxy-server
 ```
 
-### Registration to NetlifyCMS
+### CMS Registration
 
 Registration is set to *Invite Only*.  
 [Update preference](https://app.netlify.com/sites/gegi-law/settings/identity) | 
