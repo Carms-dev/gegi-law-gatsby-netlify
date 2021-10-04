@@ -2,10 +2,8 @@
 
 # 🦄 GEGI Law Site
 
-[Wireframe](https://www.figma.com/file/lgC8YPqiTAvGwk5X7buqLC/law.gegi.ca?node-id=584%3A27)
-
-[Production](https://law.gegi.ca/)
-
+[Wireframe](https://www.figma.com/file/lgC8YPqiTAvGwk5X7buqLC/law.gegi.ca?node-id=584%3A27) | 
+[Production](https://law.gegi.ca/) | 
 [CMS](https://law.gegi.ca/admin)
 
 ## Tech
