@@ -8,11 +8,11 @@
 
 [CMS](https://law.gegi.ca/admin)
 
-### Tech
+## Tech
 - Gatsby
 - NetlifyCMS
 
-### Development
+## Development
 
 ```
 npm start
@@ -22,26 +22,26 @@ npm start
 npx netlify-cms-proxy-server
 ```
 
-### CMS Registration
+## CMS Registration
 
 Registration is set to *Invite Only*.  
 [Update preference](https://app.netlify.com/sites/gegi-law/settings/identity) | 
 [Documentation](https://docs.netlify.com/visitor-access/identity/registration-login/#set-registration-preferences)
 
-Number of users to be invited to access CMS is cap to 5 under the starter plan.
+Number of users to be invited to access CMS is cap to 5 under the starter plan.  
 [Add user](https://app.netlify.com/sites/gegi-law/identity) | 
 [Documentation](https://docs.netlify.com/visitor-access/identity/registration-login/#invitations)
 
-### CMS Overview
+## CMS Overview
 
-1. Log into CMS using your credentials [Log In](https://law.gegi.ca/admin)
+#### 1. Log into CMS using your credentials [Log In](https://law.gegi.ca/admin)
 
 Credentials include email and password.  If you don't have your account setup, refer to the above section on registration.
 
 ![Screenshot from 2021-10-03 20-00-54](https://user-images.githubusercontent.com/59268689/135777913-747818d9-b7d6-4b7f-a9ec-c43376f17a71.png)
 
 
-2. Update existing or add new records
+#### 2. Update existing or add new records
 
 Update: Click on the targeted record > update fields > click *Publish*
 
